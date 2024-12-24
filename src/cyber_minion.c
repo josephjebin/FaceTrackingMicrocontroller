@@ -1,4 +1,4 @@
-#include "tm4c123gh6pm.h"
+#include "TM4C123GH6PM.h"
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>
@@ -42,6 +42,8 @@ void main_loop(void) __attribute__((aligned(4)));
 void UART0_Handler(void);
 void scan(void); 
 void sleep_position(void); 
+void set_compare_x(short); 
+void set_compare_y(short); 
 
 State current_state = WAITING;  
 // not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
@@ -97,33 +99,30 @@ void UART0_Handler(void) {
 		current_state = SCANNING;
 	} else {
 		current_state = WAITING; 
+		__asm volatile (
+			"MOV R12, LR	\n"   // Save LR to r12
+		);
 		// least significant nibble controls vertical servo 
 		// nibble will be in the input format:
 		// 0: no change, 1/2/3: small/medium/large negative jump, 4/5/6: small/medium/large positive jump
 		switch(data & 0x7){
 			case 6: 
-				compare_y = (compare_y + LARGE_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_y + LARGE_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y + LARGE_COMPARE_INCREMENT); 
 				break; 
 			case 5: 
-				compare_y = (compare_y + MEDIUM_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_y + MEDIUM_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y + MEDIUM_COMPARE_INCREMENT); 
 				break; 
 			case 4: 
-				compare_y = (compare_y + SMALL_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_y + SMALL_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y + SMALL_COMPARE_INCREMENT); 
 				break; 
 			case 3: 
-				compare_y = (compare_y - LARGE_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_y - LARGE_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y - LARGE_COMPARE_INCREMENT); 
 				break; 
 			case 2: 
-				compare_y = (compare_y - MEDIUM_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_y - MEDIUM_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y - MEDIUM_COMPARE_INCREMENT); 
 				break; 
 			case 1: 
-				compare_y = (compare_y - SMALL_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_y - SMALL_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_1_CMPA = compare_y;
+				set_compare_y(compare_y - SMALL_COMPARE_INCREMENT); 
 				break; 
 			case 0: 
 			default: 
@@ -133,28 +132,22 @@ void UART0_Handler(void) {
 		// bits 6-4 control horiztonal servo
 		switch((data & 0x70) >> 4) {
 			case 6: 
-				compare_x = (compare_x + LARGE_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_x + LARGE_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_0_CMPA = compare_x; 
+				set_compare_x(compare_x + LARGE_COMPARE_INCREMENT); 
 				break; 
 			case 5: 
-				compare_x = (compare_x + MEDIUM_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_x + MEDIUM_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_0_CMPA = compare_x;
+				set_compare_x(compare_x + MEDIUM_COMPARE_INCREMENT); 
 				break; 
 			case 4: 
-				compare_x = (compare_x + SMALL_COMPARE_INCREMENT) < MAXIMUM_COMPARE ? (compare_x + SMALL_COMPARE_INCREMENT) : MAXIMUM_COMPARE; 
-				PWM0->_0_CMPA = compare_x;
+				set_compare_x(compare_x + SMALL_COMPARE_INCREMENT); 
 				break; 
 			case 3: 
-				compare_x = (compare_x - LARGE_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_x - LARGE_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_0_CMPA = compare_x;
+				set_compare_x(compare_x - LARGE_COMPARE_INCREMENT); 
 				break; 
 			case 2: 
-				compare_x = (compare_x - MEDIUM_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_x - MEDIUM_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_0_CMPA = compare_x;
+				set_compare_x(compare_x - MEDIUM_COMPARE_INCREMENT); 
 				break; 
 			case 1: 
-				compare_x = (compare_x - SMALL_COMPARE_INCREMENT) > MINIMUM_COMPARE ? (compare_x - SMALL_COMPARE_INCREMENT) : MINIMUM_COMPARE;
-				PWM0->_0_CMPA = compare_x;
+				set_compare_x(compare_x - SMALL_COMPARE_INCREMENT); 
 				break; 
 			case 0: 
 			default: 
@@ -203,8 +196,23 @@ void UART0_Handler(void) {
 	); 
 	
 	__asm volatile (
-		"BX lr"
-	); 
+    "MOV LR, R12						\n"   // Restore LR from r12
+    "BX LR                 	\n"   // Return from the interrupt
+	);
+}
+
+void set_compare_x(short new_compare_x) {
+	new_compare_x = (new_compare_x < MAXIMUM_COMPARE) ? new_compare_x : MAXIMUM_COMPARE;
+	new_compare_x = (new_compare_x > MINIMUM_COMPARE) ? new_compare_x : MINIMUM_COMPARE;
+	compare_x = new_compare_x; 
+	PWM0->_0_CMPA = compare_x; 
+}
+
+void set_compare_y(short new_compare_y) {
+	new_compare_y = (new_compare_y < MAXIMUM_COMPARE) ? new_compare_y : MAXIMUM_COMPARE;
+	new_compare_y = (new_compare_y > MINIMUM_COMPARE) ? new_compare_y : MINIMUM_COMPARE;
+	compare_y = new_compare_y; 
+	PWM0->_1_CMPA = compare_y;
 }
 
 void scan() {

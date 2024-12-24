@@ -387,27 +387,27 @@
             <File>
               <FileName>cyber_minion.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\cyber_minion.c</FilePath>
+              <FilePath>.\src\cyber_minion.c</FilePath>
             </File>
             <File>
               <FileName>startup_TM4C123.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\startup_TM4C123.s</FilePath>
+              <FilePath>.\tm4c\startup\startup_TM4C123.s</FilePath>
             </File>
             <File>
               <FileName>system_TM4C123GH6PM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\system_TM4C123GH6PM.c</FilePath>
+              <FilePath>.\tm4c\system\system_TM4C123GH6PM.c</FilePath>
             </File>
             <File>
               <FileName>system_TM4C123GH6PM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\system_TM4C123GH6PM.h</FilePath>
+              <FilePath>.\tm4c\system\system_TM4C123GH6PM.h</FilePath>
             </File>
             <File>
-              <FileName>tm4c123gh6pm.h</FileName>
+              <FileName>TM4C123GH6PM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\tm4c123gh6pm.h</FilePath>
+              <FilePath>.\tm4c\TM4C123GH6PM.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -420,5 +420,14 @@
     <components/>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>cyber_minion</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
