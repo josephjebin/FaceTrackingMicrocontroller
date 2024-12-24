@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\cyber_minion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\cyber_minion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Tue Dec 24 02:12:09 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Tue Dec 24 10:01:29 2024
 <BR><P>
 <H3>Maximum Stack Usage =         48 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1322,16 +1322,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
-<P><STRONG><a name="[86]"></a>main</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cyber_minion.o(.text.main))
+<P><STRONG><a name="[86]"></a>main</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cyber_minion_runner.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = main &rArr; main_loop &rArr; scan &rArr; delay_10ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_and_servos_init
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1340,9 +1340,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = main_loop &rArr; scan &rArr; delay_10ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitForInterrupt
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
 </UL>
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1369,8 +1369,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[97]"></a>sleep_position</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, cyber_minion.o(.text.sleep_position))
-<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 <P>
 <H3>

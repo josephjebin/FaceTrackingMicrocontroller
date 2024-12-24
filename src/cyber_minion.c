@@ -1,3 +1,4 @@
+#include "cyber_minion.h"
 #include "TM4C123GH6PM.h"
 #include <stdint.h>
 #include <string.h>
@@ -30,20 +31,6 @@ typedef enum {
     SCANNING  // Scanning for a face
 } State;
 
-void DisableInterrupts(void); 
-void EnableInterrupts(void);  
-void WaitForInterrupt(void);  // low power mode
-
-void PLL_init(void); 
-void SysTick_init(void); 
-void delay_10ms(unsigned long); 
-void UART0_and_servos_init(void);
-void main_loop(void) __attribute__((aligned(4)));
-void UART0_Handler(void);
-void scan(void); 
-void sleep_position(void); 
-void set_compare_x(short); 
-void set_compare_y(short); 
 
 State current_state = WAITING;  
 // not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
@@ -61,15 +48,6 @@ uint32_t stack2[40];
 uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
 uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
 bool using_stack1 = false; 
-
-int main(void) {
-	PLL_init(); 
-	UART0_and_servos_init(); 
-	SysTick_init(); 
-	EnableInterrupts(); 
-	sleep_position(); 
-	main_loop(); 
-}
 
 void main_loop(void) {
 	while (1) {

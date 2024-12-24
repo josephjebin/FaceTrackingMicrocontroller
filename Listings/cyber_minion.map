@@ -4,21 +4,6 @@ Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
 
 Section Cross References
 
-    cyber_minion.o(.text.main) refers to cyber_minion.o(.text.PLL_init) for PLL_init
-    cyber_minion.o(.text.main) refers to cyber_minion.o(.text.UART0_and_servos_init) for UART0_and_servos_init
-    cyber_minion.o(.text.main) refers to cyber_minion.o(.text.SysTick_init) for SysTick_init
-    cyber_minion.o(.text.main) refers to startup_tm4c123.o(.text) for EnableInterrupts
-    cyber_minion.o(.text.main) refers to cyber_minion.o(.text.sleep_position) for sleep_position
-    cyber_minion.o(.text.main) refers to cyber_minion.o(.text.main_loop) for main_loop
-    cyber_minion.o(.ARM.exidx.text.main) refers to cyber_minion.o(.text.main) for [Anonymous Symbol]
-    cyber_minion.o(.ARM.exidx.text.PLL_init) refers to cyber_minion.o(.text.PLL_init) for [Anonymous Symbol]
-    cyber_minion.o(.text.UART0_and_servos_init) refers to cyber_minion.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
-    cyber_minion.o(.text.UART0_and_servos_init) refers to cyber_minion.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
-    cyber_minion.o(.ARM.exidx.text.UART0_and_servos_init) refers to cyber_minion.o(.text.UART0_and_servos_init) for [Anonymous Symbol]
-    cyber_minion.o(.ARM.exidx.text.SysTick_init) refers to cyber_minion.o(.text.SysTick_init) for [Anonymous Symbol]
-    cyber_minion.o(.text.sleep_position) refers to cyber_minion.o(.data.compare_x) for compare_x
-    cyber_minion.o(.text.sleep_position) refers to cyber_minion.o(.data.compare_y) for compare_y
-    cyber_minion.o(.ARM.exidx.text.sleep_position) refers to cyber_minion.o(.text.sleep_position) for [Anonymous Symbol]
     cyber_minion.o(.text.main_loop) refers to cyber_minion.o(.bss.current_state) for current_state
     cyber_minion.o(.text.main_loop) refers to startup_tm4c123.o(.text) for WaitForInterrupt
     cyber_minion.o(.text.main_loop) refers to cyber_minion.o(.text.scan) for scan
@@ -28,6 +13,9 @@ Section Cross References
     cyber_minion.o(.text.scan) refers to cyber_minion.o(.data.compare_x) for compare_x
     cyber_minion.o(.text.scan) refers to cyber_minion.o(.text.delay_10ms) for delay_10ms
     cyber_minion.o(.ARM.exidx.text.scan) refers to cyber_minion.o(.text.scan) for [Anonymous Symbol]
+    cyber_minion.o(.text.sleep_position) refers to cyber_minion.o(.data.compare_x) for compare_x
+    cyber_minion.o(.text.sleep_position) refers to cyber_minion.o(.data.compare_y) for compare_y
+    cyber_minion.o(.ARM.exidx.text.sleep_position) refers to cyber_minion.o(.text.sleep_position) for [Anonymous Symbol]
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.bss.current_state) for current_state
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.data.compare_y) for compare_y
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.text.set_compare_y) for set_compare_y
@@ -46,7 +34,12 @@ Section Cross References
     cyber_minion.o(.ARM.exidx.text.set_compare_x) refers to cyber_minion.o(.text.set_compare_x) for [Anonymous Symbol]
     cyber_minion.o(.text.delay_10ms) refers to cyber_minion.o(.text.SysTick_wait) for SysTick_wait
     cyber_minion.o(.ARM.exidx.text.delay_10ms) refers to cyber_minion.o(.text.delay_10ms) for [Anonymous Symbol]
+    cyber_minion.o(.ARM.exidx.text.PLL_init) refers to cyber_minion.o(.text.PLL_init) for [Anonymous Symbol]
+    cyber_minion.o(.ARM.exidx.text.SysTick_init) refers to cyber_minion.o(.text.SysTick_init) for [Anonymous Symbol]
     cyber_minion.o(.ARM.exidx.text.SysTick_wait) refers to cyber_minion.o(.text.SysTick_wait) for [Anonymous Symbol]
+    cyber_minion.o(.text.UART0_and_servos_init) refers to cyber_minion.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    cyber_minion.o(.text.UART0_and_servos_init) refers to cyber_minion.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    cyber_minion.o(.ARM.exidx.text.UART0_and_servos_init) refers to cyber_minion.o(.text.UART0_and_servos_init) for [Anonymous Symbol]
     cyber_minion.o(.ARM.exidx.text.__NVIC_SetPriority) refers to cyber_minion.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
     cyber_minion.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to cyber_minion.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
     cyber_minion.o(.data.sp1) refers to cyber_minion.o(.bss.stack1) for stack1
@@ -67,6 +60,13 @@ Section Cross References
     system_tm4c123gh6pm.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_tm4c123gh6pm.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
     system_tm4c123gh6pm.o(.ARM.exidx.text.getOscClk) refers to system_tm4c123gh6pm.o(.text.getOscClk) for [Anonymous Symbol]
     system_tm4c123gh6pm.o(.ARM.exidx.text.SystemInit) refers to system_tm4c123gh6pm.o(.text.SystemInit) for [Anonymous Symbol]
+    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.PLL_init) for PLL_init
+    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.UART0_and_servos_init) for UART0_and_servos_init
+    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.SysTick_init) for SysTick_init
+    cyber_minion_runner.o(.text.main) refers to startup_tm4c123.o(.text) for EnableInterrupts
+    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.sleep_position) for sleep_position
+    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.main_loop) for main_loop
+    cyber_minion_runner.o(.ARM.exidx.text.main) refers to cyber_minion_runner.o(.text.main) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
@@ -77,7 +77,7 @@ Section Cross References
     __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
-    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to cyber_minion.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to cyber_minion_runner.o(.text.main) for main
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
@@ -179,21 +179,19 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing cyber_minion.o(.text), (0 bytes).
-    Removing cyber_minion.o(.ARM.exidx.text.main), (8 bytes).
-    Removing cyber_minion.o(.ARM.exidx.text.PLL_init), (8 bytes).
-    Removing cyber_minion.o(.ARM.exidx.text.UART0_and_servos_init), (8 bytes).
-    Removing cyber_minion.o(.ARM.exidx.text.SysTick_init), (8 bytes).
-    Removing cyber_minion.o(.ARM.exidx.text.sleep_position), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.main_loop), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.scan), (8 bytes).
+    Removing cyber_minion.o(.ARM.exidx.text.sleep_position), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.UART0_Handler), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.set_compare_y), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.set_compare_x), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.delay_10ms), (8 bytes).
+    Removing cyber_minion.o(.ARM.exidx.text.PLL_init), (8 bytes).
+    Removing cyber_minion.o(.ARM.exidx.text.SysTick_init), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.SysTick_wait), (8 bytes).
+    Removing cyber_minion.o(.ARM.exidx.text.UART0_and_servos_init), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
     Removing cyber_minion.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
-    Removing cyber_minion.o(.ARM.use_no_argv), (4 bytes).
     Removing system_tm4c123gh6pm.o(.text), (0 bytes).
     Removing system_tm4c123gh6pm.o(.text.SystemCoreClockUpdate), (326 bytes).
     Removing system_tm4c123gh6pm.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
@@ -201,8 +199,11 @@ Removing Unused input sections from the image.
     Removing system_tm4c123gh6pm.o(.ARM.exidx.text.getOscClk), (8 bytes).
     Removing system_tm4c123gh6pm.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing system_tm4c123gh6pm.o(.data.SystemCoreClock), (4 bytes).
+    Removing cyber_minion_runner.o(.text), (0 bytes).
+    Removing cyber_minion_runner.o(.ARM.exidx.text.main), (8 bytes).
+    Removing cyber_minion_runner.o(.ARM.use_no_argv), (4 bytes).
 
-23 unused section(s) (total 830 bytes) removed from the image.
+24 unused section(s) (total 830 bytes) removed from the image.
 
 ==============================================================================
 
@@ -265,6 +266,7 @@ Image Symbol Table
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
     ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
     cyber_minion.c                           0x00000000   Number         0  cyber_minion.o ABSOLUTE
+    cyber_minion_runner.c                    0x00000000   Number         0  cyber_minion_runner.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     system_TM4C123GH6PM.c                    0x00000000   Number         0  system_tm4c123gh6pm.o ABSOLUTE
     tm4c/startup/startup_TM4C123.s           0x00000000   Number         0  startup_tm4c123.o ABSOLUTE
@@ -335,7 +337,7 @@ Image Symbol Table
     __NVIC_SetPriority                       0x00000bb1   Thumb Code    66  cyber_minion.o(.text.__NVIC_SetPriority)
     [Anonymous Symbol]                       0x00000bb0   Section        0  cyber_minion.o(.text.__NVIC_SetPriority)
     [Anonymous Symbol]                       0x00000bf4   Section        0  cyber_minion.o(.text.delay_10ms)
-    [Anonymous Symbol]                       0x00000c1c   Section        0  cyber_minion.o(.text.main)
+    [Anonymous Symbol]                       0x00000c1c   Section        0  cyber_minion_runner.o(.text.main)
     [Anonymous Symbol]                       0x00000c3c   Section        0  cyber_minion.o(.text.main_loop)
     [Anonymous Symbol]                       0x00000c8c   Section        0  cyber_minion.o(.text.scan)
     [Anonymous Symbol]                       0x00000da8   Section        0  cyber_minion.o(.text.set_compare_x)
@@ -576,7 +578,7 @@ Image Symbol Table
     UART0_Handler                            0x0000069d   Thumb Code   690  cyber_minion.o(.text.UART0_Handler)
     UART0_and_servos_init                    0x00000959   Thumb Code   552  cyber_minion.o(.text.UART0_and_servos_init)
     delay_10ms                               0x00000bf5   Thumb Code    40  cyber_minion.o(.text.delay_10ms)
-    main                                     0x00000c1d   Thumb Code    30  cyber_minion.o(.text.main)
+    main                                     0x00000c1d   Thumb Code    30  cyber_minion_runner.o(.text.main)
     main_loop                                0x00000c3d   Thumb Code    80  cyber_minion.o(.text.main_loop)
     scan                                     0x00000c8d   Thumb Code   282  cyber_minion.o(.text.scan)
     set_compare_x                            0x00000da9   Thumb Code   108  cyber_minion.o(.text.set_compare_x)
@@ -609,114 +611,114 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x0000026c   Data   RO           47    RESET               startup_tm4c123.o
-    0x0000026c   0x0000026c   0x00000008   Code   RO           72  * !!!main             c_w.l(__main.o)
-    0x00000274   0x00000274   0x0000005c   Code   RO          237    !!!scatter          c_w.l(__scatter.o)
-    0x000002d0   0x000002d0   0x0000001a   Code   RO          241    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x00000000   0x00000000   0x0000026c   Data   RO           44    RESET               startup_tm4c123.o
+    0x0000026c   0x0000026c   0x00000008   Code   RO           78  * !!!main             c_w.l(__main.o)
+    0x00000274   0x00000274   0x0000005c   Code   RO          243    !!!scatter          c_w.l(__scatter.o)
+    0x000002d0   0x000002d0   0x0000001a   Code   RO          247    !!handler_copy      c_w.l(__scatter_copy.o)
     0x000002ea   0x000002ea   0x00000002   PAD
-    0x000002ec   0x000002ec   0x00000002   Code   RO          238    !!handler_null      c_w.l(__scatter.o)
+    0x000002ec   0x000002ec   0x00000002   Code   RO          244    !!handler_null      c_w.l(__scatter.o)
     0x000002ee   0x000002ee   0x00000002   PAD
-    0x000002f0   0x000002f0   0x0000001c   Code   RO          243    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x0000030c   0x0000030c   0x00000002   Code   RO           99    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          106    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          108    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          110    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          113    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          115    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          117    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          120    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          122    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          124    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          126    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          128    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          134    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          136    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          138    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          140    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          144    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          146    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          148    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000000   Code   RO          150    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x0000030e   0x0000030e   0x00000002   Code   RO          151    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x00000310   0x00000310   0x00000002   Code   RO          173    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          188    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          190    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          193    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          196    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          198    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000000   Code   RO          201    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x00000312   0x00000312   0x00000002   Code   RO          202    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x00000314   0x00000314   0x00000000   Code   RO           74    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x00000314   0x00000314   0x00000000   Code   RO           76    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x00000314   0x00000314   0x00000006   Code   RO           88    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x0000031a   0x0000031a   0x00000000   Code   RO           78    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x0000031a   0x0000031a   0x00000004   Code   RO           79    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x0000031e   0x0000031e   0x00000000   Code   RO           81    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x0000031e   0x0000031e   0x00000008   Code   RO           82    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x00000326   0x00000326   0x00000002   Code   RO          103    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x00000328   0x00000328   0x00000000   Code   RO          153    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x00000328   0x00000328   0x00000004   Code   RO          154    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x0000032c   0x0000032c   0x00000006   Code   RO          155    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x000002f0   0x000002f0   0x0000001c   Code   RO          249    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x0000030c   0x0000030c   0x00000002   Code   RO          105    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          112    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          114    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          116    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          119    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          121    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          123    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          126    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          128    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          134    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          136    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          138    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          140    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          142    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          144    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          146    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          150    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          152    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          154    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          156    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000002   Code   RO          157    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x00000310   0x00000310   0x00000002   Code   RO          179    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          194    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          196    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          199    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          202    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          204    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          207    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000002   Code   RO          208    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x00000314   0x00000314   0x00000000   Code   RO           80    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000314   0x00000314   0x00000000   Code   RO           82    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000314   0x00000314   0x00000006   Code   RO           94    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0000031a   0x0000031a   0x00000000   Code   RO           84    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0000031a   0x0000031a   0x00000004   Code   RO           85    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0000031e   0x0000031e   0x00000000   Code   RO           87    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0000031e   0x0000031e   0x00000008   Code   RO           88    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x00000326   0x00000326   0x00000002   Code   RO          109    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000328   0x00000328   0x00000000   Code   RO          159    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000328   0x00000328   0x00000004   Code   RO          160    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0000032c   0x0000032c   0x00000006   Code   RO          161    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x00000332   0x00000332   0x00000002   PAD
-    0x00000334   0x00000334   0x00000120   Code   RO           48  * .text               startup_tm4c123.o
-    0x00000454   0x00000454   0x00000006   Code   RO           70    .text               c_w.l(heapauxi.o)
-    0x0000045a   0x0000045a   0x0000004a   Code   RO           90    .text               c_w.l(sys_stackheap_outer.o)
-    0x000004a4   0x000004a4   0x00000012   Code   RO           92    .text               c_w.l(exit.o)
+    0x00000334   0x00000334   0x00000120   Code   RO           45  * .text               startup_tm4c123.o
+    0x00000454   0x00000454   0x00000006   Code   RO           76    .text               c_w.l(heapauxi.o)
+    0x0000045a   0x0000045a   0x0000004a   Code   RO           96    .text               c_w.l(sys_stackheap_outer.o)
+    0x000004a4   0x000004a4   0x00000012   Code   RO           98    .text               c_w.l(exit.o)
     0x000004b6   0x000004b6   0x00000002   PAD
-    0x000004b8   0x000004b8   0x00000008   Code   RO          100    .text               c_w.l(libspace.o)
-    0x000004c0   0x000004c0   0x0000000c   Code   RO          163    .text               c_w.l(sys_exit.o)
-    0x000004cc   0x000004cc   0x00000002   Code   RO          178    .text               c_w.l(use_no_semi.o)
-    0x000004ce   0x000004ce   0x00000000   Code   RO          180    .text               c_w.l(indicate_semi.o)
+    0x000004b8   0x000004b8   0x00000008   Code   RO          106    .text               c_w.l(libspace.o)
+    0x000004c0   0x000004c0   0x0000000c   Code   RO          169    .text               c_w.l(sys_exit.o)
+    0x000004cc   0x000004cc   0x00000002   Code   RO          184    .text               c_w.l(use_no_semi.o)
+    0x000004ce   0x000004ce   0x00000000   Code   RO          186    .text               c_w.l(indicate_semi.o)
     0x000004ce   0x000004ce   0x00000002   PAD
-    0x000004d0   0x000004d0   0x0000007a   Code   RO            4    .text.PLL_init      cyber_minion.o
+    0x000004d0   0x000004d0   0x0000007a   Code   RO           16    .text.PLL_init      cyber_minion.o
     0x0000054a   0x0000054a   0x00000002   PAD
-    0x0000054c   0x0000054c   0x0000002e   Code   RO            8    .text.SysTick_init  cyber_minion.o
+    0x0000054c   0x0000054c   0x0000002e   Code   RO           18    .text.SysTick_init  cyber_minion.o
     0x0000057a   0x0000057a   0x00000002   PAD
-    0x0000057c   0x0000057c   0x00000024   Code   RO           24    .text.SysTick_wait  cyber_minion.o
-    0x000005a0   0x000005a0   0x000000fc   Code   RO           59    .text.SystemInit    system_tm4c123gh6pm.o
-    0x0000069c   0x0000069c   0x000002bc   Code   RO           16    .text.UART0_Handler  cyber_minion.o
-    0x00000958   0x00000958   0x00000228   Code   RO            6    .text.UART0_and_servos_init  cyber_minion.o
-    0x00000b80   0x00000b80   0x00000030   Code   RO           28    .text.__NVIC_EnableIRQ  cyber_minion.o
-    0x00000bb0   0x00000bb0   0x00000042   Code   RO           26    .text.__NVIC_SetPriority  cyber_minion.o
+    0x0000057c   0x0000057c   0x00000024   Code   RO           20    .text.SysTick_wait  cyber_minion.o
+    0x000005a0   0x000005a0   0x000000fc   Code   RO           56    .text.SystemInit    system_tm4c123gh6pm.o
+    0x0000069c   0x0000069c   0x000002bc   Code   RO            8    .text.UART0_Handler  cyber_minion.o
+    0x00000958   0x00000958   0x00000228   Code   RO           22    .text.UART0_and_servos_init  cyber_minion.o
+    0x00000b80   0x00000b80   0x00000030   Code   RO           26    .text.__NVIC_EnableIRQ  cyber_minion.o
+    0x00000bb0   0x00000bb0   0x00000042   Code   RO           24    .text.__NVIC_SetPriority  cyber_minion.o
     0x00000bf2   0x00000bf2   0x00000002   PAD
-    0x00000bf4   0x00000bf4   0x00000028   Code   RO           22    .text.delay_10ms    cyber_minion.o
-    0x00000c1c   0x00000c1c   0x0000001e   Code   RO            2    .text.main          cyber_minion.o
+    0x00000bf4   0x00000bf4   0x00000028   Code   RO           14    .text.delay_10ms    cyber_minion.o
+    0x00000c1c   0x00000c1c   0x0000001e   Code   RO           66    .text.main          cyber_minion_runner.o
     0x00000c3a   0x00000c3a   0x00000002   PAD
-    0x00000c3c   0x00000c3c   0x00000050   Code   RO           12    .text.main_loop     cyber_minion.o
-    0x00000c8c   0x00000c8c   0x0000011a   Code   RO           14    .text.scan          cyber_minion.o
+    0x00000c3c   0x00000c3c   0x00000050   Code   RO            2    .text.main_loop     cyber_minion.o
+    0x00000c8c   0x00000c8c   0x0000011a   Code   RO            4    .text.scan          cyber_minion.o
     0x00000da6   0x00000da6   0x00000002   PAD
-    0x00000da8   0x00000da8   0x0000006c   Code   RO           20    .text.set_compare_x  cyber_minion.o
-    0x00000e14   0x00000e14   0x0000006c   Code   RO           18    .text.set_compare_y  cyber_minion.o
-    0x00000e80   0x00000e80   0x00000036   Code   RO           10    .text.sleep_position  cyber_minion.o
+    0x00000da8   0x00000da8   0x0000006c   Code   RO           12    .text.set_compare_x  cyber_minion.o
+    0x00000e14   0x00000e14   0x0000006c   Code   RO           10    .text.set_compare_y  cyber_minion.o
+    0x00000e80   0x00000e80   0x00000036   Code   RO            6    .text.sleep_position  cyber_minion.o
     0x00000eb6   0x00000eb6   0x00000002   PAD
-    0x00000eb8   0x00000eb8   0x00000020   Data   RO          236    Region$$Table       anon$$obj.o
+    0x00000eb8   0x00000eb8   0x00000020   Data   RO          242    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000ed8, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000ed8   0x00000002   Data   RW           31    .data.compare_x     cyber_minion.o
-    0x20000002   0x00000eda   0x00000002   Data   RW           32    .data.compare_y     cyber_minion.o
-    0x20000004   0x00000edc   0x00000004   Data   RW           34    .data.sp1           cyber_minion.o
-    0x20000008   0x00000ee0   0x00000004   Data   RW           36    .data.sp2           cyber_minion.o
+    0x20000000   0x00000ed8   0x00000002   Data   RW           29    .data.compare_x     cyber_minion.o
+    0x20000002   0x00000eda   0x00000002   Data   RW           30    .data.compare_y     cyber_minion.o
+    0x20000004   0x00000edc   0x00000004   Data   RW           32    .data.sp1           cyber_minion.o
+    0x20000008   0x00000ee0   0x00000004   Data   RW           34    .data.sp2           cyber_minion.o
 
 
     Execution Region ER_ZI (Exec base: 0x20000010, Load base: 0x00000ee4, Size: 0x000003a8, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000010        -       0x00000060   Zero   RW          101    .bss                c_w.l(libspace.o)
-    0x20000070        -       0x00000001   Zero   RW           30    .bss.current_state  cyber_minion.o
+    0x20000010        -       0x00000060   Zero   RW          107    .bss                c_w.l(libspace.o)
+    0x20000070        -       0x00000001   Zero   RW           28    .bss.current_state  cyber_minion.o
     0x20000071   0x00000ee4   0x00000003   PAD
-    0x20000074        -       0x000000a0   Zero   RW           33    .bss.stack1         cyber_minion.o
-    0x20000114        -       0x000000a0   Zero   RW           35    .bss.stack2         cyber_minion.o
-    0x200001b4        -       0x00000001   Zero   RW           37    .bss.using_stack1   cyber_minion.o
+    0x20000074        -       0x000000a0   Zero   RW           31    .bss.stack1         cyber_minion.o
+    0x20000114        -       0x000000a0   Zero   RW           33    .bss.stack2         cyber_minion.o
+    0x200001b4        -       0x00000001   Zero   RW           35    .bss.using_stack1   cyber_minion.o
     0x200001b5   0x00000ee4   0x00000003   PAD
-    0x200001b8        -       0x00000000   Zero   RW           46    HEAP                startup_tm4c123.o
-    0x200001b8        -       0x00000200   Zero   RW           45    STACK               startup_tm4c123.o
+    0x200001b8        -       0x00000000   Zero   RW           43    HEAP                startup_tm4c123.o
+    0x200001b8        -       0x00000200   Zero   RW           42    STACK               startup_tm4c123.o
 
 
 ==============================================================================
@@ -726,12 +728,13 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2272         24          0         12        322      13592   cyber_minion.o
+      2242         24          0         12        322      13480   cyber_minion.o
+        30          0          0          0          0        407   cyber_minion_runner.o
        288         24        620          0        512       5416   startup_tm4c123.o
        252          0          0          0          0       6139   system_tm4c123gh6pm.o
 
     ----------------------------------------------------------------------
-      2824         48        652         12        840      25147   Object Totals
+      2824         48        652         12        840      25442   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          0          0          6          0   (incl. Padding)
 
@@ -780,8 +783,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3148         64        652         12        936      25671   Grand Totals
-      3148         64        652         12        936      25671   ELF Image Totals
+      3148         64        652         12        936      25946   Grand Totals
+      3148         64        652         12        936      25946   ELF Image Totals
       3148         64        652         12          0          0   ROM Totals
 
 ==============================================================================
