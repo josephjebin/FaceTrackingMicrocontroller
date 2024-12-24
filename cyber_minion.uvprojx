@@ -382,7 +382,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>Deploy</GroupName>
           <Files>
             <File>
               <FileName>cyber_minion.c</FileName>
@@ -408,6 +408,31 @@
               <FileName>TM4C123GH6PM.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\tm4c\TM4C123GH6PM.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Unit Test</GroupName>
+          <Files>
+            <File>
+              <FileName>cyber_minion_unit_tests.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test\unit\cyber_minion_unit_tests.c</FilePath>
+            </File>
+            <File>
+              <FileName>unity.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>C:\qp\qtools\unity\src\unity.h</FilePath>
+            </File>
+            <File>
+              <FileName>unity.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\qp\qtools\unity\src\unity.c</FilePath>
+            </File>
+            <File>
+              <FileName>unity_internals.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>C:\qp\qtools\unity\src\unity_internals.h</FilePath>
             </File>
           </Files>
         </Group>
