@@ -1,7 +1,7 @@
-#include <stdint.h>
-
 #ifndef tm4c_bsp_h
 #define tm4c_bsp_h
+
+#include <stdint.h>
 
 #define SYSCTL_RCC2_R           (*((volatile unsigned long *)0x400FE070))
 #define SYSCTL_RCC_R            (*((volatile unsigned long *)0x400FE060))

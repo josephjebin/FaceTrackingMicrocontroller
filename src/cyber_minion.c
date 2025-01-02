@@ -176,53 +176,44 @@ void set_compare_x(unsigned short new_compare_x) {
 	new_compare_x = (new_compare_x < MAXIMUM_COMPARE) ? new_compare_x : MAXIMUM_COMPARE;
 	new_compare_x = (new_compare_x > MINIMUM_COMPARE) ? new_compare_x : MINIMUM_COMPARE;
 	compare_x = new_compare_x; 
-	set_PWM0_CMPA(compare_x); 
+	set_PWM0_generator0_CMPA(compare_x); 
 }
 
-void set_compare_y(short new_compare_y) {
+void set_compare_y(unsigned short new_compare_y) {
 	new_compare_y = (new_compare_y < MAXIMUM_COMPARE) ? new_compare_y : MAXIMUM_COMPARE;
 	new_compare_y = (new_compare_y > MINIMUM_COMPARE) ? new_compare_y : MINIMUM_COMPARE;
 	compare_y = new_compare_y; 
-	PWM0->_1_CMPA = compare_y;
+	set_PWM0_generator1_CMPA(compare_y);
 }
 
 void scan() {
-	compare_y = MIDDLE_COMPARE - MEDIUM_COMPARE_INCREMENT; 
-	PWM0->_1_CMPA = compare_y;
-	compare_x = MINIMUM_COMPARE;
+	set_compare_y(MIDDLE_COMPARE - MEDIUM_COMPARE_INCREMENT); 
+	set_compare_x(MINIMUM_COMPARE);
 	delay_10ms(100);
 	while (compare_x < MAXIMUM_COMPARE) {
-		compare_x += SMALL_COMPARE_INCREMENT; 
-		PWM0->_0_CMPA = compare_x;
+		set_compare_x(compare_x + SMALL_COMPARE_INCREMENT); 
 		delay_10ms(2);
 	}
 	
-	compare_y -= LARGE_COMPARE_INCREMENT;
-	PWM0->_1_CMPA = compare_y;
+	set_compare_y(compare_y - LARGE_COMPARE_INCREMENT);
 	delay_10ms(2);
 	
 	while (compare_x > MINIMUM_COMPARE) {
-		compare_x -= SMALL_COMPARE_INCREMENT; 
-		PWM0->_0_CMPA = compare_x;
+		set_compare_x(compare_x - SMALL_COMPARE_INCREMENT); 
 		delay_10ms(2);
 	}
 	
-	compare_y -= LARGE_COMPARE_INCREMENT;
-	PWM0->_1_CMPA = compare_y;
+	set_compare_y(compare_y - LARGE_COMPARE_INCREMENT);
 	delay_10ms(2);
 	
 	while (compare_x < MAXIMUM_COMPARE) {
-		compare_x += SMALL_COMPARE_INCREMENT; 
-		PWM0->_0_CMPA = compare_x;
+		set_compare_x(compare_x + SMALL_COMPARE_INCREMENT); 
 		delay_10ms(2);
 	}
 }
 
 void sleep_position(void) {
-	compare_x = MIDDLE_COMPARE; 
-	PWM0->_0_CMPA = compare_x;
-
-	compare_y = MAXIMUM_COMPARE; 
-	PWM0->_1_CMPA = compare_y;
+	set_compare_x(MIDDLE_COMPARE);
+	set_compare_y(MAXIMUM_COMPARE);
 }	
 

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;..\..\qp\qtools\unity\src;.\tm4c\system</IncludePath>
+              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;..\..\qp\qtools\unity\src;.\tm4c\system;.\CMSIS\Core\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,6 +418,16 @@
               <FileName>cyber_minion_runner.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\cyber_minion_runner.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\tm4c_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\tm4c_bsp.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1074,6 +1084,16 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+            <File>
+              <FileName>tm4c_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\tm4c_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\tm4c_bsp.h</FilePath>
             </File>
           </Files>
         </Group>

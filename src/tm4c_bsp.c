@@ -1,7 +1,17 @@
 #include "tm4c_bsp.h" 
+#include <TM4C123GH6PM.h>
 
-void set_PWM0_CMPA(unsigned short new_compare){
+uint8_t get_UART0_interrupt_data(void) {
+	UART0->ICR = 0x10;          // Clear interrupt flag
+	return (UART0->DR & 0xFF);  // Read received byte
+}
+
+void set_PWM0_generator0_CMPA(unsigned short new_compare){
 	PWM0->_0_CMPA = new_compare; 
+}
+
+void set_PWM0_generator1_CMPA(unsigned short new_compare){
+	PWM0->_1_CMPA = new_compare; 
 }
 
 void PLL_init(void){
@@ -27,7 +37,6 @@ void PLL_init(void){
 
 void SysTick_init(void) {
 	NVIC_ST_CTRL_R = 0;						// 1) disable SysTick during setup 
-	//NVIC_ST_RELOAD_R = 159999;		// 2) 16 MHz: 159999 + 1 = 160,000; 160,000 * 62.5ns = 10ms
 	NVIC_ST_RELOAD_R = 799999;			// 2) 80 MHz: 799999 + 1 = 800,000; 800,000 * 12.5ns = 10ms
 	NVIC_ST_CURRENT_R = 0;				// 3) any write to current clears it 
 	NVIC_ST_CTRL_R = 0x00000005;	// 4) enable SysTick with core clock
