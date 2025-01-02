@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;C:\qp\qtools\unity\src;.\tm4c\system</IncludePath>
+              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;..\..\qp\qtools\unity\src;.\tm4c\system</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -501,17 +501,42 @@
             <File>
               <FileName>unity.h</FileName>
               <FileType>5</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity.h</FilePath>
+              <FilePath>.\test\framework\src\unity.h</FilePath>
             </File>
             <File>
               <FileName>unity.c</FileName>
               <FileType>1</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity.c</FilePath>
+              <FilePath>.\test\framework\src\unity.c</FilePath>
             </File>
             <File>
               <FileName>unity_internals.h</FileName>
               <FileType>5</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity_internals.h</FilePath>
+              <FilePath>.\test\framework\src\unity_internals.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>cmsis_armclang.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_armclang.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_compiler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_compiler.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_version.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_version.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_cm4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\core_cm4.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -851,7 +876,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;C:\qp\qtools\unity\src</IncludePath>
+              <IncludePath>.\CMSIS\Core\Include;.\test\framework\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -968,6 +993,36 @@
               <FileName>cyber_minion.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\cyber_minion.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_TM4C123.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\tm4c\startup\startup_TM4C123.s</FilePath>
+            </File>
+            <File>
+              <FileName>system_TM4C123GH6PM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tm4c\system\system_TM4C123GH6PM.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_TM4C123GH6PM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tm4c\system\system_TM4C123GH6PM.h</FilePath>
+            </File>
+            <File>
+              <FileName>TM4C123GH6PM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tm4c\TM4C123GH6PM.h</FilePath>
+            </File>
+            <File>
+              <FileName>cyber_minion.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\cyber_minion.h</FilePath>
+            </File>
+            <File>
+              <FileName>cyber_minion_runner.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\cyber_minion_runner.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -975,7 +1030,7 @@
                   <RVCTZI>0</RVCTZI>
                   <RVCTOtherData>0</RVCTOtherData>
                   <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>1</IncludeInBuild>
+                  <IncludeInBuild>0</IncludeInBuild>
                   <AlwaysBuild>2</AlwaysBuild>
                   <GenerateAssemblyFile>2</GenerateAssemblyFile>
                   <AssembleAssemblyFile>2</AssembleAssemblyFile>
@@ -1020,36 +1075,6 @@
                 </FileArmAds>
               </FileOption>
             </File>
-            <File>
-              <FileName>startup_TM4C123.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\tm4c\startup\startup_TM4C123.s</FilePath>
-            </File>
-            <File>
-              <FileName>system_TM4C123GH6PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\tm4c\system\system_TM4C123GH6PM.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_TM4C123GH6PM.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c\system\system_TM4C123GH6PM.h</FilePath>
-            </File>
-            <File>
-              <FileName>TM4C123GH6PM.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c\TM4C123GH6PM.h</FilePath>
-            </File>
-            <File>
-              <FileName>cyber_minion.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\cyber_minion.h</FilePath>
-            </File>
-            <File>
-              <FileName>cyber_minion_runner.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\cyber_minion_runner.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -1063,17 +1088,42 @@
             <File>
               <FileName>unity.h</FileName>
               <FileType>5</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity.h</FilePath>
+              <FilePath>.\test\framework\src\unity.h</FilePath>
             </File>
             <File>
               <FileName>unity.c</FileName>
               <FileType>1</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity.c</FilePath>
+              <FilePath>.\test\framework\src\unity.c</FilePath>
             </File>
             <File>
               <FileName>unity_internals.h</FileName>
               <FileType>5</FileType>
-              <FilePath>C:\qp\qtools\unity\src\unity_internals.h</FilePath>
+              <FilePath>.\test\framework\src\unity_internals.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>cmsis_armclang.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_armclang.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_compiler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_compiler.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_version.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\cmsis_version.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_cm4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\CMSIS\Core\Include\core_cm4.h</FilePath>
             </File>
           </Files>
         </Group>
