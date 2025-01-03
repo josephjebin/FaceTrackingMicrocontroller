@@ -1,11 +1,15 @@
 Overview Video!
+
 https://drive.google.com/file/d/1DXGHi_vd6GrTkzMNU0J7Osyh93HIYfZo/view?usp=drive_link
 
 Dependencies: 
+
 Application
+
 This project uses a TM4C123GXL to control the servos. The BSP for the TM4C along with system, startup, and register files are located in the tm4c directory.
 
 Testing
+
 I used Unity and CMock for validating and mocking. To run the make commands, you will need the GNU make utility, which I obtained from the QTools collection (https://github.com/QuantumLeaps/qtools).
 
 Running the application: 
@@ -16,6 +20,7 @@ Running the application:
 Don't make a sound, or the minion might wake up!  
 
 How to test: 
+
 Unit tests
 1. Run the makefile in the unit test directory by typing: 
 make
