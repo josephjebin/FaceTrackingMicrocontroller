@@ -2,6 +2,7 @@ Overview Video!
 
 https://drive.google.com/file/d/1DXGHi_vd6GrTkzMNU0J7Osyh93HIYfZo/view?usp=drive_link
 
+
 Dependencies: 
 
 Application
@@ -12,12 +13,14 @@ Testing
 
 I used Unity and CMock for validating and mocking. To run the make commands, you will need the GNU make utility, which I obtained from the QTools collection (https://github.com/QuantumLeaps/qtools).
 
+
 Running the application: 
 1. Connect the servos to the microcontroller. The horizontal panning servo connects to PB6, and the vertical tilting servo connects to PB4. Make sure the grounds of the servos, battery packs, and microcontroller are connected.
 2. Flash the microcontroller, and run cyber_minion_runner.c
 3. Connect the webcam to your computer.
 4. Run command_center.py
 Don't make a sound, or the minion might wake up!  
+
 
 How to test: 
 
