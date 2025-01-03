@@ -18,12 +18,6 @@
 #define LARGE_COMPARE_INCREMENT (unsigned short) 200
 #define STACK_SIZE 40
 
-typedef enum {
-    WAITING,  // Minion is either sleeping or locked on a face and waiting for movement
-    SCANNING  // Scanning for a face
-} State;
-
-
 State current_state = WAITING;  
 // not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
 // unsigned shorts have a maximum value of 65,535

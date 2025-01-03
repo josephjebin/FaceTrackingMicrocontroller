@@ -38,16 +38,16 @@
 #-----------------------------------------------------------------------------
 # project name:
 PROJECT := test
-UNITY_DIR := ./framework/src
+UNITY_DIR := ../framework/src
 
 # list of all source directories used by this project
-VPATH := ./unit \
-	../src \
+VPATH := ../unit \
+	../../src \
 	$(UNITY_DIR)
 
 # list of all include directories needed by this project
-INCLUDES := -I./unit \
-	-I../src \
+INCLUDES := -I../unit \
+	-I../../src \
 	-I$(UNITY_DIR)
 
 #-----------------------------------------------------------------------------
@@ -55,8 +55,7 @@ INCLUDES := -I./unit \
 #
 
 # C source files...
-C_SRCS := \
-	cyber_minion_unit_tests.c \
+C_SRCS := cyber_minion_unit_tests.c \
 	unity.c 
 
 # C++ source files...
