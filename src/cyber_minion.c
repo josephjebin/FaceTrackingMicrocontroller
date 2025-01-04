@@ -117,10 +117,7 @@ void UART0_Handler(void) {
 		*(--sp2) = 0x00000001U; /* R1  */
 		*(--sp2) = 0x00000000U; /* R0  */
 		using_stack1 = false; 
-		set_sp_and_jump(sp2); 
-		__asm volatile (
-			"LDR r0, =sp2        	\n"   // Load the address of next_sp into r0
-		); 
+		set_sp(sp2); 
 	} 
 	else {
 		sp1 = &stack1[STACK_SIZE]; 
@@ -133,24 +130,10 @@ void UART0_Handler(void) {
 		*(--sp1) = 0x00000001U; /* R1  */
 		*(--sp1) = 0x00000000U; /* R0  */
 		using_stack1 = true;
-		__asm volatile (
-			"LDR r0, =sp1        	\n"   // Load the address of next_sp into r0
-		); 
+		set_sp(sp1); 
 	}
 	
-	__asm volatile (
-		"LDR r0, [r0]             \n"   // Dereference sp1 or sp2 to get the next stack pointer
-	); 
-	
-	__asm volatile (
-    "MOV sp, r0               \n"   // Move next stack pointer into sp
-	); 
-	
-	set_LR_to_thread_mode(); 
-	
-	__asm volatile (
-    "BX LR                 	\n"   // Return from the interrupt
-	);
+	exit_interrupt(); 
 }
 
 void set_compare_x(unsigned short new_compare_x) {

@@ -14,19 +14,30 @@ void set_PWM0_generator1_CMPA(unsigned short new_compare){
 	PWM0->_1_CMPA = new_compare; 
 }
 
-/*
-This method is dangerous because it assumes 
-no interrupt preempted the UART interrupt and 
-there is no interrupt chaining. This assumption is 
-made by manually setting LR to 0xFFFFFFF9. 
-*/
-void set_sp_and_jump(uint32_t * volatile sp) {
+void set_sp(uint32_t * new_sp) {
 	__asm volatile (
-		"LDR r0, =sp        		\n" 	// Load the address of next sp into r0
-		"LDR r0, [r0]           \n"   // Dereference sp1 or sp2 to get the next stack pointer
+        "LDR r0, [%0]"   // Load the value at *new_sp
+        :                // No outputs
+        : "r"(new_sp)    // Input operand: address of new_sp
+        : "r0"           // Clobber list
+    );
+	
+	__asm volatile (
 		"MOV sp, r0             \n"   // Move next stack pointer into sp  
+	);
+}
+
+void exit_interrupt(void) {
+	/*
+	__asm volatile (
 		"MOV LR, #0xFFFFFFF9		\n"   // Set LR to 0xFFFFFFF9 directly
 		"BX LR                 	\n"   // Return from the interrupt
+	);
+*/
+	__asm volatile (
+		"LDR R1, [SP, #24]        \n" // Load LR from the stack (24 bytes offset for exception frame)
+		"MOV LR, R1               \n" // Restore LR
+		"BX LR                    \n" // Return from the interrupt
 	);
 }
 

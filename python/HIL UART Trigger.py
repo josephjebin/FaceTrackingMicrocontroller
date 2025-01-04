@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial(port="COM3", baudrate=9600, timeout=1)
+ser = serial.Serial(port="COM5", baudrate=9600, timeout=1)
 
 def send_scan_command():
     data = bytes([0x06])

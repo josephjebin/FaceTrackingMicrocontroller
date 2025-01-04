@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;..\..\qp\qtools\unity\src;.\tm4c\system;.\CMSIS\Core\Include</IncludePath>
+              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;..\..\qp\qtools\unity\src;.\tm4c\system;.\CMSIS\Core\Include;.\tm4c</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
