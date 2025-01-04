@@ -43,11 +43,13 @@ UNITY_DIR := ../framework/src
 # list of all source directories used by this project
 VPATH := ../unit \
 	../../src \
+	../../tm4c \
 	$(UNITY_DIR)
 
 # list of all include directories needed by this project
 INCLUDES := -I../unit \
 	-I../../src \
+	-I../../tm4c \
 	-I$(UNITY_DIR)
 
 #-----------------------------------------------------------------------------
