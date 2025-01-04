@@ -39,18 +39,23 @@
 # project name:
 PROJECT := test
 UNITY_DIR := ../framework/src
+CMOCK_DIR := C:\Users\josep\cmock\src
 
 # list of all source directories used by this project
 VPATH := ../unit \
+	../unit/mocks \
 	../../src \
 	../../tm4c \
-	$(UNITY_DIR)
+	$(UNITY_DIR) \
+	$(CMOCK_DIR)
 
 # list of all include directories needed by this project
 INCLUDES := -I../unit \
+	-I../unit/mocks \
 	-I../../src \
 	-I../../tm4c \
-	-I$(UNITY_DIR)
+	-I$(UNITY_DIR) \
+	-I$(CMOCK_DIR)
 
 #-----------------------------------------------------------------------------
 # project files:
@@ -58,7 +63,10 @@ INCLUDES := -I../unit \
 
 # C source files...
 C_SRCS := cyber_minion_unit_tests.c \
-	unity.c 
+	cyber_minion.c \
+	unity.c \
+	Mocktm4c_bsp.c \
+	cmock.c 
 
 # C++ source files...
 CPP_SRCS :=

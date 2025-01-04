@@ -18,5 +18,6 @@ void UART0_and_servos_init(void);
 uint8_t get_UART0_interrupt_data(void); 
 void set_PWM0_generator0_CMPA(unsigned short); 
 void set_PWM0_generator1_CMPA(unsigned short); 
+void set_sp_and_jump(uint32_t * volatile); 
 
 #endif

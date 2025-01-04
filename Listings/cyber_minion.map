@@ -59,11 +59,16 @@ Section Cross References
     cyber_minion_unit_tests.o(.ARM.exidx.text.tearDown) refers to cyber_minion_unit_tests.o(.text.tearDown) for [Anonymous Symbol]
     cyber_minion_unit_tests.o(.text.test_sanity) refers to unity.o(.text.UnityAssertEqualNumber) for UnityAssertEqualNumber
     cyber_minion_unit_tests.o(.ARM.exidx.text.test_sanity) refers to cyber_minion_unit_tests.o(.text.test_sanity) for [Anonymous Symbol]
+    cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) refers to cyber_minion.o(.data.compare_x) for compare_x
+    cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) refers to cyber_minion.o(.data.compare_y) for compare_y
+    cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) refers to unity.o(.text.UnityAssertEqualNumber) for UnityAssertEqualNumber
+    cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) refers to cyber_minion.o(.text.sleep_position) for sleep_position
     cyber_minion_unit_tests.o(.ARM.exidx.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) refers to cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) for [Anonymous Symbol]
     cyber_minion_unit_tests.o(.text.main) refers to cyber_minion_unit_tests.o(.rodata.str1.1) for .L.str
     cyber_minion_unit_tests.o(.text.main) refers to unity.o(.text.UnityBegin) for UnityBegin
     cyber_minion_unit_tests.o(.text.main) refers to cyber_minion_unit_tests.o(.text.test_sanity) for test_sanity
     cyber_minion_unit_tests.o(.text.main) refers to unity.o(.text.UnityDefaultTestRun) for UnityDefaultTestRun
+    cyber_minion_unit_tests.o(.text.main) refers to cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo) for test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo
     cyber_minion_unit_tests.o(.text.main) refers to unity.o(.text.UnityEnd) for UnityEnd
     cyber_minion_unit_tests.o(.ARM.exidx.text.main) refers to cyber_minion_unit_tests.o(.text.main) for [Anonymous Symbol]
     unity.o(.text.UnityPrint) refers to unity.o(.text.UnityPrintChar) for UnityPrintChar
@@ -922,7 +927,6 @@ Removing Unused input sections from the image.
     Removing cyber_minion_unit_tests.o(.ARM.exidx.text.setUp), (8 bytes).
     Removing cyber_minion_unit_tests.o(.ARM.exidx.text.tearDown), (8 bytes).
     Removing cyber_minion_unit_tests.o(.ARM.exidx.text.test_sanity), (8 bytes).
-    Removing cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo), (2 bytes).
     Removing cyber_minion_unit_tests.o(.ARM.exidx.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo), (8 bytes).
     Removing cyber_minion_unit_tests.o(.ARM.exidx.text.main), (8 bytes).
     Removing cyber_minion_unit_tests.o(.ARM.use_no_argv), (4 bytes).
@@ -1097,7 +1101,7 @@ Removing Unused input sections from the image.
     Removing cmock.o(.data.CMockStringExpNULL), (4 bytes).
     Removing cmock.o(.data.CMock_Guts_BufferSize), (4 bytes).
 
-192 unused section(s) (total 11109 bytes) removed from the image.
+191 unused section(s) (total 11107 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1359,43 +1363,45 @@ Image Symbol Table
     [Anonymous Symbol]                       0x00001b14   Section        0  mocktm4c_bsp.o(.text.delay_10ms)
     [Anonymous Symbol]                       0x00001bc8   Section        0  mocktm4c_bsp.o(.text.get_UART0_interrupt_data)
     [Anonymous Symbol]                       0x00001c40   Section        0  cyber_minion_unit_tests.o(.text.main)
-    [Anonymous Symbol]                       0x00001c74   Section        0  cyber_minion.o(.text.main_loop)
-    [Anonymous Symbol]                       0x00001cc4   Section        0  cyber_minion.o(.text.scan)
-    [Anonymous Symbol]                       0x00001da0   Section        0  cyber_minion_unit_tests.o(.text.setUp)
-    [Anonymous Symbol]                       0x00001da4   Section        0  mocktm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
-    [Anonymous Symbol]                       0x00001e5c   Section        0  mocktm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
-    [Anonymous Symbol]                       0x00001f14   Section        0  cyber_minion.o(.text.set_compare_x)
-    [Anonymous Symbol]                       0x00001f7c   Section        0  cyber_minion.o(.text.set_compare_y)
-    [Anonymous Symbol]                       0x00001fe4   Section        0  cyber_minion.o(.text.sleep_position)
-    [Anonymous Symbol]                       0x00001ff8   Section        0  cyber_minion_unit_tests.o(.text.tearDown)
-    [Anonymous Symbol]                       0x00001ffc   Section        0  cyber_minion_unit_tests.o(.text.test_sanity)
-    i.fputc                                  0x00002016   Section        0  fputc.o(i.fputc)
-    .constdata                               0x00002032   Section        4  sys_io_names.o(.constdata)
-    .constdata                               0x00002036   Section        4  sys_io_names.o(.constdata)
-    .constdata                               0x0000203a   Section        4  sys_io_names.o(.constdata)
-    UnityStrBreaker                          0x0000203e   Data          24  unity.o(.rodata.UnityStrBreaker)
-    [Anonymous Symbol]                       0x0000203e   Section        0  unity.o(.rodata.UnityStrBreaker)
-    UnityStrDetail1Name                      0x00002056   Data          10  unity.o(.rodata.UnityStrDetail1Name)
-    [Anonymous Symbol]                       0x00002056   Section        0  unity.o(.rodata.UnityStrDetail1Name)
-    UnityStrDetail2Name                      0x00002060   Data          11  unity.o(.rodata.UnityStrDetail2Name)
-    [Anonymous Symbol]                       0x00002060   Section        0  unity.o(.rodata.UnityStrDetail2Name)
-    UnityStrExpected                         0x0000206b   Data          11  unity.o(.rodata.UnityStrExpected)
-    [Anonymous Symbol]                       0x0000206b   Section        0  unity.o(.rodata.UnityStrExpected)
-    UnityStrResultsFailures                  0x00002083   Data          11  unity.o(.rodata.UnityStrResultsFailures)
-    [Anonymous Symbol]                       0x00002083   Section        0  unity.o(.rodata.UnityStrResultsFailures)
-    UnityStrResultsIgnored                   0x0000208e   Data          10  unity.o(.rodata.UnityStrResultsIgnored)
-    [Anonymous Symbol]                       0x0000208e   Section        0  unity.o(.rodata.UnityStrResultsIgnored)
-    UnityStrResultsTests                     0x00002098   Data           8  unity.o(.rodata.UnityStrResultsTests)
-    [Anonymous Symbol]                       0x00002098   Section        0  unity.o(.rodata.UnityStrResultsTests)
-    UnityStrSpacer                           0x000020a0   Data           3  unity.o(.rodata.UnityStrSpacer)
-    [Anonymous Symbol]                       0x000020a0   Section        0  unity.o(.rodata.UnityStrSpacer)
-    UnityStrWas                              0x000020a3   Data           6  unity.o(.rodata.UnityStrWas)
-    [Anonymous Symbol]                       0x000020a3   Section        0  unity.o(.rodata.UnityStrWas)
-    .L.str                                   0x000020a9   Data          36  cyber_minion_unit_tests.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000020a9   Section        0  cyber_minion_unit_tests.o(.rodata.str1.1)
-    .L.str.1                                 0x000020cd   Data          12  cyber_minion_unit_tests.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000020d9   Section        0  mocktm4c_bsp.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x00002166   Section        0  cmock.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001c88   Section        0  cyber_minion.o(.text.main_loop)
+    [Anonymous Symbol]                       0x00001cd8   Section        0  cyber_minion.o(.text.scan)
+    [Anonymous Symbol]                       0x00001db4   Section        0  cyber_minion_unit_tests.o(.text.setUp)
+    [Anonymous Symbol]                       0x00001db8   Section        0  mocktm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
+    [Anonymous Symbol]                       0x00001e70   Section        0  mocktm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
+    [Anonymous Symbol]                       0x00001f28   Section        0  cyber_minion.o(.text.set_compare_x)
+    [Anonymous Symbol]                       0x00001f90   Section        0  cyber_minion.o(.text.set_compare_y)
+    [Anonymous Symbol]                       0x00001ff8   Section        0  cyber_minion.o(.text.sleep_position)
+    [Anonymous Symbol]                       0x0000200c   Section        0  cyber_minion_unit_tests.o(.text.tearDown)
+    [Anonymous Symbol]                       0x00002010   Section        0  cyber_minion_unit_tests.o(.text.test_sanity)
+    [Anonymous Symbol]                       0x0000202c   Section        0  cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo)
+    i.fputc                                  0x000020ac   Section        0  fputc.o(i.fputc)
+    .constdata                               0x000020c8   Section        4  sys_io_names.o(.constdata)
+    .constdata                               0x000020cc   Section        4  sys_io_names.o(.constdata)
+    .constdata                               0x000020d0   Section        4  sys_io_names.o(.constdata)
+    UnityStrBreaker                          0x000020d4   Data          24  unity.o(.rodata.UnityStrBreaker)
+    [Anonymous Symbol]                       0x000020d4   Section        0  unity.o(.rodata.UnityStrBreaker)
+    UnityStrDetail1Name                      0x000020ec   Data          10  unity.o(.rodata.UnityStrDetail1Name)
+    [Anonymous Symbol]                       0x000020ec   Section        0  unity.o(.rodata.UnityStrDetail1Name)
+    UnityStrDetail2Name                      0x000020f6   Data          11  unity.o(.rodata.UnityStrDetail2Name)
+    [Anonymous Symbol]                       0x000020f6   Section        0  unity.o(.rodata.UnityStrDetail2Name)
+    UnityStrExpected                         0x00002101   Data          11  unity.o(.rodata.UnityStrExpected)
+    [Anonymous Symbol]                       0x00002101   Section        0  unity.o(.rodata.UnityStrExpected)
+    UnityStrResultsFailures                  0x00002119   Data          11  unity.o(.rodata.UnityStrResultsFailures)
+    [Anonymous Symbol]                       0x00002119   Section        0  unity.o(.rodata.UnityStrResultsFailures)
+    UnityStrResultsIgnored                   0x00002124   Data          10  unity.o(.rodata.UnityStrResultsIgnored)
+    [Anonymous Symbol]                       0x00002124   Section        0  unity.o(.rodata.UnityStrResultsIgnored)
+    UnityStrResultsTests                     0x0000212e   Data           8  unity.o(.rodata.UnityStrResultsTests)
+    [Anonymous Symbol]                       0x0000212e   Section        0  unity.o(.rodata.UnityStrResultsTests)
+    UnityStrSpacer                           0x00002136   Data           3  unity.o(.rodata.UnityStrSpacer)
+    [Anonymous Symbol]                       0x00002136   Section        0  unity.o(.rodata.UnityStrSpacer)
+    UnityStrWas                              0x00002139   Data           6  unity.o(.rodata.UnityStrWas)
+    [Anonymous Symbol]                       0x00002139   Section        0  unity.o(.rodata.UnityStrWas)
+    .L.str                                   0x0000213f   Data          36  cyber_minion_unit_tests.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0000213f   Section        0  cyber_minion_unit_tests.o(.rodata.str1.1)
+    .L.str.2                                 0x00002163   Data          70  cyber_minion_unit_tests.o(.rodata.str1.1)
+    .L.str.1                                 0x000021a9   Data          12  cyber_minion_unit_tests.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x000021b5   Section        0  mocktm4c_bsp.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00002242   Section        0  cmock.o(.rodata.str1.1)
     .data                                    0x20000000   Section        4  stdio_streams.o(.data)
     .data                                    0x20000004   Section        4  stdio_streams.o(.data)
     .data                                    0x20000008   Section        4  stdio_streams.o(.data)
@@ -1726,26 +1732,27 @@ Image Symbol Table
     UnityPrintNumberUnsigned                 0x00001a25   Thumb Code   114  unity.o(.text.UnityPrintNumberUnsigned)
     delay_10ms                               0x00001b15   Thumb Code   178  mocktm4c_bsp.o(.text.delay_10ms)
     get_UART0_interrupt_data                 0x00001bc9   Thumb Code   120  mocktm4c_bsp.o(.text.get_UART0_interrupt_data)
-    main                                     0x00001c41   Thumb Code    50  cyber_minion_unit_tests.o(.text.main)
-    main_loop                                0x00001c75   Thumb Code    80  cyber_minion.o(.text.main_loop)
-    scan                                     0x00001cc5   Thumb Code   218  cyber_minion.o(.text.scan)
-    setUp                                    0x00001da1   Thumb Code     2  cyber_minion_unit_tests.o(.text.setUp)
-    set_PWM0_generator0_CMPA                 0x00001da5   Thumb Code   182  mocktm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
-    set_PWM0_generator1_CMPA                 0x00001e5d   Thumb Code   182  mocktm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
-    set_compare_x                            0x00001f15   Thumb Code   104  cyber_minion.o(.text.set_compare_x)
-    set_compare_y                            0x00001f7d   Thumb Code   104  cyber_minion.o(.text.set_compare_y)
-    sleep_position                           0x00001fe5   Thumb Code    20  cyber_minion.o(.text.sleep_position)
-    tearDown                                 0x00001ff9   Thumb Code     2  cyber_minion_unit_tests.o(.text.tearDown)
-    test_sanity                              0x00001ffd   Thumb Code    26  cyber_minion_unit_tests.o(.text.test_sanity)
-    fputc                                    0x00002017   Thumb Code    28  fputc.o(i.fputc)
-    __stdin_name                             0x00002032   Data           4  sys_io_names.o(.constdata)
-    __stdout_name                            0x00002036   Data           4  sys_io_names.o(.constdata)
-    __stderr_name                            0x0000203a   Data           4  sys_io_names.o(.constdata)
-    UnityStrFail                             0x00002076   Data           5  unity.o(.rodata.UnityStrFail)
-    UnityStrOk                               0x0000207b   Data           3  unity.o(.rodata.UnityStrOk)
-    UnityStrPass                             0x0000207e   Data           5  unity.o(.rodata.UnityStrPass)
-    Region$$Table$$Base                      0x000022c0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000022e0   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00001c41   Thumb Code    72  cyber_minion_unit_tests.o(.text.main)
+    main_loop                                0x00001c89   Thumb Code    80  cyber_minion.o(.text.main_loop)
+    scan                                     0x00001cd9   Thumb Code   218  cyber_minion.o(.text.scan)
+    setUp                                    0x00001db5   Thumb Code     2  cyber_minion_unit_tests.o(.text.setUp)
+    set_PWM0_generator0_CMPA                 0x00001db9   Thumb Code   182  mocktm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
+    set_PWM0_generator1_CMPA                 0x00001e71   Thumb Code   182  mocktm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
+    set_compare_x                            0x00001f29   Thumb Code   104  cyber_minion.o(.text.set_compare_x)
+    set_compare_y                            0x00001f91   Thumb Code   104  cyber_minion.o(.text.set_compare_y)
+    sleep_position                           0x00001ff9   Thumb Code    20  cyber_minion.o(.text.sleep_position)
+    tearDown                                 0x0000200d   Thumb Code     2  cyber_minion_unit_tests.o(.text.tearDown)
+    test_sanity                              0x00002011   Thumb Code    26  cyber_minion_unit_tests.o(.text.test_sanity)
+    test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo 0x0000202d   Thumb Code   128  cyber_minion_unit_tests.o(.text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo)
+    fputc                                    0x000020ad   Thumb Code    28  fputc.o(i.fputc)
+    __stdin_name                             0x000020c8   Data           4  sys_io_names.o(.constdata)
+    __stdout_name                            0x000020cc   Data           4  sys_io_names.o(.constdata)
+    __stderr_name                            0x000020d0   Data           4  sys_io_names.o(.constdata)
+    UnityStrFail                             0x0000210c   Data           5  unity.o(.rodata.UnityStrFail)
+    UnityStrOk                               0x00002111   Data           3  unity.o(.rodata.UnityStrOk)
+    UnityStrPass                             0x00002114   Data           5  unity.o(.rodata.UnityStrPass)
+    Region$$Table$$Base                      0x0000239c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000023bc   Number         0  anon$$obj.o(Region$$Table)
     __aeabi_stdin                            0x20000000   Data           4  stdio_streams.o(.data)
     __aeabi_stdout                           0x20000004   Data           4  stdio_streams.o(.data)
     __aeabi_stderr                           0x20000008   Data           4  stdio_streams.o(.data)
@@ -1774,9 +1781,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000345
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x0000231c, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000023f8, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000022e0, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000023bc, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1900,69 +1907,70 @@ Memory Map of the image
     0x00001b14   0x00001b14   0x000000b2   Code   RO          220    .text.delay_10ms    mocktm4c_bsp.o
     0x00001bc6   0x00001bc6   0x00000002   PAD
     0x00001bc8   0x00001bc8   0x00000078   Code   RO          230    .text.get_UART0_interrupt_data  mocktm4c_bsp.o
-    0x00001c40   0x00001c40   0x00000032   Code   RO           60    .text.main          cyber_minion_unit_tests.o
-    0x00001c72   0x00001c72   0x00000002   PAD
-    0x00001c74   0x00001c74   0x00000050   Code   RO            2    .text.main_loop     cyber_minion.o
-    0x00001cc4   0x00001cc4   0x000000da   Code   RO            4    .text.scan          cyber_minion.o
-    0x00001d9e   0x00001d9e   0x00000002   PAD
-    0x00001da0   0x00001da0   0x00000002   Code   RO           52    .text.setUp         cyber_minion_unit_tests.o
-    0x00001da2   0x00001da2   0x00000002   PAD
-    0x00001da4   0x00001da4   0x000000b6   Code   RO          234    .text.set_PWM0_generator0_CMPA  mocktm4c_bsp.o
-    0x00001e5a   0x00001e5a   0x00000002   PAD
-    0x00001e5c   0x00001e5c   0x000000b6   Code   RO          240    .text.set_PWM0_generator1_CMPA  mocktm4c_bsp.o
-    0x00001f12   0x00001f12   0x00000002   PAD
-    0x00001f14   0x00001f14   0x00000068   Code   RO           12    .text.set_compare_x  cyber_minion.o
-    0x00001f7c   0x00001f7c   0x00000068   Code   RO           10    .text.set_compare_y  cyber_minion.o
-    0x00001fe4   0x00001fe4   0x00000014   Code   RO            6    .text.sleep_position  cyber_minion.o
-    0x00001ff8   0x00001ff8   0x00000002   Code   RO           54    .text.tearDown      cyber_minion_unit_tests.o
-    0x00001ffa   0x00001ffa   0x00000002   PAD
-    0x00001ffc   0x00001ffc   0x0000001a   Code   RO           56    .text.test_sanity   cyber_minion_unit_tests.o
-    0x00002016   0x00002016   0x0000001c   Code   RO          349    i.fputc             c_w.l(fputc.o)
-    0x00002032   0x00002032   0x00000004   Data   RO          371    .constdata          c_w.l(sys_io_names.o)
-    0x00002036   0x00002036   0x00000004   Data   RO          372    .constdata          c_w.l(sys_io_names.o)
-    0x0000203a   0x0000203a   0x00000004   Data   RO          373    .constdata          c_w.l(sys_io_names.o)
-    0x0000203e   0x0000203e   0x00000018   Data   RO          192    .rodata.UnityStrBreaker  unity.o
-    0x00002056   0x00002056   0x0000000a   Data   RO          189    .rodata.UnityStrDetail1Name  unity.o
-    0x00002060   0x00002060   0x0000000b   Data   RO          190    .rodata.UnityStrDetail2Name  unity.o
-    0x0000206b   0x0000206b   0x0000000b   Data   RO          170    .rodata.UnityStrExpected  unity.o
-    0x00002076   0x00002076   0x00000005   Data   RO          159    .rodata.UnityStrFail  unity.o
-    0x0000207b   0x0000207b   0x00000003   Data   RO          157    .rodata.UnityStrOk  unity.o
-    0x0000207e   0x0000207e   0x00000005   Data   RO          158    .rodata.UnityStrPass  unity.o
-    0x00002083   0x00002083   0x0000000b   Data   RO          194    .rodata.UnityStrResultsFailures  unity.o
-    0x0000208e   0x0000208e   0x0000000a   Data   RO          195    .rodata.UnityStrResultsIgnored  unity.o
-    0x00002098   0x00002098   0x00000008   Data   RO          193    .rodata.UnityStrResultsTests  unity.o
-    0x000020a0   0x000020a0   0x00000003   Data   RO          191    .rodata.UnityStrSpacer  unity.o
-    0x000020a3   0x000020a3   0x00000006   Data   RO          171    .rodata.UnityStrWas  unity.o
-    0x000020a9   0x000020a9   0x00000030   Data   RO           62    .rodata.str1.1      cyber_minion_unit_tests.o
-    0x000020d9   0x000020d9   0x0000008d   Data   RO          255    .rodata.str1.1      mocktm4c_bsp.o
-    0x00002166   0x00002166   0x00000159   Data   RO          283    .rodata.str1.1      cmock.o
-    0x000022bf   0x000022bf   0x00000001   PAD
-    0x000022c0   0x000022c0   0x00000020   Data   RO          697    Region$$Table       anon$$obj.o
+    0x00001c40   0x00001c40   0x00000048   Code   RO           60    .text.main          cyber_minion_unit_tests.o
+    0x00001c88   0x00001c88   0x00000050   Code   RO            2    .text.main_loop     cyber_minion.o
+    0x00001cd8   0x00001cd8   0x000000da   Code   RO            4    .text.scan          cyber_minion.o
+    0x00001db2   0x00001db2   0x00000002   PAD
+    0x00001db4   0x00001db4   0x00000002   Code   RO           52    .text.setUp         cyber_minion_unit_tests.o
+    0x00001db6   0x00001db6   0x00000002   PAD
+    0x00001db8   0x00001db8   0x000000b6   Code   RO          234    .text.set_PWM0_generator0_CMPA  mocktm4c_bsp.o
+    0x00001e6e   0x00001e6e   0x00000002   PAD
+    0x00001e70   0x00001e70   0x000000b6   Code   RO          240    .text.set_PWM0_generator1_CMPA  mocktm4c_bsp.o
+    0x00001f26   0x00001f26   0x00000002   PAD
+    0x00001f28   0x00001f28   0x00000068   Code   RO           12    .text.set_compare_x  cyber_minion.o
+    0x00001f90   0x00001f90   0x00000068   Code   RO           10    .text.set_compare_y  cyber_minion.o
+    0x00001ff8   0x00001ff8   0x00000014   Code   RO            6    .text.sleep_position  cyber_minion.o
+    0x0000200c   0x0000200c   0x00000002   Code   RO           54    .text.tearDown      cyber_minion_unit_tests.o
+    0x0000200e   0x0000200e   0x00000002   PAD
+    0x00002010   0x00002010   0x0000001a   Code   RO           56    .text.test_sanity   cyber_minion_unit_tests.o
+    0x0000202a   0x0000202a   0x00000002   PAD
+    0x0000202c   0x0000202c   0x00000080   Code   RO           58    .text.test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo  cyber_minion_unit_tests.o
+    0x000020ac   0x000020ac   0x0000001c   Code   RO          349    i.fputc             c_w.l(fputc.o)
+    0x000020c8   0x000020c8   0x00000004   Data   RO          371    .constdata          c_w.l(sys_io_names.o)
+    0x000020cc   0x000020cc   0x00000004   Data   RO          372    .constdata          c_w.l(sys_io_names.o)
+    0x000020d0   0x000020d0   0x00000004   Data   RO          373    .constdata          c_w.l(sys_io_names.o)
+    0x000020d4   0x000020d4   0x00000018   Data   RO          192    .rodata.UnityStrBreaker  unity.o
+    0x000020ec   0x000020ec   0x0000000a   Data   RO          189    .rodata.UnityStrDetail1Name  unity.o
+    0x000020f6   0x000020f6   0x0000000b   Data   RO          190    .rodata.UnityStrDetail2Name  unity.o
+    0x00002101   0x00002101   0x0000000b   Data   RO          170    .rodata.UnityStrExpected  unity.o
+    0x0000210c   0x0000210c   0x00000005   Data   RO          159    .rodata.UnityStrFail  unity.o
+    0x00002111   0x00002111   0x00000003   Data   RO          157    .rodata.UnityStrOk  unity.o
+    0x00002114   0x00002114   0x00000005   Data   RO          158    .rodata.UnityStrPass  unity.o
+    0x00002119   0x00002119   0x0000000b   Data   RO          194    .rodata.UnityStrResultsFailures  unity.o
+    0x00002124   0x00002124   0x0000000a   Data   RO          195    .rodata.UnityStrResultsIgnored  unity.o
+    0x0000212e   0x0000212e   0x00000008   Data   RO          193    .rodata.UnityStrResultsTests  unity.o
+    0x00002136   0x00002136   0x00000003   Data   RO          191    .rodata.UnityStrSpacer  unity.o
+    0x00002139   0x00002139   0x00000006   Data   RO          171    .rodata.UnityStrWas  unity.o
+    0x0000213f   0x0000213f   0x00000076   Data   RO           62    .rodata.str1.1      cyber_minion_unit_tests.o
+    0x000021b5   0x000021b5   0x0000008d   Data   RO          255    .rodata.str1.1      mocktm4c_bsp.o
+    0x00002242   0x00002242   0x00000159   Data   RO          283    .rodata.str1.1      cmock.o
+    0x0000239b   0x0000239b   0x00000001   PAD
+    0x0000239c   0x0000239c   0x00000020   Data   RO          697    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x000022e0, Size: 0x0000003c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x000023bc, Size: 0x0000003c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x000022e0   0x00000004   Data   RW          312    .data               c_w.l(stdio_streams.o)
-    0x20000004   0x000022e4   0x00000004   Data   RW          313    .data               c_w.l(stdio_streams.o)
-    0x20000008   0x000022e8   0x00000004   Data   RW          314    .data               c_w.l(stdio_streams.o)
-    0x2000000c   0x000022ec   0x00000004   Data   RW          285    .data.CMockStringCalledMore  cmock.o
-    0x20000010   0x000022f0   0x00000004   Data   RW          294    .data.CMockStringMismatch  cmock.o
-    0x20000014   0x000022f4   0x00000004   Data   RW          254    .data.CMockString_cmock_arg1  mocktm4c_bsp.o
-    0x20000018   0x000022f8   0x00000004   Data   RW          249    .data.CMockString_delay_10ms  mocktm4c_bsp.o
-    0x2000001c   0x000022fc   0x00000004   Data   RW          251    .data.CMockString_get_UART0_interrupt_data  mocktm4c_bsp.o
-    0x20000020   0x00002300   0x00000004   Data   RW          252    .data.CMockString_set_PWM0_generator0_CMPA  mocktm4c_bsp.o
-    0x20000024   0x00002304   0x00000004   Data   RW          253    .data.CMockString_set_PWM0_generator1_CMPA  mocktm4c_bsp.o
-    0x20000028   0x00002308   0x00000004   Data   RW          297    .data.CMock_Guts_Buffer  cmock.o
-    0x2000002c   0x0000230c   0x00000004   Data   RW          296    .data.CMock_Guts_FreePtr  cmock.o
-    0x20000030   0x00002310   0x00000002   Data   RW           15    .data.compare_x     cyber_minion.o
-    0x20000032   0x00002312   0x00000002   Data   RW           16    .data.compare_y     cyber_minion.o
-    0x20000034   0x00002314   0x00000004   Data   RW           18    .data.sp1           cyber_minion.o
-    0x20000038   0x00002318   0x00000004   Data   RW           20    .data.sp2           cyber_minion.o
+    0x20000000   0x000023bc   0x00000004   Data   RW          312    .data               c_w.l(stdio_streams.o)
+    0x20000004   0x000023c0   0x00000004   Data   RW          313    .data               c_w.l(stdio_streams.o)
+    0x20000008   0x000023c4   0x00000004   Data   RW          314    .data               c_w.l(stdio_streams.o)
+    0x2000000c   0x000023c8   0x00000004   Data   RW          285    .data.CMockStringCalledMore  cmock.o
+    0x20000010   0x000023cc   0x00000004   Data   RW          294    .data.CMockStringMismatch  cmock.o
+    0x20000014   0x000023d0   0x00000004   Data   RW          254    .data.CMockString_cmock_arg1  mocktm4c_bsp.o
+    0x20000018   0x000023d4   0x00000004   Data   RW          249    .data.CMockString_delay_10ms  mocktm4c_bsp.o
+    0x2000001c   0x000023d8   0x00000004   Data   RW          251    .data.CMockString_get_UART0_interrupt_data  mocktm4c_bsp.o
+    0x20000020   0x000023dc   0x00000004   Data   RW          252    .data.CMockString_set_PWM0_generator0_CMPA  mocktm4c_bsp.o
+    0x20000024   0x000023e0   0x00000004   Data   RW          253    .data.CMockString_set_PWM0_generator1_CMPA  mocktm4c_bsp.o
+    0x20000028   0x000023e4   0x00000004   Data   RW          297    .data.CMock_Guts_Buffer  cmock.o
+    0x2000002c   0x000023e8   0x00000004   Data   RW          296    .data.CMock_Guts_FreePtr  cmock.o
+    0x20000030   0x000023ec   0x00000002   Data   RW           15    .data.compare_x     cyber_minion.o
+    0x20000032   0x000023ee   0x00000002   Data   RW           16    .data.compare_y     cyber_minion.o
+    0x20000034   0x000023f0   0x00000004   Data   RW           18    .data.sp1           cyber_minion.o
+    0x20000038   0x000023f4   0x00000004   Data   RW           20    .data.sp2           cyber_minion.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000040, Load base: 0x0000231c, Size: 0x00008598, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000040, Load base: 0x000023f8, Size: 0x00008598, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1970,17 +1978,17 @@ Memory Map of the image
     0x20000094        -       0x00000054   Zero   RW          310    .bss                c_w.l(stdio_streams.o)
     0x200000e8        -       0x00000054   Zero   RW          311    .bss                c_w.l(stdio_streams.o)
     0x2000013c        -       0x00000060   Zero   RW          599    .bss                c_w.l(libspace.o)
-    0x2000019c   0x0000231c   0x00000004   PAD
+    0x2000019c   0x000023f8   0x00000004   PAD
     0x200001a0        -       0x00008008   Zero   RW          298    .bss.CMock_Guts_Space  cmock.o
     0x200081a8        -       0x0000001c   Zero   RW          246    .bss.Mock           mocktm4c_bsp.o
-    0x200081c4   0x0000231c   0x00000004   PAD
+    0x200081c4   0x000023f8   0x00000004   PAD
     0x200081c8        -       0x000000c8   Zero   RW          169    .bss.Unity          unity.o
     0x20008290        -       0x00000001   Zero   RW           14    .bss.current_state  cyber_minion.o
-    0x20008291   0x0000231c   0x00000003   PAD
+    0x20008291   0x000023f8   0x00000003   PAD
     0x20008294        -       0x000000a0   Zero   RW           17    .bss.stack1         cyber_minion.o
     0x20008334        -       0x000000a0   Zero   RW           19    .bss.stack2         cyber_minion.o
     0x200083d4        -       0x00000001   Zero   RW           21    .bss.using_stack1   cyber_minion.o
-    0x200083d5   0x0000231c   0x00000003   PAD
+    0x200083d5   0x000023f8   0x00000003   PAD
     0x200083d8        -       0x00000000   Zero   RW           29    HEAP                startup_tm4c123.o
     0x200083d8        -       0x00000200   Zero   RW           28    STACK               startup_tm4c123.o
 
@@ -1993,15 +2001,15 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        164          0        345         16      32776       3293   cmock.o
-      1206         24          0         12        322       2212   cyber_minion.o
-        80          0         48          0          0       1583   cyber_minion_unit_tests.o
+      1206         24          0         12        322       2211   cyber_minion.o
+       230          0        118          0          0       1684   cyber_minion_unit_tests.o
        662          0        141         20         28       7218   mocktm4c_bsp.o
        288         24        620          0        512       5416   startup_tm4c123.o
        252          0          0          0          0       6075   system_tm4c123gh6pm.o
       1884          0        107          0        200      17078   unity.o
 
     ----------------------------------------------------------------------
-      4562         48       1294         48      33848      42875   Object Totals
+      4712         48       1364         48      33848      42975   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         26          0          1          0         10          0   (incl. Padding)
 
@@ -2083,15 +2091,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      7622        232       1306         60      34200      44499   Grand Totals
-      7622        232       1306         60      34200      44499   ELF Image Totals
-      7622        232       1306         60          0          0   ROM Totals
+      7772        232       1376         60      34200      44599   Grand Totals
+      7772        232       1376         60      34200      44599   ELF Image Totals
+      7772        232       1376         60          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 8928 (   8.72kB)
+    Total RO  Size (Code + RO Data)                 9148 (   8.93kB)
     Total RW  Size (RW Data + ZI Data)             34260 (  33.46kB)
-    Total ROM Size (Code + RO Data + RW Data)       8988 (   8.78kB)
+    Total ROM Size (Code + RO Data + RW Data)       9208 (   8.99kB)
 
 ==============================================================================
 

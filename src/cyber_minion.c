@@ -5,17 +5,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define MINIMUM_COMPARE (unsigned short) 1249
-#define MIDDLE_COMPARE (unsigned short)1874 
-#define MAXIMUM_COMPARE (unsigned short) 2499
-// mg995 has a range of 120 degrees and COMPARE values range from 1250 to 2500. (2500 - 1250 = 1250)
-// 120 degrees / 1250 = .096 degrees per COMPARE increment 
-// (.096 degrees / COMPARE increment) * 10 = .96 degrees
-#define SMALL_COMPARE_INCREMENT (unsigned short) 10
-// (.096 degrees / COMPARE increment) * 100 = 9.6 degrees
-#define MEDIUM_COMPARE_INCREMENT (unsigned short) 100
-// (.096 degrees / COMPARE increment) * 200 = 19.2 degrees
-#define LARGE_COMPARE_INCREMENT (unsigned short) 200
 #define STACK_SIZE 40
 
 State current_state = WAITING;  
@@ -55,10 +44,6 @@ void main_loop(void) {
 }
 
 void UART0_Handler(void) {
-	__asm volatile (
-		"MOV R12, LR	\n"   // Save LR to r12
-	);
-	
 	//don't need to check receiver FIFO since UART handler is only triggered when FIFO has data
 	uint8_t data = get_UART0_interrupt_data(); 
 
@@ -132,6 +117,7 @@ void UART0_Handler(void) {
 		*(--sp2) = 0x00000001U; /* R1  */
 		*(--sp2) = 0x00000000U; /* R0  */
 		using_stack1 = false; 
+		set_sp_and_jump(sp2); 
 		__asm volatile (
 			"LDR r0, =sp2        	\n"   // Load the address of next_sp into r0
 		); 
@@ -160,8 +146,9 @@ void UART0_Handler(void) {
     "MOV sp, r0               \n"   // Move next stack pointer into sp
 	); 
 	
+	set_LR_to_thread_mode(); 
+	
 	__asm volatile (
-    "MOV LR, R12						\n"   // Restore LR from r12
     "BX LR                 	\n"   // Return from the interrupt
 	);
 }
