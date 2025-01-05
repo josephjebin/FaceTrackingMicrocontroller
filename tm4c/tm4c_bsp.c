@@ -15,11 +15,19 @@ void set_PWM0_generator1_CMPA(unsigned short new_compare){
 }
 
 void set_sp(uint32_t * new_sp) {
+	// this method subtracts 4 from the original sp to store r0.
+	// it does this because our assembly overwrites r0. 
+	// after swapping in our new sp, the compiler attempts to revert 
+	// its subtraction from sp by adding back 4 bytes to sp at the end.
+	// we need our new_sp to take this into account.
+	// we get around this by using pointer arithmetic 
+	// and subtracting 1 32-bit int (or 4 bytes) from sp
+	new_sp--; 
 	__asm volatile (
-        "LDR r0, [%0]"   // Load the value at *new_sp
-        :                // No outputs
-        : "r"(new_sp)    // Input operand: address of new_sp
-        : "r0"           // Clobber list
+			"MOV r0, %0"   // Load the value at *new_sp
+			:                // No outputs
+			: "r"(new_sp)    // Input operand: address of new_sp
+			: "r0"           // Clobber list
     );
 	
 	__asm volatile (
@@ -28,12 +36,6 @@ void set_sp(uint32_t * new_sp) {
 }
 
 void exit_interrupt(void) {
-	/*
-	__asm volatile (
-		"MOV LR, #0xFFFFFFF9		\n"   // Set LR to 0xFFFFFFF9 directly
-		"BX LR                 	\n"   // Return from the interrupt
-	);
-*/
 	__asm volatile (
 		"LDR R1, [SP, #24]        \n" // Load LR from the stack (24 bytes offset for exception frame)
 		"MOV LR, R1               \n" // Restore LR

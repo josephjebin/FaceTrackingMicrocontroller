@@ -10,9 +10,11 @@ static const char* CMockString_SysTick_init = "SysTick_init";
 static const char* CMockString_UART0_and_servos_init = "UART0_and_servos_init";
 static const char* CMockString_cmock_arg1 = "cmock_arg1";
 static const char* CMockString_delay_10ms = "delay_10ms";
+static const char* CMockString_exit_interrupt = "exit_interrupt";
 static const char* CMockString_get_UART0_interrupt_data = "get_UART0_interrupt_data";
 static const char* CMockString_set_PWM0_generator0_CMPA = "set_PWM0_generator0_CMPA";
 static const char* CMockString_set_PWM0_generator1_CMPA = "set_PWM0_generator1_CMPA";
+static const char* CMockString_set_sp = "set_sp";
 
 typedef struct _CMOCK_PLL_init_CALL_INSTANCE
 {
@@ -60,6 +62,19 @@ typedef struct _CMOCK_set_PWM0_generator1_CMPA_CALL_INSTANCE
 
 } CMOCK_set_PWM0_generator1_CMPA_CALL_INSTANCE;
 
+typedef struct _CMOCK_set_sp_CALL_INSTANCE
+{
+  UNITY_LINE_TYPE LineNumber;
+  uint32_t* Expected_cmock_arg1;
+
+} CMOCK_set_sp_CALL_INSTANCE;
+
+typedef struct _CMOCK_exit_interrupt_CALL_INSTANCE
+{
+  UNITY_LINE_TYPE LineNumber;
+
+} CMOCK_exit_interrupt_CALL_INSTANCE;
+
 static struct Mocktm4c_bspInstance
 {
   CMOCK_MEM_INDEX_TYPE PLL_init_CallInstance;
@@ -69,6 +84,8 @@ static struct Mocktm4c_bspInstance
   CMOCK_MEM_INDEX_TYPE get_UART0_interrupt_data_CallInstance;
   CMOCK_MEM_INDEX_TYPE set_PWM0_generator0_CMPA_CallInstance;
   CMOCK_MEM_INDEX_TYPE set_PWM0_generator1_CMPA_CallInstance;
+  CMOCK_MEM_INDEX_TYPE set_sp_CallInstance;
+  CMOCK_MEM_INDEX_TYPE exit_interrupt_CallInstance;
 } Mock;
 
 
@@ -116,6 +133,18 @@ void Mocktm4c_bsp_Verify(void)
   if (CMOCK_GUTS_NONE != call_instance)
   {
     UNITY_SET_DETAIL(CMockString_set_PWM0_generator1_CMPA);
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
+  }
+  call_instance = Mock.set_sp_CallInstance;
+  if (CMOCK_GUTS_NONE != call_instance)
+  {
+    UNITY_SET_DETAIL(CMockString_set_sp);
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
+  }
+  call_instance = Mock.exit_interrupt_CallInstance;
+  if (CMOCK_GUTS_NONE != call_instance)
+  {
+    UNITY_SET_DETAIL(CMockString_exit_interrupt);
     UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
   }
 }
@@ -318,5 +347,63 @@ void set_PWM0_generator1_CMPA_CMockExpect(UNITY_LINE_TYPE cmock_line, unsigned s
   Mock.set_PWM0_generator1_CMPA_CallInstance = CMock_Guts_MemChain(Mock.set_PWM0_generator1_CMPA_CallInstance, cmock_guts_index);
   cmock_call_instance->LineNumber = cmock_line;
   CMockExpectParameters_set_PWM0_generator1_CMPA(cmock_call_instance, cmock_arg1);
+}
+
+void set_sp(uint32_t* cmock_arg1)
+{
+  UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
+  CMOCK_set_sp_CALL_INSTANCE* cmock_call_instance;
+  UNITY_SET_DETAIL(CMockString_set_sp);
+  cmock_call_instance = (CMOCK_set_sp_CALL_INSTANCE*)CMock_Guts_GetAddressFor(Mock.set_sp_CallInstance);
+  Mock.set_sp_CallInstance = CMock_Guts_MemNext(Mock.set_sp_CallInstance);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringCalledMore);
+  cmock_line = cmock_call_instance->LineNumber;
+  {
+    UNITY_SET_DETAILS(CMockString_set_sp,CMockString_cmock_arg1);
+    if (cmock_call_instance->Expected_cmock_arg1 == NULL)
+      { UNITY_TEST_ASSERT_NULL(cmock_arg1, cmock_line, CMockStringExpNULL); }
+    else
+      { UNITY_TEST_ASSERT_EQUAL_HEX32_ARRAY(cmock_call_instance->Expected_cmock_arg1, cmock_arg1, 1, cmock_line, CMockStringMismatch); }
+  }
+  UNITY_CLR_DETAILS();
+}
+
+void CMockExpectParameters_set_sp(CMOCK_set_sp_CALL_INSTANCE* cmock_call_instance, uint32_t* cmock_arg1);
+void CMockExpectParameters_set_sp(CMOCK_set_sp_CALL_INSTANCE* cmock_call_instance, uint32_t* cmock_arg1)
+{
+  cmock_call_instance->Expected_cmock_arg1 = cmock_arg1;
+}
+
+void set_sp_CMockExpect(UNITY_LINE_TYPE cmock_line, uint32_t* cmock_arg1)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_set_sp_CALL_INSTANCE));
+  CMOCK_set_sp_CALL_INSTANCE* cmock_call_instance = (CMOCK_set_sp_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.set_sp_CallInstance = CMock_Guts_MemChain(Mock.set_sp_CallInstance, cmock_guts_index);
+  cmock_call_instance->LineNumber = cmock_line;
+  CMockExpectParameters_set_sp(cmock_call_instance, cmock_arg1);
+}
+
+void exit_interrupt(void)
+{
+  UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
+  CMOCK_exit_interrupt_CALL_INSTANCE* cmock_call_instance;
+  UNITY_SET_DETAIL(CMockString_exit_interrupt);
+  cmock_call_instance = (CMOCK_exit_interrupt_CALL_INSTANCE*)CMock_Guts_GetAddressFor(Mock.exit_interrupt_CallInstance);
+  Mock.exit_interrupt_CallInstance = CMock_Guts_MemNext(Mock.exit_interrupt_CallInstance);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringCalledMore);
+  cmock_line = cmock_call_instance->LineNumber;
+  UNITY_CLR_DETAILS();
+}
+
+void exit_interrupt_CMockExpect(UNITY_LINE_TYPE cmock_line)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_exit_interrupt_CALL_INSTANCE));
+  CMOCK_exit_interrupt_CALL_INSTANCE* cmock_call_instance = (CMOCK_exit_interrupt_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.exit_interrupt_CallInstance = CMock_Guts_MemChain(Mock.exit_interrupt_CallInstance, cmock_guts_index);
+  cmock_call_instance->LineNumber = cmock_line;
 }
 
