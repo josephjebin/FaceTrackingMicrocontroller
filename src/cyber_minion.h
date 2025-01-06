@@ -14,7 +14,6 @@
 
 void DisableInterrupts(void); 
 void EnableInterrupts(void);  
-void WaitForInterrupt(void);  // low power mode
 
 void main_loop(void) __attribute__((aligned(4)));
 void UART0_Handler(void);

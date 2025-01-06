@@ -35,6 +35,10 @@ void set_sp(uint32_t * new_sp) {
 	);
 }
 
+void wait_for_interrupt(void) {
+	__asm volatile ("WFI"); 
+}
+
 void exit_interrupt(void) {
 	__asm volatile (
 		"LDR R1, [SP, #24]        \n" // Load LR from the stack (24 bytes offset for exception frame)

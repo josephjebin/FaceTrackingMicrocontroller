@@ -52,6 +52,9 @@ void set_PWM0_generator1_CMPA_CMockExpect(UNITY_LINE_TYPE cmock_line, unsigned s
 #define set_sp_ExpectAndReturn(cmock_arg1, cmock_retval) TEST_FAIL_MESSAGE("set_sp requires _Expect (not AndReturn)");
 #define set_sp_Expect(cmock_arg1) set_sp_CMockExpect(__LINE__, cmock_arg1)
 void set_sp_CMockExpect(UNITY_LINE_TYPE cmock_line, uint32_t* cmock_arg1);
+#define wait_for_interrupt_ExpectAndReturn(cmock_retval) TEST_FAIL_MESSAGE("wait_for_interrupt requires _Expect (not AndReturn)");
+#define wait_for_interrupt_Expect() wait_for_interrupt_CMockExpect(__LINE__)
+void wait_for_interrupt_CMockExpect(UNITY_LINE_TYPE cmock_line);
 #define exit_interrupt_ExpectAndReturn(cmock_retval) TEST_FAIL_MESSAGE("exit_interrupt requires _Expect (not AndReturn)");
 #define exit_interrupt_Expect() exit_interrupt_CMockExpect(__LINE__)
 void exit_interrupt_CMockExpect(UNITY_LINE_TYPE cmock_line);

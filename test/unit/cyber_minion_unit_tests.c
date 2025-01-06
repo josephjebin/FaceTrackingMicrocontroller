@@ -17,11 +17,13 @@ void test_sanity(void) {
 void test_sleep_position_centersHorizontalServo_and_maximizesVerticalServo(void) {
 	compare_x = MINIMUM_COMPARE; 
 	compare_y = MINIMUM_COMPARE; 
-	
+	set_PWM0_generator0_CMPA_Expect(MIDDLE_COMPARE); 
+	set_PWM0_generator1_CMPA_Expect(MAXIMUM_COMPARE); 
 	TEST_ASSERT_EQUAL_UINT16(compare_x, MINIMUM_COMPARE); 
 	TEST_ASSERT_EQUAL_UINT16(compare_y, MINIMUM_COMPARE); 
 	
 	sleep_position(); 
+	
 	TEST_ASSERT_EQUAL_UINT16(compare_x, MIDDLE_COMPARE); 
 	TEST_ASSERT_EQUAL_UINT16(compare_y, MAXIMUM_COMPARE); 
 }

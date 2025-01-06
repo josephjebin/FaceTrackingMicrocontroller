@@ -28,7 +28,7 @@ void main_loop(void) {
 	while (1) {
 		switch(current_state) {
 			case WAITING: 
-				WaitForInterrupt();
+				wait_for_interrupt(); 
 				break; 
 			case SCANNING: 
 				scan(); 

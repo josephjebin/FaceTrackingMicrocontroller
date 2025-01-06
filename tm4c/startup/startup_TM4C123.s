@@ -937,32 +937,6 @@ PWM1_FAULT_Handler\
 
 				AREA    |.text|, CODE, READONLY
 
-				EXPORT 	DisableInterrupts
-				EXPORT  EnableInterrupts
-				EXPORT  WaitForInterrupt
-;*********** EnableInterrupts ***************
-; Enable global interrupts
-; inputs:  none
-; outputs: none
-DisableInterrupts
-        CPSID  I        ; Clear interrupt mask bit
-        BX     LR       ; Return to the caller
-;*********** EnableInterrupts ***************
-; Enable global interrupts
-; inputs:  none
-; outputs: none
-EnableInterrupts
-        CPSIE  I        ; Clear interrupt mask bit
-        BX     LR       ; Return to the caller
-
-;*********** WaitForInterrupt ***************
-; Enter low power mode and wait for an interrupt
-; inputs:  none
-; outputs: none
-WaitForInterrupt
-        WFI            ; Wait for interrupt
-        BX     LR       ; Return to the caller
-
 ; User Initial Stack & Heap
 
                 IF      :DEF:__MICROLIB
