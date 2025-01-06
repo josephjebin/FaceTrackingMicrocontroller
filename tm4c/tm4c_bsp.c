@@ -35,6 +35,9 @@ void set_sp(uint32_t * new_sp) {
 	);
 }
 
+void enable_interrupts(void) {
+	__asm volatile ("CPSIE  I"); 
+}
 void wait_for_interrupt(void) {
 	__asm volatile ("WFI"); 
 }

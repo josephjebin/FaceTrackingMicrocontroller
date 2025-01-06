@@ -5,7 +5,7 @@ int main(void) {
 	PLL_init(); 
 	UART0_and_servos_init(); 
 	SysTick_init(); 
-	EnableInterrupts(); 
+	enable_interrupts(); 
 	sleep_position(); 
 	main_loop(); 
 }

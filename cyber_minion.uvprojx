@@ -908,7 +908,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>-DUNIT_TEST</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
               <IncludePath>.\CMSIS\Core\Include;.\test\framework\src;..\..\..\cmock\src;.\tm4c;.\tm4c\system;.\src</IncludePath>

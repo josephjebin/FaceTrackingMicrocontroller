@@ -1,4 +1,6 @@
 #ifndef cyber_minion_h
+#include <stdint.h>
+
 #define cyber_minion_h
 #define MINIMUM_COMPARE (unsigned short) 1249
 #define MIDDLE_COMPARE (unsigned short)1874 
@@ -27,8 +29,12 @@ typedef enum {
     SCANNING  // Scanning for a face
 } State;
 
+#ifdef UNIT_TEST
 extern State current_state; 
 extern unsigned short compare_x; 
 extern unsigned short compare_y; 
+extern uint32_t * volatile sp1; 
+extern uint32_t * volatile sp2; 
+#endif //UNIT_TEST
 
-#endif 
+#endif //cyber_minion_h

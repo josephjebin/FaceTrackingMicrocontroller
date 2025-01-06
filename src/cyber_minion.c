@@ -6,23 +6,34 @@
 #include <stdbool.h>
 
 #define STACK_SIZE 40
+static uint32_t stack1[STACK_SIZE];
+static uint32_t stack2[STACK_SIZE];
 
-State current_state = WAITING;  
+#ifndef UNIT_TEST
+static State current_state = WAITING;  
 // not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
 // unsigned shorts have a maximum value of 65,535
 // not worried about negative values. MINIMUM_COMPARE is 1250. LARGE_COMPARE_INCREMENT is 250. 1250 - 250 = 1000
-unsigned short compare_x = MIDDLE_COMPARE; 
-unsigned short compare_y = MAXIMUM_COMPARE; 
-
-uint32_t stack1[40];
-uint32_t stack2[40];
+static unsigned short compare_x = MIDDLE_COMPARE; 
+static unsigned short compare_y = MAXIMUM_COMPARE; 
 
 /* 	intentionally out of bounds. to use the pointer, decrement it and then fill it.
 *		this way, the stack points to the last filled element
 */
+static uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
+static uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
+
+#else 
+
+State current_state = WAITING;  
+unsigned short compare_x = MIDDLE_COMPARE; 
+unsigned short compare_y = MAXIMUM_COMPARE; 
 uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
 uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
-bool using_stack1 = false; 
+
+#endif
+
+static bool using_stack1 = false; 
 
 void main_loop(void) {
 	while (1) {
@@ -136,20 +147,6 @@ void UART0_Handler(void) {
 	exit_interrupt(); 
 }
 
-void set_compare_x(unsigned short new_compare_x) {
-	new_compare_x = (new_compare_x < MAXIMUM_COMPARE) ? new_compare_x : MAXIMUM_COMPARE;
-	new_compare_x = (new_compare_x > MINIMUM_COMPARE) ? new_compare_x : MINIMUM_COMPARE;
-	compare_x = new_compare_x; 
-	set_PWM0_generator0_CMPA(compare_x); 
-}
-
-void set_compare_y(unsigned short new_compare_y) {
-	new_compare_y = (new_compare_y < MAXIMUM_COMPARE) ? new_compare_y : MAXIMUM_COMPARE;
-	new_compare_y = (new_compare_y > MINIMUM_COMPARE) ? new_compare_y : MINIMUM_COMPARE;
-	compare_y = new_compare_y; 
-	set_PWM0_generator1_CMPA(compare_y);
-}
-
 void scan() {
 	set_compare_y(MIDDLE_COMPARE - MEDIUM_COMPARE_INCREMENT); 
 	set_compare_x(MINIMUM_COMPARE);
@@ -181,3 +178,16 @@ void sleep_position(void) {
 	set_compare_y(MAXIMUM_COMPARE);
 }	
 
+void set_compare_x(unsigned short new_compare_x) {
+	new_compare_x = (new_compare_x < MAXIMUM_COMPARE) ? new_compare_x : MAXIMUM_COMPARE;
+	new_compare_x = (new_compare_x > MINIMUM_COMPARE) ? new_compare_x : MINIMUM_COMPARE;
+	compare_x = new_compare_x; 
+	set_PWM0_generator0_CMPA(compare_x); 
+}
+
+void set_compare_y(unsigned short new_compare_y) {
+	new_compare_y = (new_compare_y < MAXIMUM_COMPARE) ? new_compare_y : MAXIMUM_COMPARE;
+	new_compare_y = (new_compare_y > MINIMUM_COMPARE) ? new_compare_y : MINIMUM_COMPARE;
+	compare_y = new_compare_y; 
+	set_PWM0_generator1_CMPA(compare_y);
+}
