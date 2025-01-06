@@ -14,9 +14,6 @@
 // (.096 degrees / COMPARE increment) * 200 = 19.2 degrees
 #define LARGE_COMPARE_INCREMENT (unsigned short) 200
 
-void DisableInterrupts(void); 
-void EnableInterrupts(void);  
-
 void main_loop(void) __attribute__((aligned(4)));
 void UART0_Handler(void);
 void scan(void); 

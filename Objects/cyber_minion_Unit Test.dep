@@ -1,8 +1,8 @@
 Dependencies for Project 'cyber_minion', Target 'Unit Test': (DO NOT MODIFY !)
 CompilerVersion: 6220000::V6.22::ARMCLANG
-F (.\src\cyber_minion.c)(0x677B4234)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/cyber_minion.o -MMD)
-I (src\cyber_minion.h)(0x677B41CD)
-I (tm4c\tm4c_bsp.h)(0x677B08FA)
+F (.\src\cyber_minion.c)(0x677B4259)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/cyber_minion.o -MMD)
+I (src\cyber_minion.h)(0x677B4805)
+I (tm4c\tm4c_bsp.h)(0x677B439D)
 F (.\tm4c\startup\startup_TM4C123.s)(0x677B07C2)(--target=armv7em-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1" --target=arm-arm-none-eabi-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1"-o ./objects/startup_tm4c123.o)
 F (.\tm4c\system\system_TM4C123GH6PM.c)(0x676A5EC9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/system_tm4c123gh6pm.o -MMD)
 I (tm4c\TM4C123GH6PM.h)(0x676ACC9B)
@@ -10,16 +10,16 @@ I (CMSIS\Core\Include\core_cm4.h)(0x67787889)
 I (tm4c\system\system_TM4C123GH6PM.h)(0x67527144)
 F (.\tm4c\system\system_TM4C123GH6PM.h)(0x67527144)()
 F (.\tm4c\TM4C123GH6PM.h)(0x676ACC9B)()
-F (.\src\cyber_minion.h)(0x677B41CD)()
-F (.\src\cyber_minion_runner.c)(0x67787889)()
-F (.\tm4c\tm4c_bsp.c)(0x677B08FA)()
-F (.\tm4c\tm4c_bsp.h)(0x677B08FA)()
-F (.\test\unit\cyber_minion_unit_tests.c)(0x677B3F40)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/cyber_minion_unit_tests.o -MMD)
+F (.\src\cyber_minion.h)(0x677B4805)()
+F (.\src\cyber_minion_runner.c)(0x677B439D)()
+F (.\tm4c\tm4c_bsp.c)(0x677B4399)()
+F (.\tm4c\tm4c_bsp.h)(0x677B439D)()
+F (.\test\unit\cyber_minion_unit_tests.c)(0x677C155F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/cyber_minion_unit_tests.o -MMD)
 I (test\framework\src\unity.h)(0x6010203E)
 I (test\framework\src\unity_internals.h)(0x6010203E)
-I (src\cyber_minion.h)(0x677B41CD)
+I (src\cyber_minion.h)(0x677B4805)
 I (test\unit\mocks\Mocktm4c_bsp.h)(0x677B0937)
-I (tm4c\tm4c_bsp.h)(0x677B08FA)
+I (tm4c\tm4c_bsp.h)(0x677B439D)
 F (.\test\framework\src\unity.h)(0x6010203E)()
 F (.\test\framework\src\unity.c)(0x6010203E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/unity.o -MMD)
 I (test\framework\src\unity.h)(0x6010203E)
@@ -31,7 +31,7 @@ I (..\..\..\cmock\src\cmock_internals.h)(0x67787B6C)
 I (test\framework\src\unity.h)(0x6010203E)
 I (test\framework\src\unity_internals.h)(0x6010203E)
 I (test\unit\mocks\Mocktm4c_bsp.h)(0x677B0937)
-I (tm4c\tm4c_bsp.h)(0x677B08FA)
+I (tm4c\tm4c_bsp.h)(0x677B439D)
 F (.\test\unit\mocks\Mocktm4c_bsp.h)(0x677B0937)()
 F (..\..\..\cmock\src\cmock.c)(0x67787B6C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS/Core/Include -I ./test/framework/src -I ../../../cmock/src -I ./tm4c -I ./tm4c/system -I ./src -DUNIT_TEST-IC:/Users/josep/Keil_v5/packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM-o ./objects/cmock.o -MMD)
 I (..\..\..\cmock\src\cmock.h)(0x67787B6C)

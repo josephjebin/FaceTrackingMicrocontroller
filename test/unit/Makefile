@@ -116,7 +116,7 @@ endif
 BIN_DIR := build
 
 CFLAGS  := -c -g -O -fno-pie -std=c11 -pedantic -Wall -Wextra -W \
-	$(INCLUDES) $(DEFINES) -DQ_HOST
+	$(INCLUDES) $(DEFINES) -DQ_HOST -DUNIT_TEST
 
 CPPFLAGS := -c -g -O -fno-pie -std=c++11 -pedantic -Wall -Wextra \
 	-fno-rtti -fno-exceptions \
