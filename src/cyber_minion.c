@@ -9,7 +9,14 @@
 static uint32_t stack1[STACK_SIZE];
 static uint32_t stack2[STACK_SIZE];
 
-#ifndef UNIT_TEST
+#if defined(TEST) || defined (HIL_TEST)
+State current_state = WAITING;  
+unsigned short compare_x = MIDDLE_COMPARE; 
+unsigned short compare_y = MAXIMUM_COMPARE; 
+uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
+uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
+
+#else 
 static State current_state = WAITING;  
 // not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
 // unsigned shorts have a maximum value of 65,535
@@ -22,14 +29,6 @@ static unsigned short compare_y = MAXIMUM_COMPARE;
 */
 static uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
 static uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
-
-#else 
-
-State current_state = WAITING;  
-unsigned short compare_x = MIDDLE_COMPARE; 
-unsigned short compare_y = MAXIMUM_COMPARE; 
-uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
-uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
 
 #endif
 

@@ -26,12 +26,12 @@ typedef enum {
     SCANNING  // Scanning for a face
 } State;
 
-#ifdef UNIT_TEST
+#if defined(UNIT_TEST) || defined(HIL_TEST)
 extern State current_state; 
 extern unsigned short compare_x; 
 extern unsigned short compare_y; 
 extern uint32_t * volatile sp1; 
 extern uint32_t * volatile sp2; 
-#endif //UNIT_TEST
+#endif // UNIT_TEST || HIL_TEST
 
-#endif //cyber_minion_h
+#endif // cyber_minion_h

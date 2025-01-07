@@ -1,0 +1,6 @@
+:cmock:
+  :mock_path: "../hil/mocks"
+  :treat_as:
+    uint8_t: UINT8
+    unsigned short: UINT16
+    unsigned long: UINT32

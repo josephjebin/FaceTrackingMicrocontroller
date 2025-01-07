@@ -14,6 +14,7 @@ void set_PWM0_generator1_CMPA(unsigned short new_compare){
 	PWM0->_1_CMPA = new_compare; 
 }
 
+#ifndef HIL_TEST
 void set_sp(uint32_t * new_sp) {
 	// this method subtracts 4 from the original sp to store r0.
 	// it does this because our assembly overwrites r0. 
@@ -34,6 +35,7 @@ void set_sp(uint32_t * new_sp) {
 		"MOV sp, r0             \n"   // Move next stack pointer into sp  
 	);
 }
+#endif
 
 void enable_interrupts(void) {
 	__asm volatile ("CPSIE  I"); 
@@ -147,3 +149,4 @@ void UART0_and_servos_init(void) {
 		
 	UART0->CTL |= (1 << 0) | (1 << 8) | (1 << 9);	// Enable UART0, TXE, RXE
 }
+
