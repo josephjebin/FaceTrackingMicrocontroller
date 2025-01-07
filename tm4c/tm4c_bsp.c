@@ -45,12 +45,12 @@ void wait_for_interrupt(void) {
 }
 
 void exit_interrupt(void) {
-	__asm volatile (
-		"LDR R1, [SP, #24]        \n" // Load LR from the stack (24 bytes offset for exception frame)
-		"MOV LR, R1               \n" // Restore LR
-		"BX LR                    \n" // Return from the interrupt
-	);
+    __asm volatile (
+        "mov lr, #0xFFFFFFF9"  // Set LR to return to Handler mode with MSP
+    );
 }
+
+
 
 void PLL_init(void){
   // 0) Use RCC2

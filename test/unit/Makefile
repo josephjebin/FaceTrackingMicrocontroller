@@ -42,8 +42,8 @@ UNITY_DIR := ../framework/src
 CMOCK_DIR := C:\Users\josep\cmock\src
 
 # list of all source directories used by this project
-VPATH := ../unit \
-	../unit/mocks \
+VPATH := ./ \
+	./mocks \
 	../../src \
 	../../tm4c \
 	$(UNITY_DIR) \
@@ -116,7 +116,7 @@ endif
 BIN_DIR := build
 
 CFLAGS  := -c -g -O -fno-pie -std=c11 -pedantic -Wall -Wextra -W \
-	$(INCLUDES) $(DEFINES) -DQ_HOST -DTESTING
+	$(INCLUDES) $(DEFINES) -DQ_HOST -DUNIT_TEST
 
 CPPFLAGS := -c -g -O -fno-pie -std=c++11 -pedantic -Wall -Wextra \
 	-fno-rtti -fno-exceptions \

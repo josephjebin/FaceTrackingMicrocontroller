@@ -9,7 +9,7 @@
 static uint32_t stack1[STACK_SIZE];
 static uint32_t stack2[STACK_SIZE];
 
-#if defined(TEST) || defined (HIL_TEST)
+#if defined(UNIT_TEST) || defined (HIL_TEST)
 State current_state = WAITING;  
 unsigned short compare_x = MIDDLE_COMPARE; 
 unsigned short compare_y = MAXIMUM_COMPARE; 
@@ -53,7 +53,7 @@ void main_loop(void) {
 	}
 }
 
-void UART0_Handler(void) {
+void UART0_Handler(void) {	
 	//don't need to check receiver FIFO since UART handler is only triggered when FIFO has data
 	uint8_t data = get_UART0_interrupt_data(); 
 

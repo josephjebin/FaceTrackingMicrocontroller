@@ -20,7 +20,7 @@ void UART_TransmitChar(char);
 void UART_Flush(void);
 void enable_interrupts(void); 
 void wait_for_interrupt(void); //defined in startup_TM4C123.s
-void exit_interrupt(void); 
+void exit_interrupt(); 
 void set_PWM0_generator0_CMPA(unsigned short); 
 void set_PWM0_generator1_CMPA(unsigned short); 
 

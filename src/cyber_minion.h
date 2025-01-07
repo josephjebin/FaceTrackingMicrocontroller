@@ -32,6 +32,7 @@ extern unsigned short compare_x;
 extern unsigned short compare_y; 
 extern uint32_t * volatile sp1; 
 extern uint32_t * volatile sp2; 
+
 #endif // UNIT_TEST || HIL_TEST
 
 #endif // cyber_minion_h

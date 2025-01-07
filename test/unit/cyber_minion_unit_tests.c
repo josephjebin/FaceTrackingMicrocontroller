@@ -64,6 +64,8 @@ void test_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 }
 
 // testing UART0_Handler indirectly tests the set_compare_x/y methods
+// ISSUE: changing which stack pointer set_sp() expects via set_sp_Expect does not
+// 				affect test results. 
 void test_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled(void) {
 	current_state = SCANNING; 
 	compare_x = MIDDLE_COMPARE; 

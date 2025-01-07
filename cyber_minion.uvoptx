@@ -75,7 +75,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>0</IsCurrentTarget>
+        <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>4</CpuCode>
       <DebugOpt>
@@ -119,6 +119,10 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>DLGDARM</Key>
           <Name>(1010=1167,96,1617,653,0)(1007=105,137,292,412,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=135,169,610,483,0)</Name>
         </SetRegEntry>
@@ -157,23 +161,71 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>45</LineNumber>
+          <LineNumber>57</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
+          <Address>1684</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\tm4c\tm4c_bsp.c</Filename>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\src\cyber_minion.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\cyber_minion\src/cyber_minion.c\57</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>41</LineNumber>
+          <LineNumber>148</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>2356</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\src\cyber_minion.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\cyber_minion\src/cyber_minion.c\148</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>39</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>3170</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\src\cyber_minion.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\cyber_minion\src/cyber_minion.c\39</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>145</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>2348</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\src\cyber_minion.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\cyber_minion\src/cyber_minion.c\145</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>56</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -182,41 +234,41 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\tm4c\tm4c_bsp.c</Filename>
+          <Filename>.\src\cyber_minion.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>2</Number>
+          <Number>5</Number>
           <Type>0</Type>
-          <LineNumber>136</LineNumber>
+          <LineNumber>143</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>2242</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
+          <BreakIfRCount>0</BreakIfRCount>
           <Filename>.\src\cyber_minion.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\cyber_minion\src/cyber_minion.c\136</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>3</Number>
+          <Number>6</Number>
           <Type>0</Type>
-          <LineNumber>46</LineNumber>
+          <LineNumber>146</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>3182</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
+          <BreakIfRCount>0</BreakIfRCount>
           <Filename>.\src\cyber_minion.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\cyber_minion\src/cyber_minion.c\46</Expression>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -243,7 +295,7 @@
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>using_stack1</ItemText>
+          <ItemText>link_register</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
@@ -260,12 +312,17 @@
           <WinNumber>1</WinNumber>
           <ItemText>&amp;main_loop</ItemText>
         </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>link_register</ItemText>
+        </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>1</SubType>
-          <ItemText>0x200000F8</ItemText>
+          <ItemText>0x200000f0</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -311,12 +368,6 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
-      <SystemViewers>
-        <Entry>
-          <Name>System Viewer\UART0</Name>
-          <WinId>35905</WinId>
-        </Entry>
-      </SystemViewers>
     </TargetOption>
   </Target>
 
@@ -688,7 +739,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>1</IsCurrentTarget>
+        <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
       <CpuCode>4</CpuCode>
       <DebugOpt>
@@ -1094,7 +1145,7 @@
 
   <Group>
     <GroupName>Unit Test</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
