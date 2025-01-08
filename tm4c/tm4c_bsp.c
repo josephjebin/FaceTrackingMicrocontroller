@@ -75,7 +75,7 @@ void PLL_init(void){
 
 void SysTick_init(void) {
 	NVIC_ST_CTRL_R = 0;						// 1) disable SysTick during setup 
-	NVIC_ST_RELOAD_R = 799999;			// 2) 80 MHz: 799999 + 1 = 800,000; 800,000 * 12.5ns = 10ms
+	NVIC_ST_RELOAD_R = 799999;		// 2) 80 MHz: 799999 + 1 = 800,000; 800,000 * 12.5ns = 10ms
 	NVIC_ST_CURRENT_R = 0;				// 3) any write to current clears it 
 	NVIC_ST_CTRL_R = 0x00000005;	// 4) enable SysTick with core clock
 }

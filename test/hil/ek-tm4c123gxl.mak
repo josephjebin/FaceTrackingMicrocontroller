@@ -218,12 +218,6 @@ flash :
 	@echo
 	@echo Reset the board MANUALLY!
 
-# $(BIN_DIR)/%.d : %.c
-# 	$(CC) -MM -MT $(@:.d=.o) $(CFLAGS) $< > $@
-
-# $(BIN_DIR)/%.d : %.cpp
-# 	$(CPP) -MM -MT $(@:.d=.o) $(CPPFLAGS) $< > $@
-
 $(BIN_DIR)/%.d : %.c
 	$(CC) -MM -MT $(@:.d=.o) $(CFLAGS) $< > $@
 

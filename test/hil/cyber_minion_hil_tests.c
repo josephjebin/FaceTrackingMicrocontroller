@@ -20,15 +20,8 @@ int main(void) {
     UART0_and_servos_init();
     SysTick_init();
     enable_interrupts();
-		UART_SendChar('X'); // Before UNITY_BEGIN()
-
     UNITY_BEGIN();
-		UNITY_OUTPUT_CHAR('Y'); // Should directly map to UART_SendChar
-
-    UART_SendString(" After UNITY_BEGIN");
-    // RUN_TEST(test_sanity);
-    UART_SendString(" world");
-
+    RUN_TEST(test_sanity);
     return UNITY_END();
 }
 

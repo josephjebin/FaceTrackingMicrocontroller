@@ -18,14 +18,15 @@ uint32_t * volatile sp2 = &stack2[STACK_SIZE];
 
 #else 
 static State current_state = WAITING;  
-// not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
-// unsigned shorts have a maximum value of 65,535
-// not worried about negative values. MINIMUM_COMPARE is 1250. LARGE_COMPARE_INCREMENT is 250. 1250 - 250 = 1000
+/* not worried about unsigned short overflowing. MAXIMUM_COMPARE is 2500. LARGE_COMPARE_INCREMENT is 250. 2500 + 250 = 2750
+	 unsigned shorts have a maximum value of 65,535
+	 not worried about negative values. MINIMUM_COMPARE is 1250. LARGE_COMPARE_INCREMENT is 250. 1250 - 250 = 1000 
+*/
 static unsigned short compare_x = MIDDLE_COMPARE; 
 static unsigned short compare_y = MAXIMUM_COMPARE; 
 
 /* 	intentionally out of bounds. to use the pointer, decrement it and then fill it.
-*		this way, the stack points to the last filled element
+		this way, the stack points to the last filled element
 */
 static uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
 static uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
