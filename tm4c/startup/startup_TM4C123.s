@@ -30,7 +30,7 @@
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Stack_Size      EQU     0x00000200
+Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
@@ -41,7 +41,7 @@ __initial_sp
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x00000000
+Heap_Size       EQU     0x00000400
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3
 __heap_base
@@ -936,32 +936,6 @@ PWM1_FAULT_Handler\
 				ALIGN
 
 				AREA    |.text|, CODE, READONLY
-
-				EXPORT 	DisableInterrupts
-				EXPORT  EnableInterrupts
-				EXPORT  WaitForInterrupt
-;*********** EnableInterrupts ***************
-; Enable global interrupts
-; inputs:  none
-; outputs: none
-DisableInterrupts
-        CPSID  I        ; Clear interrupt mask bit
-        BX     LR       ; Return to the caller
-;*********** EnableInterrupts ***************
-; Enable global interrupts
-; inputs:  none
-; outputs: none
-EnableInterrupts
-        CPSIE  I        ; Clear interrupt mask bit
-        BX     LR       ; Return to the caller
-
-;*********** WaitForInterrupt ***************
-; Enter low power mode and wait for an interrupt
-; inputs:  none
-; outputs: none
-WaitForInterrupt
-        WFI            ; Wait for interrupt
-        BX     LR       ; Return to the caller
 
 ; User Initial Stack & Heap
 
