@@ -47,35 +47,49 @@ TARGET  := ek-tm4c123gxl
 #-----------------------------------------------------------------------------
 # project directories
 #
-TARGET_DIR := 
+TARGET_DIR := ../../tm4c
+UNITY_DIR := ../framework/src
+CMOCK_DIR := C:\Users\josep\cmock\src
+CMSIS_DIR := ../../CMSIS/Core/Include
 
 # list of all source directories used by this project
-VPATH = . \
-	../src \
-	$(TARGET_DIR) \
-	$(TARGET_DIR)/gnu
+VPATH := ./ \
+	./mocks \
+	../../src \
+	../../tm4c \
+	../../tm4c/system \
+	../../tm4c/startup \
+	$(UNITY_DIR) \
+	$(CMOCK_DIR)
 
-# list of all include directories needed by this project
-INCLUDES  = -I. \
-	-I../src \
-	-I$(TARGET_DIR)
+# list of all include directories needed by this project (source, header, and assembly files)
+INCLUDES := -I. \
+	-I./mocks \
+	-I../../src \
+	-I../../tm4c \
+	-I../../tm4c/system \
+	-I../../tm4c/startup \
+	-I$(UNITY_DIR) \
+	-I$(CMOCK_DIR) \
+	-I$(CMSIS_DIR)
 
 #-----------------------------------------------------------------------------
 # project files
 #
 
-# assembler source files
-ASM_SRCS := startup_TM4C123GH6PM.s
+# assembler source files ./../../tm4c/startup/startup_TM4C123.s
+ASM_SRCS := 
 
 # C source files
-C_SRCS := \
-	sum.c \
-	test.c \
-	et.c \
+C_SRCS := Mocktm4c_bsp_set_sp.c \
+	cyber_minion_hil_tests.c \
+	cyber_minion.c \
 	tm4c_bsp.c \
-	system_TM4C123GH6PM.c 
+	system_TM4C123GH6PM.c \
+	startup_TM4C123GH6PM.c \
+	unity.c \
+	cmock.c
 	
-
 # C++ source files
 CPP_SRCS :=
 
@@ -102,7 +116,7 @@ FLOAT_ABI := -mfloat-abi=softfp
 # GNU-ARM toolset (NOTE: You need to adjust to your machine)
 # see https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads
 #
-GNU_ARM := ../../../../../../../qp/qtools/gnu_arm-none-eabi
+GNU_ARM := C:/qp/qtools/gnu_arm-none-eabi
 
 # make sure that the GNU-ARM toolset exists...
 ifeq ("$(wildcard $(GNU_ARM))","")
@@ -146,6 +160,7 @@ BIN_DIR := build_$(TARGET)
 ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
+	-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H\
 	-ffunction-sections -fdata-sections \
 	-O $(INCLUDES) $(DEFINES)
 
@@ -177,6 +192,8 @@ endif
 #-----------------------------------------------------------------------------
 # rules
 #
+# Include dependency files if they exist
+# -include $(C_DEPS_EXT) $(CPP_DEPS_EXT)
 
 .PHONY : run norun flash
 
@@ -200,6 +217,12 @@ flash :
 	$(FLASH) $(TARGET_BIN)
 	@echo
 	@echo Reset the board MANUALLY!
+
+# $(BIN_DIR)/%.d : %.c
+# 	$(CC) -MM -MT $(@:.d=.o) $(CFLAGS) $< > $@
+
+# $(BIN_DIR)/%.d : %.cpp
+# 	$(CPP) -MM -MT $(@:.d=.o) $(CPPFLAGS) $< > $@
 
 $(BIN_DIR)/%.d : %.c
 	$(CC) -MM -MT $(@:.d=.o) $(CFLAGS) $< > $@

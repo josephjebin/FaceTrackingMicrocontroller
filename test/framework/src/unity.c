@@ -1854,6 +1854,7 @@ void UnitySetTestFile(const char* filename)
 /*-----------------------------------------------*/
 void UnityBegin(const char* filename)
 {
+		UNITY_OUTPUT_CHAR('a'); 
     Unity.TestFile = filename;
     Unity.CurrentTestName = NULL;
     Unity.CurrentTestLineNumber = 0;
@@ -1862,9 +1863,11 @@ void UnityBegin(const char* filename)
     Unity.TestIgnores = 0;
     Unity.CurrentTestFailed = 0;
     Unity.CurrentTestIgnored = 0;
-
+		
     UNITY_CLR_DETAILS();
     UNITY_OUTPUT_START();
+		
+
 }
 
 /*-----------------------------------------------*/

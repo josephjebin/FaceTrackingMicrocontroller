@@ -612,6 +612,11 @@
               <FileType>1</FileType>
               <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
             </File>
+            <File>
+              <FileName>unity_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\unity_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1527,6 +1532,11 @@
               <FileType>1</FileType>
               <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
             </File>
+            <File>
+              <FileName>unity_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\unity_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1927,10 +1937,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>-DHIL_TEST</MiscControls>
+              <MiscControls>-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS\Core\Include;.\test\framework\src;.\tm4c;.\tm4c\system;.\src;..\..\..\cmock\src;.\test\hil\mocks</IncludePath>
+              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;.\CMSIS\Core\Include;.\test\framework\src;.\tm4c;.\tm4c\system;.\src;..\..\..\cmock\src;.\test\hil\mocks;.\tm4c\startup;.\test\hil</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2252,6 +2262,11 @@
               <FileName>Mocktm4c_bsp_set_sp.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
+            </File>
+            <File>
+              <FileName>unity_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\unity_config.h</FilePath>
             </File>
           </Files>
         </Group>

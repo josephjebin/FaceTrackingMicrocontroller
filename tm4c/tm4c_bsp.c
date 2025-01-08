@@ -150,3 +150,22 @@ void UART0_and_servos_init(void) {
 	UART0->CTL |= (1 << 0) | (1 << 8) | (1 << 9);	// Enable UART0, TXE, RXE
 }
 
+void UART_SendString(const char *str) {
+    while (*str != '\0') { 
+        UART_SendChar(*str); 
+        str++; 
+    }
+}
+
+void UART_SendChar(char c) {
+	while (UART0->FR & (1 << 5)) {
+		// Wait until the transmit FIFO is not full using TXFF bit
+	}
+	UART0->DR = c;  
+}	
+
+void UART_Flush(void) {
+	while (UART0->FR & 0x08) {
+		// Wait until the UART is not busy
+	}
+}

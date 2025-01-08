@@ -54,7 +54,7 @@ void main_loop(void) {
 }
 
 void UART0_Handler(void) {	
-	//don't need to check receiver FIFO since UART handler is only triggered when FIFO has data
+	// don't need to check receiver FIFO since UART handler is only triggered when FIFO has data
 	uint8_t data = get_UART0_interrupt_data(); 
 
 	if (data & 0x80) {

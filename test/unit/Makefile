@@ -50,8 +50,8 @@ VPATH := ./ \
 	$(CMOCK_DIR)
 
 # list of all include directories needed by this project
-INCLUDES := -I../unit \
-	-I../unit/mocks \
+INCLUDES := -I./ \
+	-I/mocks \
 	-I../../src \
 	-I../../tm4c \
 	-I$(UNITY_DIR) \
