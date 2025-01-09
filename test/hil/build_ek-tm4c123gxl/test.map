@@ -311,7 +311,7 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
 .eh_frame       0x0000036c        0x0
  .eh_frame      0x0000036c        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.text           0x0000036c      0xfb0
+.text           0x0000036c      0xfb8
                 0x0000036c                . = ALIGN (0x4)
  *(.text)
  .text          0x0000036c       0x40 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
@@ -350,349 +350,349 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
                 0x00000600       0x14 build_ek-tm4c123gxl/cyber_minion.o
                 0x00000600                sleep_position
  .text.main_loop
-                0x00000614       0x30 build_ek-tm4c123gxl/cyber_minion.o
+                0x00000614       0x38 build_ek-tm4c123gxl/cyber_minion.o
                 0x00000614                main_loop
  .text.set_PWM0_generator0_CMPA
-                0x00000644        0xc build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000644                set_PWM0_generator0_CMPA
+                0x0000064c        0xc build_ek-tm4c123gxl/tm4c_bsp.o
+                0x0000064c                set_PWM0_generator0_CMPA
  .text.set_PWM0_generator1_CMPA
-                0x00000650        0xc build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000650                set_PWM0_generator1_CMPA
+                0x00000658        0xc build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000658                set_PWM0_generator1_CMPA
  .text.enable_interrupts
-                0x0000065c        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x0000065c                enable_interrupts
+                0x00000664        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000664                enable_interrupts
  .text.wait_for_interrupt
-                0x00000660        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000660                wait_for_interrupt
+                0x00000668        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000668                wait_for_interrupt
  .text.PLL_init
-                0x00000664       0x5c build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000664                PLL_init
+                0x0000066c       0x5c build_ek-tm4c123gxl/tm4c_bsp.o
+                0x0000066c                PLL_init
  .text.SysTick_init
-                0x000006c0       0x18 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x000006c0                SysTick_init
+                0x000006c8       0x18 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x000006c8                SysTick_init
  .text.SysTick_wait
-                0x000006d8       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x000006d8                SysTick_wait
+                0x000006e0       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x000006e0                SysTick_wait
  .text.delay_10ms
-                0x000006ec       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x000006ec                delay_10ms
- *fill*         0x00000702        0x2 
+                0x000006f4       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x000006f4                delay_10ms
+ *fill*         0x0000070a        0x2 
  .text.UART0_and_servos_init
-                0x00000704      0x178 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000704                UART0_and_servos_init
+                0x0000070c      0x178 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x0000070c                UART0_and_servos_init
  .text.UART_SendChar
-                0x0000087c       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x0000087c                UART_SendChar
+                0x00000884       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000884                UART_SendChar
  .text.UART_SendString
-                0x00000890       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000890                UART_SendString
- *fill*         0x000008a6        0x2 
+                0x00000898       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000898                UART_SendString
+ *fill*         0x000008ae        0x2 
  .text.UART_Flush
-                0x000008a8       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x000008a8                UART_Flush
+                0x000008b0       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x000008b0                UART_Flush
  .text.SystemInit
-                0x000008b8       0xc8 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
-                0x000008b8                SystemInit
+                0x000008c0       0xc8 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+                0x000008c0                SystemInit
  .text.Reset_Handler
-                0x00000980       0x94 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000980                Reset_Handler
+                0x00000988       0x94 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000988                Reset_Handler
  .text.NMI_Handler
-                0x00000a14       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a14                NMI_Handler
+                0x00000a1c       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a1c                NMI_Handler
  .text.HardFault_Handler
-                0x00000a28       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a28                HardFault_Handler
+                0x00000a30       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a30                HardFault_Handler
  .text.MemManage_Handler
-                0x00000a3c       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a3c                MemManage_Handler
+                0x00000a44       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a44                MemManage_Handler
  .text.BusFault_Handler
-                0x00000a50       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a50                BusFault_Handler
+                0x00000a58       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a58                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000a64       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a64                UsageFault_Handler
+                0x00000a6c       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a6c                UsageFault_Handler
  .text.Default_Handler
-                0x00000a78       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000a78                uDMAST_IRQHandler
-                0x00000a78                GPIOPortP4_IRQHandler
-                0x00000a78                PWM1Gen3_IRQHandler
-                0x00000a78                WideTimer5B_IRQHandler
-                0x00000a78                DebugMon_Handler
-                0x00000a78                QEI2_IRQHandler
-                0x00000a78                FlashCtrl_IRQHandler
-                0x00000a78                GPIOPortP7_IRQHandler
-                0x00000a78                Timer0B_IRQHandler
-                0x00000a78                I2C0_IRQHandler
-                0x00000a78                SysTick_Handler
-                0x00000a78                WideTimer4B_IRQHandler
-                0x00000a78                PendSV_Handler
-                0x00000a78                I2C1_IRQHandler
-                0x00000a78                GPIOPortP5_IRQHandler
-                0x00000a78                PWMGen0_IRQHandler
-                0x00000a78                UART1_IRQHandler
-                0x00000a78                CAN1_IRQHandler
-                0x00000a78                Timer1B_IRQHandler
-                0x00000a78                Watchdog_IRQHandler
-                0x00000a78                GPIOPortS_IRQHandler
-                0x00000a78                GPIOPortQ7_IRQHandler
-                0x00000a78                PWM1Gen2_IRQHandler
-                0x00000a78                UART0_IRQHandler
-                0x00000a78                GPIOPortL_IRQHandler
-                0x00000a78                SSI0_IRQHandler
-                0x00000a78                GPIOPortM_IRQHandler
-                0x00000a78                FPU_IRQHandler
-                0x00000a78                ADCSeq1_IRQHandler
-                0x00000a78                GPIOPortP0_IRQHandler
-                0x00000a78                WideTimer0B_IRQHandler
-                0x00000a78                PWMFault_IRQHandler
-                0x00000a78                WideTimer1A_IRQHandler
-                0x00000a78                I2C4_IRQHandler
-                0x00000a78                I2C5_IRQHandler
-                0x00000a78                GPIOPortQ5_IRQHandler
-                0x00000a78                PWMGen1_IRQHandler
-                0x00000a78                SSI1_IRQHandler
-                0x00000a78                I2C2_IRQHandler
-                0x00000a78                GPIOPortC_IRQHandler
-                0x00000a78                UART5_IRQHandler
-                0x00000a78                GPIOPortK_IRQHandler
-                0x00000a78                ADCSeq2_IRQHandler
-                0x00000a78                PWMGen2_IRQHandler
-                0x00000a78                UART2_IRQHandler
-                0x00000a78                GPIOPortP3_IRQHandler
-                0x00000a78                ADC1Seq0_IRQHandler
-                0x00000a78                UART4_IRQHandler
-                0x00000a78                GPIOPortJ_IRQHandler
-                0x00000a78                Default_Handler
-                0x00000a78                WideTimer0A_IRQHandler
-                0x00000a78                Timer5A_IRQHandler
-                0x00000a78                WideTimer3B_IRQHandler
-                0x00000a78                WideTimer2B_IRQHandler
-                0x00000a78                WideTimer5A_IRQHandler
-                0x00000a78                Timer4A_IRQHandler
-                0x00000a78                QEI1_IRQHandler
-                0x00000a78                PWM1Fault_IRQHandler
-                0x00000a78                GPIOPortP6_IRQHandler
-                0x00000a78                QEI0_IRQHandler
-                0x00000a78                ADC1Seq2_IRQHandler
-                0x00000a78                ADC1Seq1_IRQHandler
-                0x00000a78                PWMGen3_IRQHandler
-                0x00000a78                GPIOPortD_IRQHandler
-                0x00000a78                USB0_IRQHandler
-                0x00000a78                I2C3_IRQHandler
-                0x00000a78                SVC_Handler
-                0x00000a78                GPIOPortP2_IRQHandler
-                0x00000a78                GPIOPortQ4_IRQHandler
-                0x00000a78                Timer3B_IRQHandler
-                0x00000a78                Timer3A_IRQHandler
-                0x00000a78                GPIOPortA_IRQHandler
-                0x00000a78                ADC1Seq3_IRQHandler
-                0x00000a78                Timer0A_IRQHandler
-                0x00000a78                GPIOPortP1_IRQHandler
-                0x00000a78                ADCSeq0_IRQHandler
-                0x00000a78                Timer1A_IRQHandler
-                0x00000a78                GPIOPortG_IRQHandler
-                0x00000a78                GPIOPortQ1_IRQHandler
-                0x00000a78                GPIOPortQ3_IRQHandler
-                0x00000a78                Timer5B_IRQHandler
-                0x00000a78                ADCSeq3_IRQHandler
-                0x00000a78                WideTimer4A_IRQHandler
-                0x00000a78                GPIOPortE_IRQHandler
-                0x00000a78                CAN0_IRQHandler
-                0x00000a78                GPIOPortQ0_IRQHandler
-                0x00000a78                Comp0_IRQHandler
-                0x00000a78                Comp1_IRQHandler
-                0x00000a78                Comp2_IRQHandler
-                0x00000a78                GPIOPortQ6_IRQHandler
-                0x00000a78                SSI2_IRQHandler
-                0x00000a78                PWM1Gen0_IRQHandler
-                0x00000a78                GPIOPortF_IRQHandler
-                0x00000a78                UART7_IRQHandler
-                0x00000a78                UART6_IRQHandler
-                0x00000a78                WideTimer2A_IRQHandler
-                0x00000a78                GPIOPortB_IRQHandler
-                0x00000a78                WideTimer3A_IRQHandler
-                0x00000a78                CAN2_IRQHandler
-                0x00000a78                WideTimer1B_IRQHandler
-                0x00000a78                GPIOPortH_IRQHandler
-                0x00000a78                GPIOPortQ2_IRQHandler
-                0x00000a78                GPIOPortR_IRQHandler
-                0x00000a78                Timer4B_IRQHandler
-                0x00000a78                Timer2A_IRQHandler
-                0x00000a78                SSI3_IRQHandler
-                0x00000a78                Timer2B_IRQHandler
-                0x00000a78                uDMAError_IRQHandler
-                0x00000a78                GPIOPortN_IRQHandler
-                0x00000a78                UART3_IRQHandler
-                0x00000a78                SysCtrl_IRQHandler
-                0x00000a78                Hibernate_IRQHandler
-                0x00000a78                PWM1Gen1_IRQHandler
+                0x00000a80       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000a80                uDMAST_IRQHandler
+                0x00000a80                GPIOPortP4_IRQHandler
+                0x00000a80                PWM1Gen3_IRQHandler
+                0x00000a80                WideTimer5B_IRQHandler
+                0x00000a80                DebugMon_Handler
+                0x00000a80                QEI2_IRQHandler
+                0x00000a80                FlashCtrl_IRQHandler
+                0x00000a80                GPIOPortP7_IRQHandler
+                0x00000a80                Timer0B_IRQHandler
+                0x00000a80                I2C0_IRQHandler
+                0x00000a80                SysTick_Handler
+                0x00000a80                WideTimer4B_IRQHandler
+                0x00000a80                PendSV_Handler
+                0x00000a80                I2C1_IRQHandler
+                0x00000a80                GPIOPortP5_IRQHandler
+                0x00000a80                PWMGen0_IRQHandler
+                0x00000a80                UART1_IRQHandler
+                0x00000a80                CAN1_IRQHandler
+                0x00000a80                Timer1B_IRQHandler
+                0x00000a80                Watchdog_IRQHandler
+                0x00000a80                GPIOPortS_IRQHandler
+                0x00000a80                GPIOPortQ7_IRQHandler
+                0x00000a80                PWM1Gen2_IRQHandler
+                0x00000a80                UART0_IRQHandler
+                0x00000a80                GPIOPortL_IRQHandler
+                0x00000a80                SSI0_IRQHandler
+                0x00000a80                GPIOPortM_IRQHandler
+                0x00000a80                FPU_IRQHandler
+                0x00000a80                ADCSeq1_IRQHandler
+                0x00000a80                GPIOPortP0_IRQHandler
+                0x00000a80                WideTimer0B_IRQHandler
+                0x00000a80                PWMFault_IRQHandler
+                0x00000a80                WideTimer1A_IRQHandler
+                0x00000a80                I2C4_IRQHandler
+                0x00000a80                I2C5_IRQHandler
+                0x00000a80                GPIOPortQ5_IRQHandler
+                0x00000a80                PWMGen1_IRQHandler
+                0x00000a80                SSI1_IRQHandler
+                0x00000a80                I2C2_IRQHandler
+                0x00000a80                GPIOPortC_IRQHandler
+                0x00000a80                UART5_IRQHandler
+                0x00000a80                GPIOPortK_IRQHandler
+                0x00000a80                ADCSeq2_IRQHandler
+                0x00000a80                PWMGen2_IRQHandler
+                0x00000a80                UART2_IRQHandler
+                0x00000a80                GPIOPortP3_IRQHandler
+                0x00000a80                ADC1Seq0_IRQHandler
+                0x00000a80                UART4_IRQHandler
+                0x00000a80                GPIOPortJ_IRQHandler
+                0x00000a80                Default_Handler
+                0x00000a80                WideTimer0A_IRQHandler
+                0x00000a80                Timer5A_IRQHandler
+                0x00000a80                WideTimer3B_IRQHandler
+                0x00000a80                WideTimer2B_IRQHandler
+                0x00000a80                WideTimer5A_IRQHandler
+                0x00000a80                Timer4A_IRQHandler
+                0x00000a80                QEI1_IRQHandler
+                0x00000a80                PWM1Fault_IRQHandler
+                0x00000a80                GPIOPortP6_IRQHandler
+                0x00000a80                QEI0_IRQHandler
+                0x00000a80                ADC1Seq2_IRQHandler
+                0x00000a80                ADC1Seq1_IRQHandler
+                0x00000a80                PWMGen3_IRQHandler
+                0x00000a80                GPIOPortD_IRQHandler
+                0x00000a80                USB0_IRQHandler
+                0x00000a80                I2C3_IRQHandler
+                0x00000a80                SVC_Handler
+                0x00000a80                GPIOPortP2_IRQHandler
+                0x00000a80                GPIOPortQ4_IRQHandler
+                0x00000a80                Timer3B_IRQHandler
+                0x00000a80                Timer3A_IRQHandler
+                0x00000a80                GPIOPortA_IRQHandler
+                0x00000a80                ADC1Seq3_IRQHandler
+                0x00000a80                Timer0A_IRQHandler
+                0x00000a80                GPIOPortP1_IRQHandler
+                0x00000a80                ADCSeq0_IRQHandler
+                0x00000a80                Timer1A_IRQHandler
+                0x00000a80                GPIOPortG_IRQHandler
+                0x00000a80                GPIOPortQ1_IRQHandler
+                0x00000a80                GPIOPortQ3_IRQHandler
+                0x00000a80                Timer5B_IRQHandler
+                0x00000a80                ADCSeq3_IRQHandler
+                0x00000a80                WideTimer4A_IRQHandler
+                0x00000a80                GPIOPortE_IRQHandler
+                0x00000a80                CAN0_IRQHandler
+                0x00000a80                GPIOPortQ0_IRQHandler
+                0x00000a80                Comp0_IRQHandler
+                0x00000a80                Comp1_IRQHandler
+                0x00000a80                Comp2_IRQHandler
+                0x00000a80                GPIOPortQ6_IRQHandler
+                0x00000a80                SSI2_IRQHandler
+                0x00000a80                PWM1Gen0_IRQHandler
+                0x00000a80                GPIOPortF_IRQHandler
+                0x00000a80                UART7_IRQHandler
+                0x00000a80                UART6_IRQHandler
+                0x00000a80                WideTimer2A_IRQHandler
+                0x00000a80                GPIOPortB_IRQHandler
+                0x00000a80                WideTimer3A_IRQHandler
+                0x00000a80                CAN2_IRQHandler
+                0x00000a80                WideTimer1B_IRQHandler
+                0x00000a80                GPIOPortH_IRQHandler
+                0x00000a80                GPIOPortQ2_IRQHandler
+                0x00000a80                GPIOPortR_IRQHandler
+                0x00000a80                Timer4B_IRQHandler
+                0x00000a80                Timer2A_IRQHandler
+                0x00000a80                SSI3_IRQHandler
+                0x00000a80                Timer2B_IRQHandler
+                0x00000a80                uDMAError_IRQHandler
+                0x00000a80                GPIOPortN_IRQHandler
+                0x00000a80                UART3_IRQHandler
+                0x00000a80                SysCtrl_IRQHandler
+                0x00000a80                Hibernate_IRQHandler
+                0x00000a80                PWM1Gen1_IRQHandler
  .text.UnityPrintNumberUnsigned
-                0x00000a8c       0x64 build_ek-tm4c123gxl/unity.o
-                0x00000a8c                UnityPrintNumberUnsigned
+                0x00000a94       0x64 build_ek-tm4c123gxl/unity.o
+                0x00000a94                UnityPrintNumberUnsigned
  .text.UnityPrintNumber
-                0x00000af0       0x18 build_ek-tm4c123gxl/unity.o
-                0x00000af0                UnityPrintNumber
+                0x00000af8       0x18 build_ek-tm4c123gxl/unity.o
+                0x00000af8                UnityPrintNumber
  .text.UnityPrintNumberHex
-                0x00000b08       0x32 build_ek-tm4c123gxl/unity.o
-                0x00000b08                UnityPrintNumberHex
+                0x00000b10       0x32 build_ek-tm4c123gxl/unity.o
+                0x00000b10                UnityPrintNumberHex
  .text.UnityPrint
-                0x00000b3a       0x64 build_ek-tm4c123gxl/unity.o
-                0x00000b3a                UnityPrint
- *fill*         0x00000b9e        0x2 
+                0x00000b42       0x64 build_ek-tm4c123gxl/unity.o
+                0x00000b42                UnityPrint
+ *fill*         0x00000ba6        0x2 
  .text.UnityTestResultsBegin
-                0x00000ba0       0x30 build_ek-tm4c123gxl/unity.o
+                0x00000ba8       0x30 build_ek-tm4c123gxl/unity.o
  .text.UnityTestResultsFailBegin
-                0x00000bd0       0x24 build_ek-tm4c123gxl/unity.o
+                0x00000bd8       0x24 build_ek-tm4c123gxl/unity.o
  .text.UnityAddMsgIfSpecified
-                0x00000bf4       0x50 build_ek-tm4c123gxl/unity.o
+                0x00000bfc       0x50 build_ek-tm4c123gxl/unity.o
  .text.UnityPrintNumberByStyle
-                0x00000c44       0x92 build_ek-tm4c123gxl/unity.o
-                0x00000c44                UnityPrintNumberByStyle
- *fill*         0x00000cd6        0x2 
+                0x00000c4c       0x92 build_ek-tm4c123gxl/unity.o
+                0x00000c4c                UnityPrintNumberByStyle
+ *fill*         0x00000cde        0x2 
  .text.UnityConcludeTest
-                0x00000cd8       0x50 build_ek-tm4c123gxl/unity.o
-                0x00000cd8                UnityConcludeTest
+                0x00000ce0       0x50 build_ek-tm4c123gxl/unity.o
+                0x00000ce0                UnityConcludeTest
  .text.UnityAssertEqualNumber
-                0x00000d28       0x74 build_ek-tm4c123gxl/unity.o
-                0x00000d28                UnityAssertEqualNumber
+                0x00000d30       0x74 build_ek-tm4c123gxl/unity.o
+                0x00000d30                UnityAssertEqualNumber
  .text.UnityFail
-                0x00000d9c       0x98 build_ek-tm4c123gxl/unity.o
-                0x00000d9c                UnityFail
+                0x00000da4       0x98 build_ek-tm4c123gxl/unity.o
+                0x00000da4                UnityFail
  .text.UnityDefaultTestRun
-                0x00000e34       0x4c build_ek-tm4c123gxl/unity.o
-                0x00000e34                UnityDefaultTestRun
+                0x00000e3c       0x4c build_ek-tm4c123gxl/unity.o
+                0x00000e3c                UnityDefaultTestRun
  .text.UnityBegin
-                0x00000e80       0x20 build_ek-tm4c123gxl/unity.o
-                0x00000e80                UnityBegin
+                0x00000e88       0x20 build_ek-tm4c123gxl/unity.o
+                0x00000e88                UnityBegin
  .text.UnityEnd
-                0x00000ea0       0x80 build_ek-tm4c123gxl/unity.o
-                0x00000ea0                UnityEnd
+                0x00000ea8       0x80 build_ek-tm4c123gxl/unity.o
+                0x00000ea8                UnityEnd
  .text.CMock_Guts_MemNew
-                0x00000f20       0x40 build_ek-tm4c123gxl/cmock.o
-                0x00000f20                CMock_Guts_MemNew
+                0x00000f28       0x40 build_ek-tm4c123gxl/cmock.o
+                0x00000f28                CMock_Guts_MemNew
  .text.CMock_Guts_MemChain
-                0x00000f60       0x60 build_ek-tm4c123gxl/cmock.o
-                0x00000f60                CMock_Guts_MemChain
+                0x00000f68       0x60 build_ek-tm4c123gxl/cmock.o
+                0x00000f68                CMock_Guts_MemChain
  .text.CMock_Guts_GetAddressFor
-                0x00000fc0       0x24 build_ek-tm4c123gxl/cmock.o
-                0x00000fc0                CMock_Guts_GetAddressFor
+                0x00000fc8       0x24 build_ek-tm4c123gxl/cmock.o
+                0x00000fc8                CMock_Guts_GetAddressFor
  .text.__libc_init_array
-                0x00000fe4       0x48 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
-                0x00000fe4                __libc_init_array
+                0x00000fec       0x48 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
+                0x00000fec                __libc_init_array
  *(.rodata)
  *(.rodata*)
  .rodata.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled.str1.4
-                0x0000102c       0x19 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- *fill*         0x00001045        0x3 
+                0x00001034       0x19 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ *fill*         0x0000104d        0x3 
  .rodata.main.str1.4
-                0x00001048       0x63 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- *fill*         0x000010ab        0x1 
+                0x00001050       0x63 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ *fill*         0x000010b3        0x1 
  .rodata.assert_failed.str1.4
-                0x000010ac        0xa build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- *fill*         0x000010b6        0x2 
+                0x000010b4        0xa build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ *fill*         0x000010be        0x2 
  .rodata.Reset_Handler.str1.4
-                0x000010b8        0xe build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x000010c6        0x2 
+                0x000010c0        0xe build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x000010ce        0x2 
  .rodata.NMI_Handler.str1.4
-                0x000010c8        0xc build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x000010d0        0xc build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .rodata.HardFault_Handler.str1.4
-                0x000010d4       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x000010e6        0x2 
+                0x000010dc       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x000010ee        0x2 
  .rodata.MemManage_Handler.str1.4
-                0x000010e8       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x000010fa        0x2 
+                0x000010f0       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x00001102        0x2 
  .rodata.UsageFault_Handler.str1.4
-                0x000010fc       0x11 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x0000110d        0x3 
+                0x00001104       0x11 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x00001115        0x3 
  .rodata.Default_Handler.str1.4
-                0x00001110       0x10 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00001118       0x10 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .rodata.UnityStrBreaker
-                0x00001120       0x18 build_ek-tm4c123gxl/unity.o
+                0x00001128       0x18 build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrDetail1Name
-                0x00001138        0xa build_ek-tm4c123gxl/unity.o
- *fill*         0x00001142        0x2 
+                0x00001140        0xa build_ek-tm4c123gxl/unity.o
+ *fill*         0x0000114a        0x2 
  .rodata.UnityStrDetail2Name
-                0x00001144        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x0000114f        0x1 
+                0x0000114c        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001157        0x1 
  .rodata.UnityStrExpected
-                0x00001150        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x0000115b        0x1 
+                0x00001158        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001163        0x1 
  .rodata.UnityStrFail
-                0x0000115c        0x5 build_ek-tm4c123gxl/unity.o
-                0x0000115c                UnityStrFail
- *fill*         0x00001161        0x3 
+                0x00001164        0x5 build_ek-tm4c123gxl/unity.o
+                0x00001164                UnityStrFail
+ *fill*         0x00001169        0x3 
  .rodata.UnityStrOk
-                0x00001164        0x3 build_ek-tm4c123gxl/unity.o
-                0x00001164                UnityStrOk
- *fill*         0x00001167        0x1 
+                0x0000116c        0x3 build_ek-tm4c123gxl/unity.o
+                0x0000116c                UnityStrOk
+ *fill*         0x0000116f        0x1 
  .rodata.UnityStrPass
-                0x00001168        0x5 build_ek-tm4c123gxl/unity.o
-                0x00001168                UnityStrPass
- *fill*         0x0000116d        0x3 
+                0x00001170        0x5 build_ek-tm4c123gxl/unity.o
+                0x00001170                UnityStrPass
+ *fill*         0x00001175        0x3 
  .rodata.UnityStrResultsFailures
-                0x00001170        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x0000117b        0x1 
+                0x00001178        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001183        0x1 
  .rodata.UnityStrResultsIgnored
-                0x0000117c        0xa build_ek-tm4c123gxl/unity.o
- *fill*         0x00001186        0x2 
+                0x00001184        0xa build_ek-tm4c123gxl/unity.o
+ *fill*         0x0000118e        0x2 
  .rodata.UnityStrResultsTests
-                0x00001188        0x8 build_ek-tm4c123gxl/unity.o
+                0x00001190        0x8 build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrSpacer
-                0x00001190        0x3 build_ek-tm4c123gxl/unity.o
- *fill*         0x00001193        0x1 
+                0x00001198        0x3 build_ek-tm4c123gxl/unity.o
+ *fill*         0x0000119b        0x1 
  .rodata.UnityStrWas
-                0x00001194        0x6 build_ek-tm4c123gxl/unity.o
- *fill*         0x0000119a        0x2 
+                0x0000119c        0x6 build_ek-tm4c123gxl/unity.o
+ *fill*         0x000011a2        0x2 
  .rodata.str1.4
-                0x0000119c      0x167 build_ek-tm4c123gxl/cmock.o
+                0x000011a4      0x167 build_ek-tm4c123gxl/cmock.o
  *(.init)
- *fill*         0x00001303        0x1 
- .init          0x00001304        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
-                0x00001304                _init
- .init          0x00001308        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
+ *fill*         0x0000130b        0x1 
+ .init          0x0000130c        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
+                0x0000130c                _init
+ .init          0x00001310        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
  *(.fini)
- .fini          0x00001310        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
-                0x00001310                _fini
- .fini          0x00001314        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
-                0x0000131c                . = ALIGN (0x4)
+ .fini          0x00001318        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
+                0x00001318                _fini
+ .fini          0x0000131c        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
+                0x00001324                . = ALIGN (0x4)
 
-.glue_7         0x0000131c        0x0
- .glue_7        0x0000131c        0x0 linker stubs
+.glue_7         0x00001324        0x0
+ .glue_7        0x00001324        0x0 linker stubs
 
-.glue_7t        0x0000131c        0x0
- .glue_7t       0x0000131c        0x0 linker stubs
+.glue_7t        0x00001324        0x0
+ .glue_7t       0x00001324        0x0 linker stubs
 
-.vfp11_veneer   0x0000131c        0x0
- .vfp11_veneer  0x0000131c        0x0 linker stubs
+.vfp11_veneer   0x00001324        0x0
+ .vfp11_veneer  0x00001324        0x0 linker stubs
 
-.v4_bx          0x0000131c        0x0
- .v4_bx         0x0000131c        0x0 linker stubs
+.v4_bx          0x00001324        0x0
+ .v4_bx         0x00001324        0x0 linker stubs
 
-.iplt           0x0000131c        0x0
- .iplt          0x0000131c        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+.iplt           0x00001324        0x0
+ .iplt          0x00001324        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.rel.dyn        0x0000131c        0x0
- .rel.iplt      0x0000131c        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+.rel.dyn        0x00001324        0x0
+ .rel.iplt      0x00001324        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.preinit_array  0x0000131c        0x0
-                0x0000131c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00001324        0x0
+                0x00001324                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000131c                PROVIDE (__preinit_array_end = .)
+                0x00001324                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000131c        0x4
-                0x0000131c                PROVIDE (__init_array_start = .)
+.init_array     0x00001324        0x4
+                0x00001324                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000131c        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
-                0x00001320                PROVIDE (__init_array_end = .)
+ .init_array    0x00001324        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+                0x00001328                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00001320        0x4
+.fini_array     0x00001328        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x00001320        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+ .fini_array    0x00001328        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x00001324                _etext = .
+                0x0000132c                _etext = .
 
 .stack          0x20000000      0x800
                 0x20000000                __stack_start__ = .
@@ -701,8 +701,8 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
                 0x20000800                . = ALIGN (0x4)
                 0x20000800                __stack_end__ = .
 
-.data           0x20000800       0x10 load address 0x00001324
-                0x00001324                __data_load = LOADADDR (.data)
+.data           0x20000800       0x10 load address 0x0000132c
+                0x0000132c                __data_load = LOADADDR (.data)
                 0x20000800                __data_start = .
  *(.data)
  *(.data*)
@@ -723,10 +723,10 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
                 0x20000810                __data_end__ = .
                 0x20000810                _edata = __data_end__
 
-.igot.plt       0x20000810        0x0 load address 0x00001334
+.igot.plt       0x20000810        0x0 load address 0x0000133c
  .igot.plt      0x20000810        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.bss            0x20000810      0x558 load address 0x00001338
+.bss            0x20000810      0x558 load address 0x00001340
                 0x20000810                __bss_start__ = .
  *(.bss)
  .bss           0x20000810       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
@@ -811,15 +811,15 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/unity.o
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/cmock.o
 
-.debug_info     0x00000000     0x7a1e
+.debug_info     0x00000000     0x7a3e
  .debug_info    0x00000000      0x711 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .debug_info    0x00000711      0x603 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_info    0x00000d14      0x47b build_ek-tm4c123gxl/cyber_minion.o
- .debug_info    0x0000118f     0x1d25 build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_info    0x00002eb4      0xf6f build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_info    0x00003e23      0x2c2 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_info    0x000040e5     0x3509 build_ek-tm4c123gxl/unity.o
- .debug_info    0x000075ee      0x430 build_ek-tm4c123gxl/cmock.o
+ .debug_info    0x00000d14      0x49b build_ek-tm4c123gxl/cyber_minion.o
+ .debug_info    0x000011af     0x1d25 build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_info    0x00002ed4      0xf6f build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_info    0x00003e43      0x2c2 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_info    0x00004105     0x3509 build_ek-tm4c123gxl/unity.o
+ .debug_info    0x0000760e      0x430 build_ek-tm4c123gxl/cmock.o
 
 .debug_abbrev   0x00000000      0xfed
  .debug_abbrev  0x00000000      0x20c build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
@@ -869,15 +869,15 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
  .debug_ranges  0x00000188      0x218 build_ek-tm4c123gxl/unity.o
  .debug_ranges  0x000003a0       0x58 build_ek-tm4c123gxl/cmock.o
 
-.debug_line     0x00000000     0x2eba
+.debug_line     0x00000000     0x2ebe
  .debug_line    0x00000000      0x3ae build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .debug_line    0x000003ae      0x227 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_line    0x000005d5      0x3b3 build_ek-tm4c123gxl/cyber_minion.o
- .debug_line    0x00000988      0x57b build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_line    0x00000f03      0x462 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_line    0x00001365      0x168 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_line    0x000014cd     0x16c8 build_ek-tm4c123gxl/unity.o
- .debug_line    0x00002b95      0x325 build_ek-tm4c123gxl/cmock.o
+ .debug_line    0x000005d5      0x3b7 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_line    0x0000098c      0x57b build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_line    0x00000f07      0x462 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_line    0x00001369      0x168 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_line    0x000014d1     0x16c8 build_ek-tm4c123gxl/unity.o
+ .debug_line    0x00002b99      0x325 build_ek-tm4c123gxl/cmock.o
 
 .debug_str      0x00000000     0x22d5
  .debug_str     0x00000000      0x66a build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
@@ -885,7 +885,7 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
  .debug_str     0x0000066a      0x1fa build_ek-tm4c123gxl/cyber_minion_hil_tests.o
                                 0x526 (size before relaxing)
  .debug_str     0x00000864      0x100 build_ek-tm4c123gxl/cyber_minion.o
-                                0x2ec (size before relaxing)
+                                0x2fa (size before relaxing)
  .debug_str     0x00000964      0xd54 build_ek-tm4c123gxl/tm4c_bsp.o
                                0x10db (size before relaxing)
  .debug_str     0x000016b8       0x7b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
@@ -1064,6 +1064,7 @@ UART_Flush                                        build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/unity.o
 UART_SendChar                                     build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/unity.o
+                                                  build_ek-tm4c123gxl/cyber_minion.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 UART_SendString                                   build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o

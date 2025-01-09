@@ -1,4 +1,5 @@
 import serial
+import time
 
 # input: 1 frame of UART data to echo back followed by
 #        test results. 
@@ -11,15 +12,14 @@ try:
             data = ser.read(ser.in_waiting)
             print("sending back: ")
             print(data)
+            time.sleep(3) 
             ser.write(data) 
 
-            while not ser.in_waiting: {
-                # wait for test results
-            }
+            while ser.in_waiting == 0: {}
                 
             # hil tests will use null as terminating character for printing test results
             malformed_test_results = False
-            while not malformed_test_results and data == '\0':
+            while not malformed_test_results and data != 0x7E:
                 try: 
                     data = ser.read(ser.in_waiting)
                     decoded_data = data.decode('utf-8')
@@ -32,3 +32,15 @@ except KeyboardInterrupt:
     print("Exiting...")
 finally:
     ser.close()  
+
+
+# try:
+#     while True:
+#         if ser.in_waiting > 0:
+#             data = ser.read(ser.in_waiting)
+#             print(data)
+            
+# except KeyboardInterrupt:
+#     print("Exiting...")
+# finally:
+#     ser.close()  

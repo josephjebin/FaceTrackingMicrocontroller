@@ -39,6 +39,7 @@ void main_loop(void) {
 	while (1) {
 		switch(current_state) {
 			case WAITING: 
+				UART_SendChar('a'); 
 				wait_for_interrupt(); 
 				break; 
 			case SCANNING: 
