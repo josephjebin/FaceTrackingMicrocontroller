@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\cyber_minion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\cyber_minion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed Jan  8 14:43:34 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jan  9 10:49:19 2025
 <BR><P>
 <H3>Maximum Stack Usage =        292 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1278,25 +1278,27 @@ Global Symbols
 
 <P><STRONG><a name="[e3]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[b5]"></a>CMock_Guts_GetAddressFor</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, cmock.o(.text.CMock_Guts_GetAddressFor))
+<P><STRONG><a name="[ac]"></a>CMock_Guts_GetAddressFor</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, cmock.o(.text.CMock_Guts_GetAddressFor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CMock_Guts_GetAddressFor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
 </UL>
 
-<P><STRONG><a name="[b6]"></a>CMock_Guts_MemNext</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, cmock.o(.text.CMock_Guts_MemNext))
+<P><STRONG><a name="[ad]"></a>CMock_Guts_MemNext</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, cmock.o(.text.CMock_Guts_MemNext))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CMock_Guts_MemNext
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
 </UL>
 
-<P><STRONG><a name="[ac]"></a>PLL_init</STRONG> (Thumb, 122 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.PLL_init))
+<P><STRONG><a name="[ae]"></a>PLL_init</STRONG> (Thumb, 122 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.PLL_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PLL_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>SysTick_init</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.SysTick_init))
+<P><STRONG><a name="[af]"></a>SysTick_init</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.SysTick_init))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1380,7 +1382,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_sanity
 </UL>
 
-<P><STRONG><a name="[af]"></a>UnityBegin</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, unity.o(.text.UnityBegin))
+<P><STRONG><a name="[b1]"></a>UnityBegin</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, unity.o(.text.UnityBegin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UnityBegin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1428,7 +1430,8 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Flush
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
 </UL>
 
 <P><STRONG><a name="[95]"></a>UnityPrint</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, unity.o(.text.UnityPrint))
@@ -1494,15 +1497,21 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_wait
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
-<P><STRONG><a name="[ae]"></a>enable_interrupts</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.enable_interrupts))
+<P><STRONG><a name="[b0]"></a>enable_interrupts</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.enable_interrupts))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>exit_interrupt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.exit_interrupt))
-<BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
+<P><STRONG><a name="[90]"></a>exit_interrupt</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, mocktm4c_bsp_mocks.o(.text.exit_interrupt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = exit_interrupt &rArr; UnityFail &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemNext
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_GetAddressFor
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
 <P><STRONG><a name="[8c]"></a>get_UART0_interrupt_data</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.get_UART0_interrupt_data))
@@ -1514,11 +1523,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityEnd
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityBegin
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityBegin
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_and_servos_init
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_init
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_interrupts
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_init
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_interrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1526,13 +1535,13 @@ Global Symbols
 <P><STRONG><a name="[78]"></a>main_loop</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cyber_minion.o(.text.main_loop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = main_loop &rArr; sleep_position &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_for_interrupt
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_for_interrupt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cyber_minion.o(.text.UART0_Handler)
 </UL>
-<P><STRONG><a name="[b1]"></a>scan</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, cyber_minion.o(.text.scan))
+<P><STRONG><a name="[b3]"></a>scan</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, cyber_minion.o(.text.scan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = scan &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
@@ -1546,13 +1555,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
 </UL>
 
-<P><STRONG><a name="[b3]"></a>set_PWM0_generator0_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator0_CMPA))
+<P><STRONG><a name="[b5]"></a>set_PWM0_generator0_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator0_CMPA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = set_PWM0_generator0_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_x
 </UL>
 
-<P><STRONG><a name="[b4]"></a>set_PWM0_generator1_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator1_CMPA))
+<P><STRONG><a name="[b6]"></a>set_PWM0_generator1_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator1_CMPA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = set_PWM0_generator1_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_y
@@ -1561,35 +1570,35 @@ Global Symbols
 <P><STRONG><a name="[8e]"></a>set_compare_x</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cyber_minion.o(.text.set_compare_x))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator0_CMPA
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator0_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
 <P><STRONG><a name="[8d]"></a>set_compare_y</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cyber_minion.o(.text.set_compare_y))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = set_compare_y &rArr; set_PWM0_generator1_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator1_CMPA
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator1_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
-<P><STRONG><a name="[8f]"></a>set_sp</STRONG> (Thumb, 232 bytes, Stack size 40 bytes, mocktm4c_bsp_set_sp.o(.text.set_sp))
+<P><STRONG><a name="[8f]"></a>set_sp</STRONG> (Thumb, 232 bytes, Stack size 40 bytes, mocktm4c_bsp_mocks.o(.text.set_sp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = set_sp &rArr; UnityAssertEqualIntArray &rArr; UnityIsOneArrayNull &rArr; UnityTestResultsFailBegin &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualIntArray
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemNext
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_GetAddressFor
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemNext
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_GetAddressFor
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
-<P><STRONG><a name="[b2]"></a>sleep_position</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, cyber_minion.o(.text.sleep_position))
+<P><STRONG><a name="[b4]"></a>sleep_position</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, cyber_minion.o(.text.sleep_position))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = sleep_position &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_x
@@ -1609,7 +1618,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cyber_minion_hil_tests.o(.text.main)
 </UL>
-<P><STRONG><a name="[b0]"></a>wait_for_interrupt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.wait_for_interrupt))
+<P><STRONG><a name="[b2]"></a>wait_for_interrupt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.wait_for_interrupt))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 <P>

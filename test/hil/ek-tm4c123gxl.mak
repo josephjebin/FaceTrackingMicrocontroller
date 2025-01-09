@@ -81,14 +81,14 @@ INCLUDES := -I. \
 ASM_SRCS := 
 
 # C source files
-C_SRCS := Mocktm4c_bsp_set_sp.c \
+C_SRCS := Mocktm4c_bsp_mocks.c \
 	cyber_minion_hil_tests.c \
 	cyber_minion.c \
 	tm4c_bsp.c \
 	system_TM4C123GH6PM.c \
 	startup_TM4C123GH6PM.c \
 	unity.c \
-	cmock.c
+	cmock.c \
 	
 # C++ source files
 CPP_SRCS :=

@@ -429,11 +429,6 @@
               <FileType>5</FileType>
               <FilePath>.\tm4c\tm4c_bsp.h</FilePath>
             </File>
-            <File>
-              <FileName>tm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c\tm4c_bsp_set_sp.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -603,19 +598,24 @@
               <FilePath>.\test\hil\cyber_minion_hil_tests.c</FilePath>
             </File>
             <File>
-              <FileName>Mocktm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.h</FilePath>
-            </File>
-            <File>
-              <FileName>Mocktm4c_bsp_set_sp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
-            </File>
-            <File>
               <FileName>unity_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\test\hil\unity_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\tm4c\tm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1418,11 +1418,6 @@
               <FileType>5</FileType>
               <FilePath>.\tm4c\tm4c_bsp.h</FilePath>
             </File>
-            <File>
-              <FileName>tm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c\tm4c_bsp_set_sp.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -1523,19 +1518,24 @@
               <FilePath>.\test\hil\cyber_minion_hil_tests.c</FilePath>
             </File>
             <File>
-              <FileName>Mocktm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.h</FilePath>
-            </File>
-            <File>
-              <FileName>Mocktm4c_bsp_set_sp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
-            </File>
-            <File>
               <FileName>unity_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\test\hil\unity_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\tm4c\tm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1940,7 +1940,7 @@
               <MiscControls>-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;.\CMSIS\Core\Include;.\test\framework\src;.\tm4c;.\tm4c\system;.\src;..\..\..\cmock\src;.\test\hil\mocks;.\tm4c\startup;.\test\hil</IncludePath>
+              <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;.\CMSIS\Core\Include;.\test\framework\src;.\tm4c;.\tm4c\system;.\src;..\..\..\cmock\src;.\test\hil\mocks;.\tm4c\startup;.\test\hil;.\test\hil\tm4c</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2149,11 +2149,6 @@
               <FileType>5</FileType>
               <FilePath>.\tm4c\tm4c_bsp.h</FilePath>
             </File>
-            <File>
-              <FileName>tm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tm4c\tm4c_bsp_set_sp.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -2254,19 +2249,24 @@
               <FilePath>.\test\hil\cyber_minion_hil_tests.c</FilePath>
             </File>
             <File>
-              <FileName>Mocktm4c_bsp_set_sp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.h</FilePath>
-            </File>
-            <File>
-              <FileName>Mocktm4c_bsp_set_sp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_set_sp.c</FilePath>
-            </File>
-            <File>
               <FileName>unity_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\test\hil\unity_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\tm4c\tm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mocktm4c_bsp_mocks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\test\hil\mocks\Mocktm4c_bsp_mocks.c</FilePath>
             </File>
           </Files>
         </Group>

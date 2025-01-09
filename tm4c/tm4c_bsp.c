@@ -35,6 +35,12 @@ void set_sp(uint32_t * new_sp) {
 		"MOV sp, r0             \n"   // Move next stack pointer into sp  
 	);
 }
+
+void exit_interrupt(void) {
+    __asm volatile (
+        "mov lr, #0xFFFFFFF9"  // Set LR to return to Handler mode with MSP
+    );
+}
 #endif
 
 void enable_interrupts(void) {
@@ -44,11 +50,7 @@ void wait_for_interrupt(void) {
 	__asm volatile ("WFI"); 
 }
 
-void exit_interrupt(void) {
-    __asm volatile (
-        "mov lr, #0xFFFFFFF9"  // Set LR to return to Handler mode with MSP
-    );
-}
+
 
 
 

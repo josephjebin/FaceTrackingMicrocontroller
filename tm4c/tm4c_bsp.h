@@ -7,9 +7,9 @@
 #define SYSCTL_RCC_R            (*((volatile unsigned long *)0x400FE060))
 #define SYSCTL_RIS_R            (*((volatile unsigned long *)0x400FE050))
 
-#define NVIC_ST_CTRL_R      (*((volatile uint32_t *)0xE000E010)) // SysTick Control and Status Register
-#define NVIC_ST_RELOAD_R    (*((volatile uint32_t *)0xE000E014)) // SysTick Reload Value Register
-#define NVIC_ST_CURRENT_R   (*((volatile uint32_t *)0xE000E018)) // SysTick Current Value Register
+#define NVIC_ST_CTRL_R      		(*((volatile uint32_t *)0xE000E010))
+#define NVIC_ST_RELOAD_R    		(*((volatile uint32_t *)0xE000E014))
+#define NVIC_ST_CURRENT_R				(*((volatile uint32_t *)0xE000E018))
 	
 void PLL_init(void); 
 void SysTick_init(void); 
@@ -20,7 +20,7 @@ void UART_SendString(const char*);
 void UART_SendChar(char); 
 void UART_Flush(void);
 void enable_interrupts(void); 
-void wait_for_interrupt(void); //defined in startup_TM4C123.s
+void wait_for_interrupt(void);
 void set_PWM0_generator0_CMPA(unsigned short); 
 void set_PWM0_generator1_CMPA(unsigned short); 
 

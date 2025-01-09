@@ -28,9 +28,10 @@ Section Cross References
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.bss.stack2) for stack2
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.data.sp2) for sp2
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.text.main_loop) for main_loop
+    cyber_minion.o(.text.UART0_Handler) refers to mocktm4c_bsp_mocks.o(.text.set_sp) for set_sp
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.bss.stack1) for stack1
     cyber_minion.o(.text.UART0_Handler) refers to cyber_minion.o(.data.sp1) for sp1
-    cyber_minion.o(.text.UART0_Handler) refers to tm4c_bsp.o(.text.exit_interrupt) for exit_interrupt
+    cyber_minion.o(.text.UART0_Handler) refers to mocktm4c_bsp_mocks.o(.text.exit_interrupt) for exit_interrupt
     cyber_minion.o(.ARM.exidx.text.UART0_Handler) refers to cyber_minion.o(.text.UART0_Handler) for [Anonymous Symbol]
     cyber_minion.o(.text.set_compare_y) refers to cyber_minion.o(.data.compare_y) for compare_y
     cyber_minion.o(.text.set_compare_y) refers to tm4c_bsp.o(.text.set_PWM0_generator1_CMPA) for set_PWM0_generator1_CMPA
@@ -38,8 +39,8 @@ Section Cross References
     cyber_minion.o(.text.set_compare_x) refers to cyber_minion.o(.data.compare_x) for compare_x
     cyber_minion.o(.text.set_compare_x) refers to tm4c_bsp.o(.text.set_PWM0_generator0_CMPA) for set_PWM0_generator0_CMPA
     cyber_minion.o(.ARM.exidx.text.set_compare_x) refers to cyber_minion.o(.text.set_compare_x) for [Anonymous Symbol]
-    cyber_minion.o(.data.sp2) refers to cyber_minion.o(.bss.stack2) for [Anonymous Symbol]
     cyber_minion.o(.data.sp1) refers to cyber_minion.o(.bss.stack1) for [Anonymous Symbol]
+    cyber_minion.o(.data.sp2) refers to cyber_minion.o(.bss.stack2) for [Anonymous Symbol]
     startup_tm4c123.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -56,19 +57,11 @@ Section Cross References
     system_tm4c123gh6pm.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_tm4c123gh6pm.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
     system_tm4c123gh6pm.o(.ARM.exidx.text.getOscClk) refers to system_tm4c123gh6pm.o(.text.getOscClk) for [Anonymous Symbol]
     system_tm4c123gh6pm.o(.ARM.exidx.text.SystemInit) refers to system_tm4c123gh6pm.o(.text.SystemInit) for [Anonymous Symbol]
-    cyber_minion_runner.o(.text.main) refers to tm4c_bsp.o(.text.PLL_init) for PLL_init
-    cyber_minion_runner.o(.text.main) refers to tm4c_bsp.o(.text.UART0_and_servos_init) for UART0_and_servos_init
-    cyber_minion_runner.o(.text.main) refers to tm4c_bsp.o(.text.SysTick_init) for SysTick_init
-    cyber_minion_runner.o(.text.main) refers to tm4c_bsp.o(.text.enable_interrupts) for enable_interrupts
-    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.sleep_position) for sleep_position
-    cyber_minion_runner.o(.text.main) refers to cyber_minion.o(.text.main_loop) for main_loop
-    cyber_minion_runner.o(.ARM.exidx.text.main) refers to cyber_minion_runner.o(.text.main) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.get_UART0_interrupt_data) refers to tm4c_bsp.o(.text.get_UART0_interrupt_data) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.set_PWM0_generator0_CMPA) refers to tm4c_bsp.o(.text.set_PWM0_generator0_CMPA) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.set_PWM0_generator1_CMPA) refers to tm4c_bsp.o(.text.set_PWM0_generator1_CMPA) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.enable_interrupts) refers to tm4c_bsp.o(.text.enable_interrupts) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.wait_for_interrupt) refers to tm4c_bsp.o(.text.wait_for_interrupt) for [Anonymous Symbol]
-    tm4c_bsp.o(.ARM.exidx.text.exit_interrupt) refers to tm4c_bsp.o(.text.exit_interrupt) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.PLL_init) refers to tm4c_bsp.o(.text.PLL_init) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.SysTick_init) refers to tm4c_bsp.o(.text.SysTick_init) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.SysTick_wait) refers to tm4c_bsp.o(.text.SysTick_wait) for [Anonymous Symbol]
@@ -83,17 +76,479 @@ Section Cross References
     tm4c_bsp.o(.ARM.exidx.text.UART_SendString) refers to tm4c_bsp.o(.text.UART_SendString) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.UART_SendChar) refers to tm4c_bsp.o(.text.UART_SendChar) for [Anonymous Symbol]
     tm4c_bsp.o(.ARM.exidx.text.UART_Flush) refers to tm4c_bsp.o(.text.UART_Flush) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.ARM.exidx.text.setUp) refers to cyber_minion_hil_tests.o(.text.setUp) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.ARM.exidx.text.tearDown) refers to cyber_minion_hil_tests.o(.text.tearDown) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.text.test_sanity) refers to unity.o(.text.UnityAssertEqualNumber) for UnityAssertEqualNumber
+    cyber_minion_hil_tests.o(.ARM.exidx.text.test_sanity) refers to cyber_minion_hil_tests.o(.text.test_sanity) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) refers to cyber_minion.o(.bss.current_state) for current_state
+    cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) refers to unity.o(.text.UnityAssertEqualNumber) for UnityAssertEqualNumber
+    cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) refers to cyber_minion.o(.text.main_loop) for main_loop
+    cyber_minion_hil_tests.o(.ARM.exidx.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) refers to cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.text.main) refers to tm4c_bsp.o(.text.PLL_init) for PLL_init
+    cyber_minion_hil_tests.o(.text.main) refers to tm4c_bsp.o(.text.UART0_and_servos_init) for UART0_and_servos_init
+    cyber_minion_hil_tests.o(.text.main) refers to tm4c_bsp.o(.text.SysTick_init) for SysTick_init
+    cyber_minion_hil_tests.o(.text.main) refers to tm4c_bsp.o(.text.enable_interrupts) for enable_interrupts
+    cyber_minion_hil_tests.o(.text.main) refers to cyber_minion_hil_tests.o(.rodata.str1.1) for .L.str
+    cyber_minion_hil_tests.o(.text.main) refers to unity.o(.text.UnityBegin) for UnityBegin
+    cyber_minion_hil_tests.o(.text.main) refers to cyber_minion_hil_tests.o(.text.test_sanity) for test_sanity
+    cyber_minion_hil_tests.o(.text.main) refers to unity.o(.text.UnityDefaultTestRun) for UnityDefaultTestRun
+    cyber_minion_hil_tests.o(.text.main) refers to unity.o(.text.UnityEnd) for UnityEnd
+    cyber_minion_hil_tests.o(.ARM.exidx.text.main) refers to cyber_minion_hil_tests.o(.text.main) for [Anonymous Symbol]
+    cyber_minion_hil_tests.o(.text.assert_failed) refers to cyber_minion_hil_tests.o(.rodata.str1.1) for .L.str.2
+    cyber_minion_hil_tests.o(.text.assert_failed) refers to tm4c_bsp.o(.text.UART_SendString) for UART_SendString
+    cyber_minion_hil_tests.o(.ARM.exidx.text.assert_failed) refers to cyber_minion_hil_tests.o(.text.assert_failed) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to unity.o(.bss.Unity) for Unity
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to mocktm4c_bsp_mocks.o(.data.CMockString_set_sp) for CMockString_set_sp
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to cmock.o(.data.CMockStringCalledLess) for CMockStringCalledLess
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to unity.o(.text.UnityFail) for UnityFail
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) refers to mocktm4c_bsp_mocks.o(.data.CMockString_exit_interrupt) for CMockString_exit_interrupt
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Verify) refers to mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Init) refers to mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Destroy) for Mocktm4c_bsp_mocks_Destroy
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Init) refers to mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Init) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Destroy) refers to cmock.o(.text.CMock_Guts_MemFreeAll) for CMock_Guts_MemFreeAll
+    mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Destroy) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Destroy) refers to mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Destroy) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to unity.o(.bss.Unity) for Unity
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to mocktm4c_bsp_mocks.o(.data.CMockString_set_sp) for CMockString_set_sp
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to cmock.o(.text.CMock_Guts_GetAddressFor) for CMock_Guts_GetAddressFor
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to cmock.o(.text.CMock_Guts_MemNext) for CMock_Guts_MemNext
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to cmock.o(.data.CMockStringCalledMore) for CMockStringCalledMore
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to unity.o(.text.UnityFail) for UnityFail
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to mocktm4c_bsp_mocks.o(.data.CMockString_cmock_arg1) for CMockString_cmock_arg1
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to cmock.o(.data.CMockStringExpNULL) for CMockStringExpNULL
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to cmock.o(.data.CMockStringMismatch) for CMockStringMismatch
+    mocktm4c_bsp_mocks.o(.text.set_sp) refers to unity.o(.text.UnityAssertEqualIntArray) for UnityAssertEqualIntArray
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.set_sp) refers to mocktm4c_bsp_mocks.o(.text.set_sp) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.CMockExpectParameters_set_sp) refers to mocktm4c_bsp_mocks.o(.text.CMockExpectParameters_set_sp) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to cmock.o(.text.CMock_Guts_MemNew) for CMock_Guts_MemNew
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to cmock.o(.text.CMock_Guts_GetAddressFor) for CMock_Guts_GetAddressFor
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to cmock.o(.data.CMockStringOutOfMemory) for CMockStringOutOfMemory
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to unity.o(.text.UnityFail) for UnityFail
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to cmock.o(.text.CMock_Guts_MemChain) for CMock_Guts_MemChain
+    mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) refers to mocktm4c_bsp_mocks.o(.text.CMockExpectParameters_set_sp) for CMockExpectParameters_set_sp
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.set_sp_CMockExpect) refers to mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to unity.o(.bss.Unity) for Unity
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to mocktm4c_bsp_mocks.o(.data.CMockString_exit_interrupt) for CMockString_exit_interrupt
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to cmock.o(.text.CMock_Guts_GetAddressFor) for CMock_Guts_GetAddressFor
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to cmock.o(.text.CMock_Guts_MemNext) for CMock_Guts_MemNext
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to cmock.o(.data.CMockStringCalledMore) for CMockStringCalledMore
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt) refers to unity.o(.text.UnityFail) for UnityFail
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.exit_interrupt) refers to mocktm4c_bsp_mocks.o(.text.exit_interrupt) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to cmock.o(.text.CMock_Guts_MemNew) for CMock_Guts_MemNew
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to cmock.o(.text.CMock_Guts_GetAddressFor) for CMock_Guts_GetAddressFor
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to cmock.o(.data.CMockStringOutOfMemory) for CMockStringOutOfMemory
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to unity.o(.text.UnityFail) for UnityFail
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to mocktm4c_bsp_mocks.o(.bss.Mock) for Mock
+    mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) refers to cmock.o(.text.CMock_Guts_MemChain) for CMock_Guts_MemChain
+    mocktm4c_bsp_mocks.o(.ARM.exidx.text.exit_interrupt_CMockExpect) refers to mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.data.CMockString_set_sp) refers to mocktm4c_bsp_mocks.o(.rodata.str1.1) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.data.CMockString_exit_interrupt) refers to mocktm4c_bsp_mocks.o(.rodata.str1.1) for [Anonymous Symbol]
+    mocktm4c_bsp_mocks.o(.data.CMockString_cmock_arg1) refers to mocktm4c_bsp_mocks.o(.rodata.str1.1) for [Anonymous Symbol]
+    unity.o(.text.UnityPrint) refers to unity.o(.text.UnityPrintChar) for UnityPrintChar
+    unity.o(.ARM.exidx.text.UnityPrint) refers to unity.o(.text.UnityPrint) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintChar) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintChar) refers to unity.o(.text.UnityPrintNumberHex) for UnityPrintNumberHex
+    unity.o(.ARM.exidx.text.UnityPrintChar) refers to unity.o(.text.UnityPrintChar) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintLen) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintLen) refers to unity.o(.text.UnityPrintNumberHex) for UnityPrintNumberHex
+    unity.o(.ARM.exidx.text.UnityPrintLen) refers to unity.o(.text.UnityPrintLen) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintNumberHex) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.ARM.exidx.text.UnityPrintNumberHex) refers to unity.o(.text.UnityPrintNumberHex) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintNumberByStyle) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintNumberByStyle) refers to unity.o(.text.UnityPrintNumberHex) for UnityPrintNumberHex
+    unity.o(.text.UnityPrintNumberByStyle) refers to unity.o(.text.UnityPrintNumber) for UnityPrintNumber
+    unity.o(.text.UnityPrintNumberByStyle) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.ARM.exidx.text.UnityPrintNumberByStyle) refers to unity.o(.text.UnityPrintNumberByStyle) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintNumber) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintNumber) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.ARM.exidx.text.UnityPrintNumber) refers to unity.o(.text.UnityPrintNumber) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintNumberUnsigned) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.ARM.exidx.text.UnityPrintNumberUnsigned) refers to unity.o(.text.UnityPrintNumberUnsigned) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintMask) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.ARM.exidx.text.UnityPrintMask) refers to unity.o(.text.UnityPrintMask) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintFloat) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmpge
+    unity.o(.text.UnityPrintFloat) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.rodata.str1.1) for .L.str
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.text.__ARM_isnanf) for __ARM_isnanf
+    unity.o(.text.UnityPrintFloat) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.text.__ARM_isnan) for __ARM_isnan
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.text.__ARM_isinff) for __ARM_isinff
+    unity.o(.text.UnityPrintFloat) refers to unity.o(.text.__ARM_isinf) for __ARM_isinf
+    unity.o(.text.UnityPrintFloat) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    unity.o(.text.UnityPrintFloat) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
+    unity.o(.text.UnityPrintFloat) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
+    unity.o(.text.UnityPrintFloat) refers to fflt_clz.o(x$fpl$fflt) for __aeabi_i2f
+    unity.o(.text.UnityPrintFloat) refers to faddsub_clz.o(x$fpl$fsub) for __aeabi_fsub
+    unity.o(.text.UnityPrintFloat) refers to faddsub_clz.o(x$fpl$fadd) for __aeabi_fadd
+    unity.o(.ARM.exidx.text.UnityPrintFloat) refers to unity.o(.text.UnityPrintFloat) for [Anonymous Symbol]
+    unity.o(.ARM.exidx.text.__ARM_isnanf) refers to unity.o(.text.__ARM_isnanf) for [Anonymous Symbol]
+    unity.o(.ARM.exidx.text.__ARM_isnan) refers to unity.o(.text.__ARM_isnan) for [Anonymous Symbol]
+    unity.o(.ARM.exidx.text.__ARM_isinff) refers to unity.o(.text.__ARM_isinff) for [Anonymous Symbol]
+    unity.o(.ARM.exidx.text.__ARM_isinf) refers to unity.o(.text.__ARM_isinf) for [Anonymous Symbol]
+    unity.o(.text.UnityConcludeTest) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityConcludeTest) refers to unity.o(.text.UnityTestResultsBegin) for UnityTestResultsBegin
+    unity.o(.text.UnityConcludeTest) refers to unity.o(.rodata.UnityStrPass) for UnityStrPass
+    unity.o(.text.UnityConcludeTest) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityConcludeTest) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityConcludeTest) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityConcludeTest) refers to unity.o(.text.UnityConcludeTest) for [Anonymous Symbol]
+    unity.o(.text.UnityTestResultsBegin) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityTestResultsBegin) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityTestResultsBegin) refers to unity.o(.text.UnityPrintNumber) for UnityPrintNumber
+    unity.o(.text.UnityTestResultsBegin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.ARM.exidx.text.UnityTestResultsBegin) refers to unity.o(.text.UnityTestResultsBegin) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertBits) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertBits) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertBits) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertBits) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertBits) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertBits) refers to unity.o(.text.UnityPrintMask) for UnityPrintMask
+    unity.o(.text.UnityAssertBits) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.text.UnityAssertBits) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertBits) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertBits) refers to unity.o(.text.UnityAssertBits) for [Anonymous Symbol]
+    unity.o(.text.UnityTestResultsFailBegin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityTestResultsFailBegin) refers to unity.o(.text.UnityTestResultsBegin) for UnityTestResultsBegin
+    unity.o(.text.UnityTestResultsFailBegin) refers to unity.o(.rodata.UnityStrFail) for UnityStrFail
+    unity.o(.text.UnityTestResultsFailBegin) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityTestResultsFailBegin) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.ARM.exidx.text.UnityTestResultsFailBegin) refers to unity.o(.text.UnityTestResultsFailBegin) for [Anonymous Symbol]
+    unity.o(.text.UnityAddMsgIfSpecified) refers to unity.o(.rodata.UnityStrSpacer) for UnityStrSpacer
+    unity.o(.text.UnityAddMsgIfSpecified) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAddMsgIfSpecified) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAddMsgIfSpecified) refers to unity.o(.rodata.UnityStrDetail1Name) for UnityStrDetail1Name
+    unity.o(.text.UnityAddMsgIfSpecified) refers to unity.o(.rodata.UnityStrDetail2Name) for UnityStrDetail2Name
+    unity.o(.ARM.exidx.text.UnityAddMsgIfSpecified) refers to unity.o(.text.UnityAddMsgIfSpecified) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualNumber) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.text.UnityAssertEqualNumber) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualNumber) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertEqualNumber) refers to unity.o(.text.UnityAssertEqualNumber) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.rodata.UnityStrGt) for UnityStrGt
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.rodata.UnityStrLt) for UnityStrLt
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.rodata.UnityStrOrEqual) for UnityStrOrEqual
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.rodata.UnityStrNotEqual) for UnityStrNotEqual
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertGreaterOrLessOrEqualNumber) refers to unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualIntArray) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.rodata.UnityStrPointless) for UnityStrPointless
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualIntArray) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityIsOneArrayNull) for UnityIsOneArrayNull
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.rodata.UnityStrElement) for UnityStrElement
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertEqualIntArray) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityAssertEqualIntArray) refers to unity.o(.text.UnityAssertEqualIntArray) for [Anonymous Symbol]
+    unity.o(.text.UnityIsOneArrayNull) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityIsOneArrayNull) refers to unity.o(.rodata.UnityStrNullPointerForExpected) for UnityStrNullPointerForExpected
+    unity.o(.text.UnityIsOneArrayNull) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityIsOneArrayNull) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityIsOneArrayNull) refers to unity.o(.rodata.UnityStrNullPointerForActual) for UnityStrNullPointerForActual
+    unity.o(.ARM.exidx.text.UnityIsOneArrayNull) refers to unity.o(.text.UnityIsOneArrayNull) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualFloatArray) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.rodata.UnityStrPointless) for UnityStrPointless
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualFloatArray) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityIsOneArrayNull) for UnityIsOneArrayNull
+    unity.o(.text.UnityAssertEqualFloatArray) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityFloatsWithin) for UnityFloatsWithin
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.rodata.UnityStrElement) for UnityStrElement
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityPrintFloat) for UnityPrintFloat
+    unity.o(.text.UnityAssertEqualFloatArray) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityAssertEqualFloatArray) refers to unity.o(.text.UnityAssertEqualFloatArray) for [Anonymous Symbol]
+    unity.o(.text.UnityFloatsWithin) refers to unity.o(.text.__ARM_isinff) for __ARM_isinff
+    unity.o(.text.UnityFloatsWithin) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    unity.o(.text.UnityFloatsWithin) refers to unity.o(.text.__ARM_isinf) for __ARM_isinf
+    unity.o(.text.UnityFloatsWithin) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmplt
+    unity.o(.text.UnityFloatsWithin) refers to unity.o(.text.__ARM_isnanf) for __ARM_isnanf
+    unity.o(.text.UnityFloatsWithin) refers to unity.o(.text.__ARM_isnan) for __ARM_isnan
+    unity.o(.text.UnityFloatsWithin) refers to faddsub_clz.o(x$fpl$fsub) for __aeabi_fsub
+    unity.o(.ARM.exidx.text.UnityFloatsWithin) refers to unity.o(.text.UnityFloatsWithin) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertFloatsWithin) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityFloatsWithin) for UnityFloatsWithin
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityPrintFloat) for UnityPrintFloat
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertFloatsWithin) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertFloatsWithin) refers to unity.o(.text.UnityAssertFloatsWithin) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names) for .L__const.UnityAssertFloatSpecial.trait_names
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertFloatSpecial) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.__ARM_isinff) for __ARM_isinff
+    unity.o(.text.UnityAssertFloatSpecial) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.__ARM_isinf) for __ARM_isinf
+    unity.o(.text.UnityAssertFloatSpecial) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmpgt
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.__ARM_isnanf) for __ARM_isnanf
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.rodata.UnityStrInvalidFloatTrait) for UnityStrInvalidFloatTrait
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.rodata.UnityStrNot) for UnityStrNot
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.UnityPrintFloat) for UnityPrintFloat
+    unity.o(.text.UnityAssertFloatSpecial) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertFloatSpecial) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertFloatSpecial) refers to unity.o(.text.UnityAssertFloatSpecial) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertNumbersWithin) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.rodata.UnityStrDelta) for UnityStrDelta
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.text.UnityAssertNumbersWithin) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertNumbersWithin) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertNumbersWithin) refers to unity.o(.text.UnityAssertNumbersWithin) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.rodata.UnityStrPointless) for UnityStrPointless
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityIsOneArrayNull) for UnityIsOneArrayNull
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.rodata.UnityStrDelta) for UnityStrDelta
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.rodata.UnityStrElement) for UnityStrElement
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertNumbersArrayWithin) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityAssertNumbersArrayWithin) refers to unity.o(.text.UnityAssertNumbersArrayWithin) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualString) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualString) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualString) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualString) refers to unity.o(.text.UnityPrintExpectedAndActualStrings) for UnityPrintExpectedAndActualStrings
+    unity.o(.text.UnityAssertEqualString) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualString) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertEqualString) refers to unity.o(.text.UnityAssertEqualString) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintExpectedAndActualStrings) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityPrintExpectedAndActualStrings) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityPrintExpectedAndActualStrings) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintExpectedAndActualStrings) refers to unity.o(.rodata.UnityStrNull) for UnityStrNull
+    unity.o(.text.UnityPrintExpectedAndActualStrings) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityPrintExpectedAndActualStrings) refers to unity.o(.text.UnityPrintExpectedAndActualStrings) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualStringLen) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualStringLen) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualStringLen) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualStringLen) refers to unity.o(.text.UnityPrintExpectedAndActualStringsLen) for UnityPrintExpectedAndActualStringsLen
+    unity.o(.text.UnityAssertEqualStringLen) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualStringLen) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityAssertEqualStringLen) refers to unity.o(.text.UnityAssertEqualStringLen) for [Anonymous Symbol]
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.text.UnityPrintLen) for UnityPrintLen
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.rodata.UnityStrNull) for UnityStrNull
+    unity.o(.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityPrintExpectedAndActualStringsLen) refers to unity.o(.text.UnityPrintExpectedAndActualStringsLen) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualStringArray) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.rodata.UnityStrPointless) for UnityStrPointless
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualStringArray) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityIsOneArrayNull) for UnityIsOneArrayNull
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.rodata.UnityStrElement) for UnityStrElement
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityPrintExpectedAndActualStrings) for UnityPrintExpectedAndActualStrings
+    unity.o(.ARM.exidx.text.UnityAssertEqualStringArray) refers to unity.o(.text.UnityAssertEqualStringArray) for [Anonymous Symbol]
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityAssertEqualMemory) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityTestResultsFailBegin) for UnityTestResultsFailBegin
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrPointless) for UnityStrPointless
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityAddMsgIfSpecified) for UnityAddMsgIfSpecified
+    unity.o(.text.UnityAssertEqualMemory) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityIsOneArrayNull) for UnityIsOneArrayNull
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrMemory) for UnityStrMemory
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrElement) for UnityStrElement
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityPrintNumberUnsigned) for UnityPrintNumberUnsigned
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrByte) for UnityStrByte
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrExpected) for UnityStrExpected
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityPrintNumberByStyle) for UnityPrintNumberByStyle
+    unity.o(.text.UnityAssertEqualMemory) refers to unity.o(.rodata.UnityStrWas) for UnityStrWas
+    unity.o(.ARM.exidx.text.UnityAssertEqualMemory) refers to unity.o(.text.UnityAssertEqualMemory) for [Anonymous Symbol]
+    unity.o(.text.UnityNumToPtr) refers to unity.o(.bss.UnityQuickCompare) for UnityQuickCompare
+    unity.o(.ARM.exidx.text.UnityNumToPtr) refers to unity.o(.text.UnityNumToPtr) for [Anonymous Symbol]
+    unity.o(.text.UnityFloatToPtr) refers to unity.o(.bss.UnityQuickCompare) for UnityQuickCompare
+    unity.o(.ARM.exidx.text.UnityFloatToPtr) refers to unity.o(.text.UnityFloatToPtr) for [Anonymous Symbol]
+    unity.o(.text.UnityFail) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityFail) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityFail) refers to unity.o(.text.UnityTestResultsBegin) for UnityTestResultsBegin
+    unity.o(.text.UnityFail) refers to unity.o(.rodata.UnityStrFail) for UnityStrFail
+    unity.o(.text.UnityFail) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityFail) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityFail) refers to unity.o(.rodata.UnityStrDetail1Name) for UnityStrDetail1Name
+    unity.o(.text.UnityFail) refers to unity.o(.rodata.UnityStrDetail2Name) for UnityStrDetail2Name
+    unity.o(.text.UnityFail) refers to unity.o(.rodata.UnityStrSpacer) for UnityStrSpacer
+    unity.o(.text.UnityFail) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityFail) refers to unity.o(.text.UnityFail) for [Anonymous Symbol]
+    unity.o(.text.UnityIgnore) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityIgnore) refers to setjmp.o(.text) for longjmp
+    unity.o(.text.UnityIgnore) refers to unity.o(.text.UnityTestResultsBegin) for UnityTestResultsBegin
+    unity.o(.text.UnityIgnore) refers to unity.o(.rodata.UnityStrIgnore) for UnityStrIgnore
+    unity.o(.text.UnityIgnore) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityIgnore) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityIgnore) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityIgnore) refers to unity.o(.text.UnityIgnore) for [Anonymous Symbol]
+    unity.o(.text.UnityMessage) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityMessage) refers to unity.o(.text.UnityTestResultsBegin) for UnityTestResultsBegin
+    unity.o(.text.UnityMessage) refers to unity.o(.rodata.str1.1) for .L.str.3
+    unity.o(.text.UnityMessage) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityMessage) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.ARM.exidx.text.UnityMessage) refers to unity.o(.text.UnityMessage) for [Anonymous Symbol]
+    unity.o(.text.UnityDefaultTestRun) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityDefaultTestRun) refers to setjmp.o(.text) for setjmp
+    unity.o(.text.UnityDefaultTestRun) refers to cyber_minion_hil_tests.o(.text.setUp) for setUp
+    unity.o(.text.UnityDefaultTestRun) refers to cyber_minion_hil_tests.o(.text.tearDown) for tearDown
+    unity.o(.text.UnityDefaultTestRun) refers to unity.o(.text.UnityConcludeTest) for UnityConcludeTest
+    unity.o(.ARM.exidx.text.UnityDefaultTestRun) refers to unity.o(.text.UnityDefaultTestRun) for [Anonymous Symbol]
+    unity.o(.text.UnitySetTestFile) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.ARM.exidx.text.UnitySetTestFile) refers to unity.o(.text.UnitySetTestFile) for [Anonymous Symbol]
+    unity.o(.text.UnityBegin) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.ARM.exidx.text.UnityBegin) refers to unity.o(.text.UnityBegin) for [Anonymous Symbol]
+    unity.o(.text.UnityEnd) refers to tm4c_bsp.o(.text.UART_SendChar) for UART_SendChar
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrBreaker) for UnityStrBreaker
+    unity.o(.text.UnityEnd) refers to unity.o(.text.UnityPrint) for UnityPrint
+    unity.o(.text.UnityEnd) refers to unity.o(.bss.Unity) for Unity
+    unity.o(.text.UnityEnd) refers to unity.o(.text.UnityPrintNumber) for UnityPrintNumber
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrResultsTests) for UnityStrResultsTests
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrResultsFailures) for UnityStrResultsFailures
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrResultsIgnored) for UnityStrResultsIgnored
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrOk) for UnityStrOk
+    unity.o(.text.UnityEnd) refers to unity.o(.rodata.UnityStrFail) for UnityStrFail
+    unity.o(.text.UnityEnd) refers to tm4c_bsp.o(.text.UART_Flush) for UART_Flush
+    unity.o(.ARM.exidx.text.UnityEnd) refers to unity.o(.text.UnityEnd) for [Anonymous Symbol]
+    unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names) refers to unity.o(.rodata.UnityStrInf) for [Anonymous Symbol]
+    unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names) refers to unity.o(.rodata.UnityStrNegInf) for [Anonymous Symbol]
+    unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names) refers to unity.o(.rodata.UnityStrNaN) for [Anonymous Symbol]
+    unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names) refers to unity.o(.rodata.UnityStrDet) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemNew) refers to cmock.o(.data.CMock_Guts_BufferSize) for CMock_Guts_BufferSize
+    cmock.o(.text.CMock_Guts_MemNew) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.text.CMock_Guts_MemNew) refers to cmock.o(.data.CMock_Guts_Buffer) for CMock_Guts_Buffer
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemNew) refers to cmock.o(.text.CMock_Guts_MemNew) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemChain) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.text.CMock_Guts_MemChain) refers to cmock.o(.data.CMock_Guts_Buffer) for CMock_Guts_Buffer
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemChain) refers to cmock.o(.text.CMock_Guts_MemChain) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemNext) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.text.CMock_Guts_MemNext) refers to cmock.o(.data.CMock_Guts_Buffer) for CMock_Guts_Buffer
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemNext) refers to cmock.o(.text.CMock_Guts_MemNext) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemEndOfChain) refers to cmock.o(.text.CMock_Guts_MemNext) for CMock_Guts_MemNext
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemEndOfChain) refers to cmock.o(.text.CMock_Guts_MemEndOfChain) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_GetAddressFor) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.text.CMock_Guts_GetAddressFor) refers to cmock.o(.data.CMock_Guts_Buffer) for CMock_Guts_Buffer
+    cmock.o(.ARM.exidx.text.CMock_Guts_GetAddressFor) refers to cmock.o(.text.CMock_Guts_GetAddressFor) for [Anonymous Symbol]
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesCapacity) refers to cmock.o(.text.CMock_Guts_MemBytesCapacity) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemBytesFree) refers to cmock.o(.data.CMock_Guts_BufferSize) for CMock_Guts_BufferSize
+    cmock.o(.text.CMock_Guts_MemBytesFree) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesFree) refers to cmock.o(.text.CMock_Guts_MemBytesFree) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemBytesUsed) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesUsed) refers to cmock.o(.text.CMock_Guts_MemBytesUsed) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemFreeAll) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemFreeAll) refers to cmock.o(.text.CMock_Guts_MemFreeAll) for [Anonymous Symbol]
+    cmock.o(.text.CMock_Guts_MemFreeFinal) refers to cmock.o(.data.CMock_Guts_FreePtr) for CMock_Guts_FreePtr
+    cmock.o(.ARM.exidx.text.CMock_Guts_MemFreeFinal) refers to cmock.o(.text.CMock_Guts_MemFreeFinal) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringOutOfMemory) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringCalledMore) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringCalledLess) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringCalledEarly) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringCalledLate) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringCallOrder) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringIgnPreExp) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringPtrPreExp) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringPtrIsNULL) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringExpNULL) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMockStringMismatch) refers to cmock.o(.rodata.str1.1) for [Anonymous Symbol]
+    cmock.o(.data.CMock_Guts_Buffer) refers to cmock.o(.bss.CMock_Guts_Space) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    f2d.o(x$fpl$f2d) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    f2d.o(x$fpl$f2d) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    f2d.o(x$fpl$f2d) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    faddsub_clz.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fadd) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fadd) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    faddsub_clz.o(x$fpl$fadd) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    faddsub_clz.o(x$fpl$frsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fsub) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$fsub) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fcmp.o(x$fpl$fcmp) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(x$fpl$fcmp) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fcmp.o(x$fpl$fcmp) refers to fgeqf.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(x$fpl$fcmp) refers to fleqf.o(x$fpl$fleqf) for _fcmple
+    fdiv.o(x$fpl$frdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fdiv.o(x$fpl$frdiv) refers to fdiv.o(x$fpl$fdiv) for _fdiv1
+    fdiv.o(x$fpl$fdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fdiv.o(x$fpl$fdiv) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fdiv.o(x$fpl$fdiv) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffix.o(x$fpl$ffix) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffix.o(x$fpl$ffix) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffix.o(x$fpl$ffixr) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffix.o(x$fpl$ffixr) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fflt_clz.o(x$fpl$ffltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$fflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$ffltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fmul.o(x$fpl$fmul) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    dretinf.o(x$fpl$dretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    feqf.o(x$fpl$feqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    feqf.o(x$fpl$feqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    feqf.o(x$fpl$feqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fgeqf.o(x$fpl$fgeqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fgeqf.o(x$fpl$fgeqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fgeqf.o(x$fpl$fgeqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fleqf.o(x$fpl$fleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fleqf.o(x$fpl$fleqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fleqf.o(x$fpl$fleqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fnaninf.o(x$fpl$fnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fretinf.o(x$fpl$fretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
-    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to cyber_minion_runner.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to cyber_minion_hil_tests.o(.text.main) for main
     __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
@@ -102,6 +557,7 @@ Section Cross References
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
     __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
     __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    fcmpi.o(x$fpl$fcmpinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
     sys_stackheap_outer.o(.text) refers to startup_tm4c123.o(.text) for __user_initial_stackheap
     exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
@@ -208,16 +664,12 @@ Removing Unused input sections from the image.
     Removing system_tm4c123gh6pm.o(.ARM.exidx.text.getOscClk), (8 bytes).
     Removing system_tm4c123gh6pm.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing system_tm4c123gh6pm.o(.data.SystemCoreClock), (4 bytes).
-    Removing cyber_minion_runner.o(.text), (0 bytes).
-    Removing cyber_minion_runner.o(.ARM.exidx.text.main), (8 bytes).
-    Removing cyber_minion_runner.o(.ARM.use_no_argv), (4 bytes).
     Removing tm4c_bsp.o(.text), (0 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.get_UART0_interrupt_data), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.set_PWM0_generator0_CMPA), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.set_PWM0_generator1_CMPA), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.enable_interrupts), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.wait_for_interrupt), (8 bytes).
-    Removing tm4c_bsp.o(.ARM.exidx.text.exit_interrupt), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.PLL_init), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.SysTick_init), (8 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.SysTick_wait), (8 bytes).
@@ -227,9 +679,964 @@ Removing Unused input sections from the image.
     Removing tm4c_bsp.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
     Removing tm4c_bsp.o(.text.UART_SendString), (36 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.UART_SendString), (8 bytes).
-    Removing tm4c_bsp.o(.text.UART_SendChar), (46 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.UART_SendChar), (8 bytes).
-    Removing tm4c_bsp.o(.text.UART_Flush), (24 bytes).
     Removing tm4c_bsp.o(.ARM.exidx.text.UART_Flush), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.text), (0 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.setUp), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.tearDown), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.test_sanity), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled), (54 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.main), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.text.assert_failed), (24 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.exidx.text.assert_failed), (8 bytes).
+    Removing cyber_minion_hil_tests.o(.ARM.use_no_argv), (4 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text), (0 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Verify), (136 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Verify), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Init), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Init), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.Mocktm4c_bsp_mocks_Destroy), (22 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.Mocktm4c_bsp_mocks_Destroy), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.set_sp), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.CMockExpectParameters_set_sp), (16 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.CMockExpectParameters_set_sp), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect), (100 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.set_sp_CMockExpect), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.exit_interrupt), (8 bytes).
+    Removing mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect), (88 bytes).
+    Removing mocktm4c_bsp_mocks.o(.ARM.exidx.text.exit_interrupt_CMockExpect), (8 bytes).
+    Removing unity.o(.text), (0 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrint), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintChar), (8 bytes).
+    Removing unity.o(.text.UnityPrintLen), (182 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintLen), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintNumberHex), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintNumberByStyle), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintNumber), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintNumberUnsigned), (8 bytes).
+    Removing unity.o(.text.UnityPrintMask), (94 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintMask), (8 bytes).
+    Removing unity.o(.text.UnityPrintFloat), (1080 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintFloat), (8 bytes).
+    Removing unity.o(.text.__ARM_isnanf), (20 bytes).
+    Removing unity.o(.ARM.exidx.text.__ARM_isnanf), (8 bytes).
+    Removing unity.o(.text.__ARM_isnan), (42 bytes).
+    Removing unity.o(.ARM.exidx.text.__ARM_isnan), (8 bytes).
+    Removing unity.o(.text.__ARM_isinff), (24 bytes).
+    Removing unity.o(.ARM.exidx.text.__ARM_isinff), (8 bytes).
+    Removing unity.o(.text.__ARM_isinf), (48 bytes).
+    Removing unity.o(.ARM.exidx.text.__ARM_isinf), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityConcludeTest), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityTestResultsBegin), (8 bytes).
+    Removing unity.o(.text.UnityAssertBits), (162 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertBits), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityTestResultsFailBegin), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAddMsgIfSpecified), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualNumber), (8 bytes).
+    Removing unity.o(.text.UnityAssertGreaterOrLessOrEqualNumber), (426 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertGreaterOrLessOrEqualNumber), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualIntArray), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityIsOneArrayNull), (8 bytes).
+    Removing unity.o(.text.UnityAssertEqualFloatArray), (382 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualFloatArray), (8 bytes).
+    Removing unity.o(.text.UnityFloatsWithin), (356 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityFloatsWithin), (8 bytes).
+    Removing unity.o(.text.UnityAssertFloatsWithin), (156 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertFloatsWithin), (8 bytes).
+    Removing unity.o(.text.UnityAssertFloatSpecial), (496 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertFloatSpecial), (8 bytes).
+    Removing unity.o(.text.UnityAssertNumbersWithin), (344 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertNumbersWithin), (8 bytes).
+    Removing unity.o(.text.UnityAssertNumbersArrayWithin), (732 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertNumbersArrayWithin), (8 bytes).
+    Removing unity.o(.text.UnityAssertEqualString), (248 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualString), (8 bytes).
+    Removing unity.o(.text.UnityPrintExpectedAndActualStrings), (120 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintExpectedAndActualStrings), (8 bytes).
+    Removing unity.o(.text.UnityAssertEqualStringLen), (274 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualStringLen), (8 bytes).
+    Removing unity.o(.text.UnityPrintExpectedAndActualStringsLen), (126 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityPrintExpectedAndActualStringsLen), (8 bytes).
+    Removing unity.o(.text.UnityAssertEqualStringArray), (486 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualStringArray), (8 bytes).
+    Removing unity.o(.text.UnityAssertEqualMemory), (448 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityAssertEqualMemory), (8 bytes).
+    Removing unity.o(.text.UnityNumToPtr), (84 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityNumToPtr), (8 bytes).
+    Removing unity.o(.text.UnityFloatToPtr), (20 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityFloatToPtr), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityFail), (8 bytes).
+    Removing unity.o(.text.UnityIgnore), (134 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityIgnore), (8 bytes).
+    Removing unity.o(.text.UnityMessage), (72 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityMessage), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityDefaultTestRun), (8 bytes).
+    Removing unity.o(.text.UnitySetTestFile), (20 bytes).
+    Removing unity.o(.ARM.exidx.text.UnitySetTestFile), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityBegin), (8 bytes).
+    Removing unity.o(.ARM.exidx.text.UnityEnd), (8 bytes).
+    Removing unity.o(.rodata.UnityStrIgnore), (7 bytes).
+    Removing unity.o(.rodata.UnityStrErrShorthand), (33 bytes).
+    Removing unity.o(.rodata.UnityStrErrFloat), (30 bytes).
+    Removing unity.o(.rodata.UnityStrErrDouble), (32 bytes).
+    Removing unity.o(.rodata.UnityStrErr64), (30 bytes).
+    Removing unity.o(.rodata.UnityPrintFloat.sig_digits), (4 bytes).
+    Removing unity.o(.rodata.UnityPrintFloat.min_scaled), (4 bytes).
+    Removing unity.o(.rodata.UnityPrintFloat.max_scaled), (4 bytes).
+    Removing unity.o(.rodata.str1.1), (15 bytes).
+    Removing unity.o(.rodata.UnityStrGt), (21 bytes).
+    Removing unity.o(.rodata.UnityStrLt), (18 bytes).
+    Removing unity.o(.rodata.UnityStrOrEqual), (13 bytes).
+    Removing unity.o(.rodata.UnityStrNotEqual), (21 bytes).
+    Removing unity.o(.rodata.UnityStrInf), (9 bytes).
+    Removing unity.o(.rodata.UnityStrNegInf), (18 bytes).
+    Removing unity.o(.rodata.UnityStrNaN), (4 bytes).
+    Removing unity.o(.rodata.UnityStrDet), (12 bytes).
+    Removing unity.o(.rodata..L__const.UnityAssertFloatSpecial.trait_names), (16 bytes).
+    Removing unity.o(.rodata.UnityStrInvalidFloatTrait), (20 bytes).
+    Removing unity.o(.rodata.UnityStrNot), (5 bytes).
+    Removing unity.o(.rodata.UnityStrDelta), (26 bytes).
+    Removing unity.o(.rodata.UnityStrMemory), (18 bytes).
+    Removing unity.o(.rodata.UnityStrByte), (7 bytes).
+    Removing unity.o(.bss.UnityQuickCompare), (4 bytes).
+    Removing unity.o(.rodata.UnityStrNull), (5 bytes).
+    Removing cmock.o(.text), (0 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemNew), (130 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemNew), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemChain), (210 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemChain), (8 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemNext), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemEndOfChain), (44 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemEndOfChain), (8 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_GetAddressFor), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemBytesCapacity), (4 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesCapacity), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemBytesFree), (24 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesFree), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemBytesUsed), (14 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemBytesUsed), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemFreeAll), (14 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemFreeAll), (8 bytes).
+    Removing cmock.o(.text.CMock_Guts_MemFreeFinal), (14 bytes).
+    Removing cmock.o(.ARM.exidx.text.CMock_Guts_MemFreeFinal), (8 bytes).
+    Removing cmock.o(.data.CMockStringOutOfMemory), (4 bytes).
+    Removing cmock.o(.data.CMockStringCalledLess), (4 bytes).
+    Removing cmock.o(.data.CMockStringCalledEarly), (4 bytes).
+    Removing cmock.o(.data.CMockStringCalledLate), (4 bytes).
+    Removing cmock.o(.data.CMockStringCallOrder), (4 bytes).
+    Removing cmock.o(.data.CMockStringIgnPreExp), (4 bytes).
+    Removing cmock.o(.data.CMockStringPtrPreExp), (4 bytes).
+    Removing cmock.o(.data.CMockStringPtrIsNULL), (4 bytes).
+    Removing cmock.o(.data.CMock_Guts_BufferSize), (4 bytes).
 
-37 unused section(s) (total 1008 bytes) removed from the image.
+179 unused section(s) (total 9348 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/dretinf.s                       0x00000000   Number         0  dretinf.o ABSOLUTE
+    ../fplib/f2d.s                           0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/faddsub.s                       0x00000000   Number         0  faddsub_clz.o ABSOLUTE
+    ../fplib/fcmp.s                          0x00000000   Number         0  fcmp.o ABSOLUTE
+    ../fplib/fcmpi.s                         0x00000000   Number         0  fcmpi.o ABSOLUTE
+    ../fplib/fdiv.s                          0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/feqf.s                          0x00000000   Number         0  feqf.o ABSOLUTE
+    ../fplib/ffix.s                          0x00000000   Number         0  ffix.o ABSOLUTE
+    ../fplib/fflt.s                          0x00000000   Number         0  fflt_clz.o ABSOLUTE
+    ../fplib/fgeqf.s                         0x00000000   Number         0  fgeqf.o ABSOLUTE
+    ../fplib/fleqf.s                         0x00000000   Number         0  fleqf.o ABSOLUTE
+    ../fplib/fmul.s                          0x00000000   Number         0  fmul.o ABSOLUTE
+    ../fplib/fnaninf.s                       0x00000000   Number         0  fnaninf.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    ../fplib/fretinf.s                       0x00000000   Number         0  fretinf.o ABSOLUTE
+    ../fplib/setjmp.s                        0x00000000   Number         0  setjmp.o ABSOLUTE
+    ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
+    Mocktm4c_bsp_mocks.c                     0x00000000   Number         0  mocktm4c_bsp_mocks.o ABSOLUTE
+    cmock.c                                  0x00000000   Number         0  cmock.o ABSOLUTE
+    cyber_minion.c                           0x00000000   Number         0  cyber_minion.o ABSOLUTE
+    cyber_minion_hil_tests.c                 0x00000000   Number         0  cyber_minion_hil_tests.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    system_TM4C123GH6PM.c                    0x00000000   Number         0  system_tm4c123gh6pm.o ABSOLUTE
+    tm4c/startup/startup_TM4C123.s           0x00000000   Number         0  startup_tm4c123.o ABSOLUTE
+    tm4c_bsp.c                               0x00000000   Number         0  tm4c_bsp.o ABSOLUTE
+    unity.c                                  0x00000000   Number         0  unity.o ABSOLUTE
+    RESET                                    0x00000000   Section      620  startup_tm4c123.o(RESET)
+    !!!main                                  0x0000026c   Section        8  __main.o(!!!main)
+    !!!scatter                               0x00000274   Section       92  __scatter.o(!!!scatter)
+    !!handler_copy                           0x000002d0   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_null                           0x000002ec   Section        2  __scatter.o(!!handler_null)
+    !!handler_zi                             0x000002f0   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x0000030c   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$00000006          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    .ARM.Collect$$libinit$$0000000C          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000010          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    .ARM.Collect$$libinit$$00000013          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$00000027          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    .ARM.Collect$$libinit$$0000002E          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000034          0x0000030e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    .ARM.Collect$$libinit$$00000035          0x0000030e   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    .ARM.Collect$$libshutdown$$00000000      0x00000310   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x00000312   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x00000312   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x00000314   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000314   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000314   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0000031a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0000031a   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0000031e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0000031e   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x00000326   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x00000328   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x00000328   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x0000032c   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x00000334   Section      280  startup_tm4c123.o(.text)
+    .text                                    0x0000044c   Section        0  heapauxi.o(.text)
+    .text                                    0x00000452   Section       62  setjmp.o(.text)
+    .text                                    0x00000490   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x000004da   Section        0  exit.o(.text)
+    .text                                    0x000004ec   Section        8  libspace.o(.text)
+    .text                                    0x000004f4   Section        0  sys_exit.o(.text)
+    .text                                    0x00000500   Section        2  use_no_semi.o(.text)
+    .text                                    0x00000502   Section        0  indicate_semi.o(.text)
+    [Anonymous Symbol]                       0x00000504   Section        0  cmock.o(.text.CMock_Guts_GetAddressFor)
+    [Anonymous Symbol]                       0x00000540   Section        0  cmock.o(.text.CMock_Guts_MemNext)
+    [Anonymous Symbol]                       0x000005a8   Section        0  tm4c_bsp.o(.text.PLL_init)
+    [Anonymous Symbol]                       0x00000624   Section        0  tm4c_bsp.o(.text.SysTick_init)
+    [Anonymous Symbol]                       0x00000654   Section        0  tm4c_bsp.o(.text.SysTick_wait)
+    [Anonymous Symbol]                       0x00000678   Section        0  system_tm4c123gh6pm.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00000774   Section        0  cyber_minion.o(.text.UART0_Handler)
+    [Anonymous Symbol]                       0x00000a1c   Section        0  tm4c_bsp.o(.text.UART0_and_servos_init)
+    [Anonymous Symbol]                       0x00000c44   Section        0  tm4c_bsp.o(.text.UART_Flush)
+    [Anonymous Symbol]                       0x00000c5c   Section        0  tm4c_bsp.o(.text.UART_SendChar)
+    UnityAddMsgIfSpecified                   0x00000c8d   Thumb Code   128  unity.o(.text.UnityAddMsgIfSpecified)
+    [Anonymous Symbol]                       0x00000c8c   Section        0  unity.o(.text.UnityAddMsgIfSpecified)
+    [Anonymous Symbol]                       0x00000d0c   Section        0  unity.o(.text.UnityAssertEqualIntArray)
+    [Anonymous Symbol]                       0x00000f38   Section        0  unity.o(.text.UnityAssertEqualNumber)
+    [Anonymous Symbol]                       0x00000fe0   Section        0  unity.o(.text.UnityBegin)
+    [Anonymous Symbol]                       0x00001008   Section        0  unity.o(.text.UnityConcludeTest)
+    [Anonymous Symbol]                       0x00001084   Section        0  unity.o(.text.UnityDefaultTestRun)
+    [Anonymous Symbol]                       0x000010f0   Section        0  unity.o(.text.UnityEnd)
+    [Anonymous Symbol]                       0x00001194   Section        0  unity.o(.text.UnityFail)
+    UnityIsOneArrayNull                      0x00001285   Thumb Code   112  unity.o(.text.UnityIsOneArrayNull)
+    [Anonymous Symbol]                       0x00001284   Section        0  unity.o(.text.UnityIsOneArrayNull)
+    [Anonymous Symbol]                       0x000012f4   Section        0  unity.o(.text.UnityPrint)
+    UnityPrintChar                           0x00001325   Thumb Code   116  unity.o(.text.UnityPrintChar)
+    [Anonymous Symbol]                       0x00001324   Section        0  unity.o(.text.UnityPrintChar)
+    [Anonymous Symbol]                       0x00001398   Section        0  unity.o(.text.UnityPrintNumber)
+    [Anonymous Symbol]                       0x000013c4   Section        0  unity.o(.text.UnityPrintNumberByStyle)
+    [Anonymous Symbol]                       0x00001494   Section        0  unity.o(.text.UnityPrintNumberHex)
+    [Anonymous Symbol]                       0x00001504   Section        0  unity.o(.text.UnityPrintNumberUnsigned)
+    UnityTestResultsBegin                    0x00001571   Thumb Code    58  unity.o(.text.UnityTestResultsBegin)
+    [Anonymous Symbol]                       0x00001570   Section        0  unity.o(.text.UnityTestResultsBegin)
+    UnityTestResultsFailBegin                0x000015ad   Thumb Code    44  unity.o(.text.UnityTestResultsFailBegin)
+    [Anonymous Symbol]                       0x000015ac   Section        0  unity.o(.text.UnityTestResultsFailBegin)
+    __NVIC_EnableIRQ                         0x000015d9   Thumb Code    48  tm4c_bsp.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x000015d8   Section        0  tm4c_bsp.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x00001609   Thumb Code    66  tm4c_bsp.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x00001608   Section        0  tm4c_bsp.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0000164c   Section        0  tm4c_bsp.o(.text.delay_10ms)
+    [Anonymous Symbol]                       0x00001674   Section        0  tm4c_bsp.o(.text.enable_interrupts)
+    [Anonymous Symbol]                       0x00001678   Section        0  mocktm4c_bsp_mocks.o(.text.exit_interrupt)
+    [Anonymous Symbol]                       0x000016ec   Section        0  tm4c_bsp.o(.text.get_UART0_interrupt_data)
+    [Anonymous Symbol]                       0x00001708   Section        0  cyber_minion_hil_tests.o(.text.main)
+    [Anonymous Symbol]                       0x0000174c   Section        0  cyber_minion.o(.text.main_loop)
+    [Anonymous Symbol]                       0x0000179c   Section        0  cyber_minion.o(.text.scan)
+    [Anonymous Symbol]                       0x00001878   Section        0  cyber_minion_hil_tests.o(.text.setUp)
+    [Anonymous Symbol]                       0x0000187c   Section        0  tm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
+    [Anonymous Symbol]                       0x00001894   Section        0  tm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
+    [Anonymous Symbol]                       0x000018ac   Section        0  cyber_minion.o(.text.set_compare_x)
+    [Anonymous Symbol]                       0x00001914   Section        0  cyber_minion.o(.text.set_compare_y)
+    [Anonymous Symbol]                       0x0000197c   Section        0  mocktm4c_bsp_mocks.o(.text.set_sp)
+    [Anonymous Symbol]                       0x00001a64   Section        0  cyber_minion.o(.text.sleep_position)
+    [Anonymous Symbol]                       0x00001a78   Section        0  cyber_minion_hil_tests.o(.text.tearDown)
+    [Anonymous Symbol]                       0x00001a7c   Section        0  cyber_minion_hil_tests.o(.text.test_sanity)
+    [Anonymous Symbol]                       0x00001a98   Section        0  tm4c_bsp.o(.text.wait_for_interrupt)
+    UnityStrBreaker                          0x00001a9c   Data          24  unity.o(.rodata.UnityStrBreaker)
+    [Anonymous Symbol]                       0x00001a9c   Section        0  unity.o(.rodata.UnityStrBreaker)
+    UnityStrDetail1Name                      0x00001ab4   Data          10  unity.o(.rodata.UnityStrDetail1Name)
+    [Anonymous Symbol]                       0x00001ab4   Section        0  unity.o(.rodata.UnityStrDetail1Name)
+    UnityStrDetail2Name                      0x00001abe   Data          11  unity.o(.rodata.UnityStrDetail2Name)
+    [Anonymous Symbol]                       0x00001abe   Section        0  unity.o(.rodata.UnityStrDetail2Name)
+    UnityStrElement                          0x00001ac9   Data          10  unity.o(.rodata.UnityStrElement)
+    [Anonymous Symbol]                       0x00001ac9   Section        0  unity.o(.rodata.UnityStrElement)
+    UnityStrExpected                         0x00001ad3   Data          11  unity.o(.rodata.UnityStrExpected)
+    [Anonymous Symbol]                       0x00001ad3   Section        0  unity.o(.rodata.UnityStrExpected)
+    UnityStrNullPointerForActual             0x00001ae3   Data          25  unity.o(.rodata.UnityStrNullPointerForActual)
+    [Anonymous Symbol]                       0x00001ae3   Section        0  unity.o(.rodata.UnityStrNullPointerForActual)
+    UnityStrNullPointerForExpected           0x00001afc   Data          29  unity.o(.rodata.UnityStrNullPointerForExpected)
+    [Anonymous Symbol]                       0x00001afc   Section        0  unity.o(.rodata.UnityStrNullPointerForExpected)
+    UnityStrPointless                        0x00001b21   Data          55  unity.o(.rodata.UnityStrPointless)
+    [Anonymous Symbol]                       0x00001b21   Section        0  unity.o(.rodata.UnityStrPointless)
+    UnityStrResultsFailures                  0x00001b58   Data          11  unity.o(.rodata.UnityStrResultsFailures)
+    [Anonymous Symbol]                       0x00001b58   Section        0  unity.o(.rodata.UnityStrResultsFailures)
+    UnityStrResultsIgnored                   0x00001b63   Data          10  unity.o(.rodata.UnityStrResultsIgnored)
+    [Anonymous Symbol]                       0x00001b63   Section        0  unity.o(.rodata.UnityStrResultsIgnored)
+    UnityStrResultsTests                     0x00001b6d   Data           8  unity.o(.rodata.UnityStrResultsTests)
+    [Anonymous Symbol]                       0x00001b6d   Section        0  unity.o(.rodata.UnityStrResultsTests)
+    UnityStrSpacer                           0x00001b75   Data           3  unity.o(.rodata.UnityStrSpacer)
+    [Anonymous Symbol]                       0x00001b75   Section        0  unity.o(.rodata.UnityStrSpacer)
+    UnityStrWas                              0x00001b78   Data           6  unity.o(.rodata.UnityStrWas)
+    [Anonymous Symbol]                       0x00001b78   Section        0  unity.o(.rodata.UnityStrWas)
+    .L.str                                   0x00001b7e   Data          34  cyber_minion_hil_tests.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001b7e   Section        0  cyber_minion_hil_tests.o(.rodata.str1.1)
+    .L.str.1                                 0x00001baa   Data          12  cyber_minion_hil_tests.o(.rodata.str1.1)
+    .L.str.2                                 0x00001bac   Data          10  cyber_minion_hil_tests.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001bb6   Section        0  mocktm4c_bsp_mocks.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001bd7   Section        0  cmock.o(.rodata.str1.1)
+    CMockString_cmock_arg1                   0x2000000c   Data           4  mocktm4c_bsp_mocks.o(.data.CMockString_cmock_arg1)
+    [Anonymous Symbol]                       0x2000000c   Section        0  mocktm4c_bsp_mocks.o(.data.CMockString_cmock_arg1)
+    CMockString_exit_interrupt               0x20000010   Data           4  mocktm4c_bsp_mocks.o(.data.CMockString_exit_interrupt)
+    [Anonymous Symbol]                       0x20000010   Section        0  mocktm4c_bsp_mocks.o(.data.CMockString_exit_interrupt)
+    CMockString_set_sp                       0x20000014   Data           4  mocktm4c_bsp_mocks.o(.data.CMockString_set_sp)
+    [Anonymous Symbol]                       0x20000014   Section        0  mocktm4c_bsp_mocks.o(.data.CMockString_set_sp)
+    CMock_Guts_Buffer                        0x20000018   Data           4  cmock.o(.data.CMock_Guts_Buffer)
+    [Anonymous Symbol]                       0x20000018   Section        0  cmock.o(.data.CMock_Guts_Buffer)
+    CMock_Guts_FreePtr                       0x2000001c   Data           4  cmock.o(.data.CMock_Guts_FreePtr)
+    [Anonymous Symbol]                       0x2000001c   Section        0  cmock.o(.data.CMock_Guts_FreePtr)
+    .bss                                     0x20000030   Section       96  libspace.o(.bss)
+    CMock_Guts_Space                         0x20000090   Data       32776  cmock.o(.bss.CMock_Guts_Space)
+    [Anonymous Symbol]                       0x20000090   Section        0  cmock.o(.bss.CMock_Guts_Space)
+    Mock                                     0x20008098   Data           8  mocktm4c_bsp_mocks.o(.bss.Mock)
+    [Anonymous Symbol]                       0x20008098   Section        0  mocktm4c_bsp_mocks.o(.bss.Mock)
+    stack1                                   0x2000816c   Data         160  cyber_minion.o(.bss.stack1)
+    [Anonymous Symbol]                       0x2000816c   Section        0  cyber_minion.o(.bss.stack1)
+    stack2                                   0x2000820c   Data         160  cyber_minion.o(.bss.stack2)
+    [Anonymous Symbol]                       0x2000820c   Section        0  cyber_minion.o(.bss.stack2)
+    using_stack1                             0x200082ac   Data           1  cyber_minion.o(.bss.using_stack1)
+    [Anonymous Symbol]                       0x200082ac   Section        0  cyber_minion.o(.bss.using_stack1)
+    Heap_Mem                                 0x200082b0   Data        1024  startup_tm4c123.o(HEAP)
+    HEAP                                     0x200082b0   Section     1024  startup_tm4c123.o(HEAP)
+    Stack_Mem                                0x200086b0   Data        1024  startup_tm4c123.o(STACK)
+    STACK                                    0x200086b0   Section     1024  startup_tm4c123.o(STACK)
+    __initial_sp                             0x20008ab0   Data           0  startup_tm4c123.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_tm4c123.o(RESET)
+    __fp_init_empty                          0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __alloca_longjmp                          - Undefined Weak Reference
+    __alloca_setjmp                           - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __arm_relocate_pie_                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_End                            0x0000026c   Data           0  startup_tm4c123.o(RESET)
+    __Vectors_Size                           0x0000026c   Number         0  startup_tm4c123.o ABSOLUTE
+    __main                                   0x0000026d   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x00000275   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x00000275   Thumb Code    84  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x00000275   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_loop                       0x0000027f   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x000002d1   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_null                       0x000002ed   Thumb Code     2  __scatter.o(!!handler_null)
+    __scatterload_zeroinit                   0x000002f1   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x0000030d   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_argv_1                     0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_atexit_1                   0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_clock_1                    0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_cpp_1                      0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    __rt_lib_init_exceptions_1               0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_fp_1                       0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_getenv_1                   0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_heap_1                     0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_lc_collate_1               0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_ctype_1                 0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_monetary_1              0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_numeric_1               0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_lc_time_1                  0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_preinit_1                  0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    __rt_lib_init_rand_1                     0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    __rt_lib_init_relocate_pie_1             0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_return                     0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    __rt_lib_init_signal_1                   0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_stdio_1                    0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    __rt_lib_init_user_alloc_1               0x0000030f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_shutdown                        0x00000311   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x00000313   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x00000315   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000315   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000315   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0000031b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0000031b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0000031f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0000031f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x00000327   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x00000329   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x00000329   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x0000032d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x00000335   Thumb Code     8  startup_tm4c123.o(.text)
+    NMI_Handler                              0x0000033d   Thumb Code     2  startup_tm4c123.o(.text)
+    HardFault_Handler                        0x0000033f   Thumb Code     2  startup_tm4c123.o(.text)
+    MemManage_Handler                        0x00000341   Thumb Code     2  startup_tm4c123.o(.text)
+    BusFault_Handler                         0x00000343   Thumb Code     2  startup_tm4c123.o(.text)
+    UsageFault_Handler                       0x00000345   Thumb Code     2  startup_tm4c123.o(.text)
+    SVC_Handler                              0x00000347   Thumb Code     2  startup_tm4c123.o(.text)
+    DebugMon_Handler                         0x00000349   Thumb Code     2  startup_tm4c123.o(.text)
+    PendSV_Handler                           0x0000034b   Thumb Code     2  startup_tm4c123.o(.text)
+    SysTick_Handler                          0x0000034d   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOA_Handler                            0x0000034f   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOB_Handler                            0x00000351   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOC_Handler                            0x00000353   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOD_Handler                            0x00000355   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOE_Handler                            0x00000357   Thumb Code     2  startup_tm4c123.o(.text)
+    UART1_Handler                            0x0000035b   Thumb Code     2  startup_tm4c123.o(.text)
+    SSI0_Handler                             0x0000035d   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C0_Handler                             0x0000035f   Thumb Code     2  startup_tm4c123.o(.text)
+    PMW0_FAULT_Handler                       0x00000361   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM0_0_Handler                           0x00000363   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM0_1_Handler                           0x00000365   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM0_2_Handler                           0x00000367   Thumb Code     2  startup_tm4c123.o(.text)
+    QEI0_Handler                             0x00000369   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC0SS0_Handler                          0x0000036b   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC0SS1_Handler                          0x0000036d   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC0SS2_Handler                          0x0000036f   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC0SS3_Handler                          0x00000371   Thumb Code     2  startup_tm4c123.o(.text)
+    WDT0_Handler                             0x00000373   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER0A_Handler                          0x00000375   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER0B_Handler                          0x00000377   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER1A_Handler                          0x00000379   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER1B_Handler                          0x0000037b   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER2A_Handler                          0x0000037d   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER2B_Handler                          0x0000037f   Thumb Code     2  startup_tm4c123.o(.text)
+    COMP0_Handler                            0x00000381   Thumb Code     2  startup_tm4c123.o(.text)
+    COMP1_Handler                            0x00000383   Thumb Code     2  startup_tm4c123.o(.text)
+    COMP2_Handler                            0x00000385   Thumb Code     2  startup_tm4c123.o(.text)
+    SYSCTL_Handler                           0x00000387   Thumb Code     2  startup_tm4c123.o(.text)
+    FLASH_Handler                            0x00000389   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOF_Handler                            0x0000038b   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOG_Handler                            0x0000038d   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOH_Handler                            0x0000038f   Thumb Code     2  startup_tm4c123.o(.text)
+    UART2_Handler                            0x00000391   Thumb Code     2  startup_tm4c123.o(.text)
+    SSI1_Handler                             0x00000393   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER3A_Handler                          0x00000395   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER3B_Handler                          0x00000397   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C1_Handler                             0x00000399   Thumb Code     2  startup_tm4c123.o(.text)
+    QEI1_Handler                             0x0000039b   Thumb Code     2  startup_tm4c123.o(.text)
+    CAN0_Handler                             0x0000039d   Thumb Code     2  startup_tm4c123.o(.text)
+    CAN1_Handler                             0x0000039f   Thumb Code     2  startup_tm4c123.o(.text)
+    CAN2_Handler                             0x000003a1   Thumb Code     2  startup_tm4c123.o(.text)
+    HIB_Handler                              0x000003a3   Thumb Code     2  startup_tm4c123.o(.text)
+    USB0_Handler                             0x000003a5   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM0_3_Handler                           0x000003a7   Thumb Code     2  startup_tm4c123.o(.text)
+    UDMA_Handler                             0x000003a9   Thumb Code     2  startup_tm4c123.o(.text)
+    UDMAERR_Handler                          0x000003ab   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC1SS0_Handler                          0x000003ad   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC1SS1_Handler                          0x000003af   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC1SS2_Handler                          0x000003b1   Thumb Code     2  startup_tm4c123.o(.text)
+    ADC1SS3_Handler                          0x000003b3   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOJ_Handler                            0x000003b5   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOK_Handler                            0x000003b7   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOL_Handler                            0x000003b9   Thumb Code     2  startup_tm4c123.o(.text)
+    SSI2_Handler                             0x000003bb   Thumb Code     2  startup_tm4c123.o(.text)
+    SSI3_Handler                             0x000003bd   Thumb Code     2  startup_tm4c123.o(.text)
+    UART3_Handler                            0x000003bf   Thumb Code     2  startup_tm4c123.o(.text)
+    UART4_Handler                            0x000003c1   Thumb Code     2  startup_tm4c123.o(.text)
+    UART5_Handler                            0x000003c3   Thumb Code     2  startup_tm4c123.o(.text)
+    UART6_Handler                            0x000003c5   Thumb Code     2  startup_tm4c123.o(.text)
+    UART7_Handler                            0x000003c7   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C2_Handler                             0x000003c9   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C3_Handler                             0x000003cb   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER4A_Handler                          0x000003cd   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER4B_Handler                          0x000003cf   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER5A_Handler                          0x000003d1   Thumb Code     2  startup_tm4c123.o(.text)
+    TIMER5B_Handler                          0x000003d3   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER0A_Handler                         0x000003d5   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER0B_Handler                         0x000003d7   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER1A_Handler                         0x000003d9   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER1B_Handler                         0x000003db   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER2A_Handler                         0x000003dd   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER2B_Handler                         0x000003df   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER3A_Handler                         0x000003e1   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER3B_Handler                         0x000003e3   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER4A_Handler                         0x000003e5   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER4B_Handler                         0x000003e7   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER5A_Handler                         0x000003e9   Thumb Code     2  startup_tm4c123.o(.text)
+    WTIMER5B_Handler                         0x000003eb   Thumb Code     2  startup_tm4c123.o(.text)
+    FPU_Handler                              0x000003ed   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C4_Handler                             0x000003ef   Thumb Code     2  startup_tm4c123.o(.text)
+    I2C5_Handler                             0x000003f1   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOM_Handler                            0x000003f3   Thumb Code     2  startup_tm4c123.o(.text)
+    GPION_Handler                            0x000003f5   Thumb Code     2  startup_tm4c123.o(.text)
+    QEI2_Handler                             0x000003f7   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP0_Handler                           0x000003f9   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP1_Handler                           0x000003fb   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP2_Handler                           0x000003fd   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP3_Handler                           0x000003ff   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP4_Handler                           0x00000401   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP5_Handler                           0x00000403   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP6_Handler                           0x00000405   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOP7_Handler                           0x00000407   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ0_Handler                           0x00000409   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ1_Handler                           0x0000040b   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ2_Handler                           0x0000040d   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ3_Handler                           0x0000040f   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ4_Handler                           0x00000411   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ5_Handler                           0x00000413   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ6_Handler                           0x00000415   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOQ7_Handler                           0x00000417   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOR_Handler                            0x00000419   Thumb Code     2  startup_tm4c123.o(.text)
+    GPIOS_Handler                            0x0000041b   Thumb Code     2  startup_tm4c123.o(.text)
+    PMW1_0_Handler                           0x0000041d   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM1_1_Handler                           0x0000041f   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM1_2_Handler                           0x00000421   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM1_3_Handler                           0x00000423   Thumb Code     2  startup_tm4c123.o(.text)
+    PWM1_FAULT_Handler                       0x00000425   Thumb Code     2  startup_tm4c123.o(.text)
+    __user_initial_stackheap                 0x00000431   Thumb Code     0  startup_tm4c123.o(.text)
+    __use_two_region_memory                  0x0000044d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0000044f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00000451   Thumb Code     2  heapauxi.o(.text)
+    setjmp                                   0x00000453   Thumb Code    26  setjmp.o(.text)
+    longjmp                                  0x0000046d   Thumb Code    36  setjmp.o(.text)
+    __user_setup_stackheap                   0x00000491   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x000004db   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x000004ed   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000004ed   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000004ed   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x000004f5   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x00000501   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x00000501   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x00000503   Thumb Code     0  indicate_semi.o(.text)
+    CMock_Guts_GetAddressFor                 0x00000505   Thumb Code    60  cmock.o(.text.CMock_Guts_GetAddressFor)
+    CMock_Guts_MemNext                       0x00000541   Thumb Code   104  cmock.o(.text.CMock_Guts_MemNext)
+    PLL_init                                 0x000005a9   Thumb Code   122  tm4c_bsp.o(.text.PLL_init)
+    SysTick_init                             0x00000625   Thumb Code    46  tm4c_bsp.o(.text.SysTick_init)
+    SysTick_wait                             0x00000655   Thumb Code    36  tm4c_bsp.o(.text.SysTick_wait)
+    SystemInit                               0x00000679   Thumb Code   252  system_tm4c123gh6pm.o(.text.SystemInit)
+    UART0_Handler                            0x00000775   Thumb Code   678  cyber_minion.o(.text.UART0_Handler)
+    UART0_and_servos_init                    0x00000a1d   Thumb Code   552  tm4c_bsp.o(.text.UART0_and_servos_init)
+    UART_Flush                               0x00000c45   Thumb Code    24  tm4c_bsp.o(.text.UART_Flush)
+    UART_SendChar                            0x00000c5d   Thumb Code    46  tm4c_bsp.o(.text.UART_SendChar)
+    UnityAssertEqualIntArray                 0x00000d0d   Thumb Code   554  unity.o(.text.UnityAssertEqualIntArray)
+    UnityAssertEqualNumber                   0x00000f39   Thumb Code   166  unity.o(.text.UnityAssertEqualNumber)
+    UnityBegin                               0x00000fe1   Thumb Code    40  unity.o(.text.UnityBegin)
+    UnityConcludeTest                        0x00001009   Thumb Code   124  unity.o(.text.UnityConcludeTest)
+    UnityDefaultTestRun                      0x00001085   Thumb Code   106  unity.o(.text.UnityDefaultTestRun)
+    UnityEnd                                 0x000010f1   Thumb Code   164  unity.o(.text.UnityEnd)
+    UnityFail                                0x00001195   Thumb Code   240  unity.o(.text.UnityFail)
+    UnityPrint                               0x000012f5   Thumb Code    46  unity.o(.text.UnityPrint)
+    UnityPrintNumber                         0x00001399   Thumb Code    44  unity.o(.text.UnityPrintNumber)
+    UnityPrintNumberByStyle                  0x000013c5   Thumb Code   208  unity.o(.text.UnityPrintNumberByStyle)
+    UnityPrintNumberHex                      0x00001495   Thumb Code   112  unity.o(.text.UnityPrintNumberHex)
+    UnityPrintNumberUnsigned                 0x00001505   Thumb Code   106  unity.o(.text.UnityPrintNumberUnsigned)
+    delay_10ms                               0x0000164d   Thumb Code    40  tm4c_bsp.o(.text.delay_10ms)
+    enable_interrupts                        0x00001675   Thumb Code     4  tm4c_bsp.o(.text.enable_interrupts)
+    exit_interrupt                           0x00001679   Thumb Code   116  mocktm4c_bsp_mocks.o(.text.exit_interrupt)
+    get_UART0_interrupt_data                 0x000016ed   Thumb Code    26  tm4c_bsp.o(.text.get_UART0_interrupt_data)
+    main                                     0x00001709   Thumb Code    66  cyber_minion_hil_tests.o(.text.main)
+    main_loop                                0x0000174d   Thumb Code    80  cyber_minion.o(.text.main_loop)
+    scan                                     0x0000179d   Thumb Code   218  cyber_minion.o(.text.scan)
+    setUp                                    0x00001879   Thumb Code     2  cyber_minion_hil_tests.o(.text.setUp)
+    set_PWM0_generator0_CMPA                 0x0000187d   Thumb Code    24  tm4c_bsp.o(.text.set_PWM0_generator0_CMPA)
+    set_PWM0_generator1_CMPA                 0x00001895   Thumb Code    24  tm4c_bsp.o(.text.set_PWM0_generator1_CMPA)
+    set_compare_x                            0x000018ad   Thumb Code   104  cyber_minion.o(.text.set_compare_x)
+    set_compare_y                            0x00001915   Thumb Code   104  cyber_minion.o(.text.set_compare_y)
+    set_sp                                   0x0000197d   Thumb Code   232  mocktm4c_bsp_mocks.o(.text.set_sp)
+    sleep_position                           0x00001a65   Thumb Code    20  cyber_minion.o(.text.sleep_position)
+    tearDown                                 0x00001a79   Thumb Code     2  cyber_minion_hil_tests.o(.text.tearDown)
+    test_sanity                              0x00001a7d   Thumb Code    26  cyber_minion_hil_tests.o(.text.test_sanity)
+    wait_for_interrupt                       0x00001a99   Thumb Code     4  tm4c_bsp.o(.text.wait_for_interrupt)
+    UnityStrFail                             0x00001ade   Data           5  unity.o(.rodata.UnityStrFail)
+    UnityStrOk                               0x00001b19   Data           3  unity.o(.rodata.UnityStrOk)
+    UnityStrPass                             0x00001b1c   Data           5  unity.o(.rodata.UnityStrPass)
+    Region$$Table$$Base                      0x00001d30   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001d50   Number         0  anon$$obj.o(Region$$Table)
+    CMockStringCalledMore                    0x20000000   Data           4  cmock.o(.data.CMockStringCalledMore)
+    CMockStringExpNULL                       0x20000004   Data           4  cmock.o(.data.CMockStringExpNULL)
+    CMockStringMismatch                      0x20000008   Data           4  cmock.o(.data.CMockStringMismatch)
+    compare_x                                0x20000020   Data           2  cyber_minion.o(.data.compare_x)
+    compare_y                                0x20000022   Data           2  cyber_minion.o(.data.compare_y)
+    sp1                                      0x20000024   Data           4  cyber_minion.o(.data.sp1)
+    sp2                                      0x20000028   Data           4  cyber_minion.o(.data.sp2)
+    __libspace_start                         0x20000030   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000090   Data           0  libspace.o(.bss)
+    Unity                                    0x200080a0   Data         200  unity.o(.bss.Unity)
+    current_state                            0x20008168   Data           1  cyber_minion.o(.bss.current_state)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000335
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001d7c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001d50, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x0000026c   Data   RO           30    RESET               startup_tm4c123.o
+    0x0000026c   0x0000026c   0x00000008   Code   RO          319  * !!!main             c_w.l(__main.o)
+    0x00000274   0x00000274   0x0000005c   Code   RO          527    !!!scatter          c_w.l(__scatter.o)
+    0x000002d0   0x000002d0   0x0000001a   Code   RO          531    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x000002ea   0x000002ea   0x00000002   PAD
+    0x000002ec   0x000002ec   0x00000002   Code   RO          528    !!handler_null      c_w.l(__scatter.o)
+    0x000002ee   0x000002ee   0x00000002   PAD
+    0x000002f0   0x000002f0   0x0000001c   Code   RO          533    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x0000030c   0x0000030c   0x00000002   Code   RO          389    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          396    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          398    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          400    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          407    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          410    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          412    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          414    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          416    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          418    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          420    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          422    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          424    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          426    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          428    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          430    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          434    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          436    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          438    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO          440    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x0000030e   0x0000030e   0x00000002   Code   RO          441    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x00000310   0x00000310   0x00000002   Code   RO          463    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          478    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          480    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          483    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          486    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          488    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO          491    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000312   0x00000312   0x00000002   Code   RO          492    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x00000314   0x00000314   0x00000000   Code   RO          349    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000314   0x00000314   0x00000000   Code   RO          364    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000314   0x00000314   0x00000006   Code   RO          376    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0000031a   0x0000031a   0x00000000   Code   RO          366    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0000031a   0x0000031a   0x00000004   Code   RO          367    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0000031e   0x0000031e   0x00000000   Code   RO          369    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0000031e   0x0000031e   0x00000008   Code   RO          370    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x00000326   0x00000326   0x00000002   Code   RO          393    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000328   0x00000328   0x00000000   Code   RO          443    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000328   0x00000328   0x00000004   Code   RO          444    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0000032c   0x0000032c   0x00000006   Code   RO          445    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000332   0x00000332   0x00000002   PAD
+    0x00000334   0x00000334   0x00000118   Code   RO           31  * .text               startup_tm4c123.o
+    0x0000044c   0x0000044c   0x00000006   Code   RO          317    .text               c_w.l(heapauxi.o)
+    0x00000452   0x00000452   0x0000003e   Code   RO          347    .text               fz_ws.l(setjmp.o)
+    0x00000490   0x00000490   0x0000004a   Code   RO          380    .text               c_w.l(sys_stackheap_outer.o)
+    0x000004da   0x000004da   0x00000012   Code   RO          382    .text               c_w.l(exit.o)
+    0x000004ec   0x000004ec   0x00000008   Code   RO          390    .text               c_w.l(libspace.o)
+    0x000004f4   0x000004f4   0x0000000c   Code   RO          453    .text               c_w.l(sys_exit.o)
+    0x00000500   0x00000500   0x00000002   Code   RO          468    .text               c_w.l(use_no_semi.o)
+    0x00000502   0x00000502   0x00000000   Code   RO          470    .text               c_w.l(indicate_semi.o)
+    0x00000502   0x00000502   0x00000002   PAD
+    0x00000504   0x00000504   0x0000003c   Code   RO          281    .text.CMock_Guts_GetAddressFor  cmock.o
+    0x00000540   0x00000540   0x00000068   Code   RO          277    .text.CMock_Guts_MemNext  cmock.o
+    0x000005a8   0x000005a8   0x0000007a   Code   RO           62    .text.PLL_init      tm4c_bsp.o
+    0x00000622   0x00000622   0x00000002   PAD
+    0x00000624   0x00000624   0x0000002e   Code   RO           64    .text.SysTick_init  tm4c_bsp.o
+    0x00000652   0x00000652   0x00000002   PAD
+    0x00000654   0x00000654   0x00000024   Code   RO           66    .text.SysTick_wait  tm4c_bsp.o
+    0x00000678   0x00000678   0x000000fc   Code   RO           42    .text.SystemInit    system_tm4c123gh6pm.o
+    0x00000774   0x00000774   0x000002a6   Code   RO            8    .text.UART0_Handler  cyber_minion.o
+    0x00000a1a   0x00000a1a   0x00000002   PAD
+    0x00000a1c   0x00000a1c   0x00000228   Code   RO           70    .text.UART0_and_servos_init  tm4c_bsp.o
+    0x00000c44   0x00000c44   0x00000018   Code   RO           80    .text.UART_Flush    tm4c_bsp.o
+    0x00000c5c   0x00000c5c   0x0000002e   Code   RO           78    .text.UART_SendChar  tm4c_bsp.o
+    0x00000c8a   0x00000c8a   0x00000002   PAD
+    0x00000c8c   0x00000c8c   0x00000080   Code   RO          172    .text.UnityAddMsgIfSpecified  unity.o
+    0x00000d0c   0x00000d0c   0x0000022a   Code   RO          178    .text.UnityAssertEqualIntArray  unity.o
+    0x00000f36   0x00000f36   0x00000002   PAD
+    0x00000f38   0x00000f38   0x000000a6   Code   RO          174    .text.UnityAssertEqualNumber  unity.o
+    0x00000fde   0x00000fde   0x00000002   PAD
+    0x00000fe0   0x00000fe0   0x00000028   Code   RO          220    .text.UnityBegin    unity.o
+    0x00001008   0x00001008   0x0000007c   Code   RO          164    .text.UnityConcludeTest  unity.o
+    0x00001084   0x00001084   0x0000006a   Code   RO          216    .text.UnityDefaultTestRun  unity.o
+    0x000010ee   0x000010ee   0x00000002   PAD
+    0x000010f0   0x000010f0   0x000000a4   Code   RO          222    .text.UnityEnd      unity.o
+    0x00001194   0x00001194   0x000000f0   Code   RO          210    .text.UnityFail     unity.o
+    0x00001284   0x00001284   0x00000070   Code   RO          180    .text.UnityIsOneArrayNull  unity.o
+    0x000012f4   0x000012f4   0x0000002e   Code   RO          138    .text.UnityPrint    unity.o
+    0x00001322   0x00001322   0x00000002   PAD
+    0x00001324   0x00001324   0x00000074   Code   RO          140    .text.UnityPrintChar  unity.o
+    0x00001398   0x00001398   0x0000002c   Code   RO          148    .text.UnityPrintNumber  unity.o
+    0x000013c4   0x000013c4   0x000000d0   Code   RO          146    .text.UnityPrintNumberByStyle  unity.o
+    0x00001494   0x00001494   0x00000070   Code   RO          144    .text.UnityPrintNumberHex  unity.o
+    0x00001504   0x00001504   0x0000006a   Code   RO          150    .text.UnityPrintNumberUnsigned  unity.o
+    0x0000156e   0x0000156e   0x00000002   PAD
+    0x00001570   0x00001570   0x0000003a   Code   RO          166    .text.UnityTestResultsBegin  unity.o
+    0x000015aa   0x000015aa   0x00000002   PAD
+    0x000015ac   0x000015ac   0x0000002c   Code   RO          170    .text.UnityTestResultsFailBegin  unity.o
+    0x000015d8   0x000015d8   0x00000030   Code   RO           74    .text.__NVIC_EnableIRQ  tm4c_bsp.o
+    0x00001608   0x00001608   0x00000042   Code   RO           72    .text.__NVIC_SetPriority  tm4c_bsp.o
+    0x0000164a   0x0000164a   0x00000002   PAD
+    0x0000164c   0x0000164c   0x00000028   Code   RO           68    .text.delay_10ms    tm4c_bsp.o
+    0x00001674   0x00001674   0x00000004   Code   RO           58    .text.enable_interrupts  tm4c_bsp.o
+    0x00001678   0x00001678   0x00000074   Code   RO          122    .text.exit_interrupt  mocktm4c_bsp_mocks.o
+    0x000016ec   0x000016ec   0x0000001a   Code   RO           52    .text.get_UART0_interrupt_data  tm4c_bsp.o
+    0x00001706   0x00001706   0x00000002   PAD
+    0x00001708   0x00001708   0x00000042   Code   RO           97    .text.main          cyber_minion_hil_tests.o
+    0x0000174a   0x0000174a   0x00000002   PAD
+    0x0000174c   0x0000174c   0x00000050   Code   RO            2    .text.main_loop     cyber_minion.o
+    0x0000179c   0x0000179c   0x000000da   Code   RO            4    .text.scan          cyber_minion.o
+    0x00001876   0x00001876   0x00000002   PAD
+    0x00001878   0x00001878   0x00000002   Code   RO           89    .text.setUp         cyber_minion_hil_tests.o
+    0x0000187a   0x0000187a   0x00000002   PAD
+    0x0000187c   0x0000187c   0x00000018   Code   RO           54    .text.set_PWM0_generator0_CMPA  tm4c_bsp.o
+    0x00001894   0x00001894   0x00000018   Code   RO           56    .text.set_PWM0_generator1_CMPA  tm4c_bsp.o
+    0x000018ac   0x000018ac   0x00000068   Code   RO           12    .text.set_compare_x  cyber_minion.o
+    0x00001914   0x00001914   0x00000068   Code   RO           10    .text.set_compare_y  cyber_minion.o
+    0x0000197c   0x0000197c   0x000000e8   Code   RO          116    .text.set_sp        mocktm4c_bsp_mocks.o
+    0x00001a64   0x00001a64   0x00000014   Code   RO            6    .text.sleep_position  cyber_minion.o
+    0x00001a78   0x00001a78   0x00000002   Code   RO           91    .text.tearDown      cyber_minion_hil_tests.o
+    0x00001a7a   0x00001a7a   0x00000002   PAD
+    0x00001a7c   0x00001a7c   0x0000001a   Code   RO           93    .text.test_sanity   cyber_minion_hil_tests.o
+    0x00001a96   0x00001a96   0x00000002   PAD
+    0x00001a98   0x00001a98   0x00000004   Code   RO           60    .text.wait_for_interrupt  tm4c_bsp.o
+    0x00001a9c   0x00001a9c   0x00000018   Data   RO          259    .rodata.UnityStrBreaker  unity.o
+    0x00001ab4   0x00001ab4   0x0000000a   Data   RO          256    .rodata.UnityStrDetail1Name  unity.o
+    0x00001abe   0x00001abe   0x0000000b   Data   RO          257    .rodata.UnityStrDetail2Name  unity.o
+    0x00001ac9   0x00001ac9   0x0000000a   Data   RO          244    .rodata.UnityStrElement  unity.o
+    0x00001ad3   0x00001ad3   0x0000000b   Data   RO          237    .rodata.UnityStrExpected  unity.o
+    0x00001ade   0x00001ade   0x00000005   Data   RO          226    .rodata.UnityStrFail  unity.o
+    0x00001ae3   0x00001ae3   0x00000019   Data   RO          264    .rodata.UnityStrNullPointerForActual  unity.o
+    0x00001afc   0x00001afc   0x0000001d   Data   RO          263    .rodata.UnityStrNullPointerForExpected  unity.o
+    0x00001b19   0x00001b19   0x00000003   Data   RO          224    .rodata.UnityStrOk  unity.o
+    0x00001b1c   0x00001b1c   0x00000005   Data   RO          225    .rodata.UnityStrPass  unity.o
+    0x00001b21   0x00001b21   0x00000037   Data   RO          243    .rodata.UnityStrPointless  unity.o
+    0x00001b58   0x00001b58   0x0000000b   Data   RO          261    .rodata.UnityStrResultsFailures  unity.o
+    0x00001b63   0x00001b63   0x0000000a   Data   RO          262    .rodata.UnityStrResultsIgnored  unity.o
+    0x00001b6d   0x00001b6d   0x00000008   Data   RO          260    .rodata.UnityStrResultsTests  unity.o
+    0x00001b75   0x00001b75   0x00000003   Data   RO          258    .rodata.UnityStrSpacer  unity.o
+    0x00001b78   0x00001b78   0x00000006   Data   RO          238    .rodata.UnityStrWas  unity.o
+    0x00001b7e   0x00001b7e   0x00000038   Data   RO          101    .rodata.str1.1      cyber_minion_hil_tests.o
+    0x00001bb6   0x00001bb6   0x00000021   Data   RO          130    .rodata.str1.1      mocktm4c_bsp_mocks.o
+    0x00001bd7   0x00001bd7   0x00000159   Data   RO          293    .rodata.str1.1      cmock.o
+    0x00001d30   0x00001d30   0x00000020   Data   RO          526    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001d50, Size: 0x0000002c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00001d50   0x00000004   Data   RW          295    .data.CMockStringCalledMore  cmock.o
+    0x20000004   0x00001d54   0x00000004   Data   RW          303    .data.CMockStringExpNULL  cmock.o
+    0x20000008   0x00001d58   0x00000004   Data   RW          304    .data.CMockStringMismatch  cmock.o
+    0x2000000c   0x00001d5c   0x00000004   Data   RW          129    .data.CMockString_cmock_arg1  mocktm4c_bsp_mocks.o
+    0x20000010   0x00001d60   0x00000004   Data   RW          128    .data.CMockString_exit_interrupt  mocktm4c_bsp_mocks.o
+    0x20000014   0x00001d64   0x00000004   Data   RW          127    .data.CMockString_set_sp  mocktm4c_bsp_mocks.o
+    0x20000018   0x00001d68   0x00000004   Data   RW          307    .data.CMock_Guts_Buffer  cmock.o
+    0x2000001c   0x00001d6c   0x00000004   Data   RW          306    .data.CMock_Guts_FreePtr  cmock.o
+    0x20000020   0x00001d70   0x00000002   Data   RW           15    .data.compare_x     cyber_minion.o
+    0x20000022   0x00001d72   0x00000002   Data   RW           16    .data.compare_y     cyber_minion.o
+    0x20000024   0x00001d74   0x00000004   Data   RW           18    .data.sp1           cyber_minion.o
+    0x20000028   0x00001d78   0x00000004   Data   RW           20    .data.sp2           cyber_minion.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000030, Load base: 0x00001d7c, Size: 0x00008a80, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000030        -       0x00000060   Zero   RW          391    .bss                c_w.l(libspace.o)
+    0x20000090        -       0x00008008   Zero   RW          308    .bss.CMock_Guts_Space  cmock.o
+    0x20008098        -       0x00000008   Zero   RW          126    .bss.Mock           mocktm4c_bsp_mocks.o
+    0x200080a0        -       0x000000c8   Zero   RW          236    .bss.Unity          unity.o
+    0x20008168        -       0x00000001   Zero   RW           14    .bss.current_state  cyber_minion.o
+    0x20008169   0x00001d7c   0x00000003   PAD
+    0x2000816c        -       0x000000a0   Zero   RW           17    .bss.stack1         cyber_minion.o
+    0x2000820c        -       0x000000a0   Zero   RW           19    .bss.stack2         cyber_minion.o
+    0x200082ac        -       0x00000001   Zero   RW           21    .bss.using_stack1   cyber_minion.o
+    0x200082ad   0x00001d7c   0x00000003   PAD
+    0x200082b0        -       0x00000400   Zero   RW           29    HEAP                startup_tm4c123.o
+    0x200086b0        -       0x00000400   Zero   RW           28    STACK               startup_tm4c123.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       164          0        345         20      32776       3293   cmock.o
+      1204         16          0         12        322       2232   cyber_minion.o
+        96          0         56          0          0       1955   cyber_minion_hil_tests.o
+       348          0         33         12          8       3378   mocktm4c_bsp_mocks.o
+       280         28        620          0       2048       5408   startup_tm4c123.o
+       252          0          0          0          0       6075   system_tm4c123gh6pm.o
+      1062          0          0          0          0      12669   tm4c_bsp.o
+      2368          0        226          0        200      17307   unity.o
+
+    ----------------------------------------------------------------------
+      5808         44       1312         44      35360      52317   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        34          0          0          0          6          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        94          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+        62          0          0          0          0         92   setjmp.o
+
+    ----------------------------------------------------------------------
+       384         16          0          0         96        676   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       314         16          0          0         96        584   c_w.l
+        62          0          0          0          0         92   fz_ws.l
+
+    ----------------------------------------------------------------------
+       384         16          0          0         96        676   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6192         60       1312         44      35456      52781   Grand Totals
+      6192         60       1312         44      35456      52781   ELF Image Totals
+      6192         60       1312         44          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 7504 (   7.33kB)
+    Total RW  Size (RW Data + ZI Data)             35500 (  34.67kB)
+    Total ROM Size (Code + RO Data + RW Data)       7548 (   7.37kB)
+
+==============================================================================
+

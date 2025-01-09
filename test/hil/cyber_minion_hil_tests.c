@@ -3,6 +3,9 @@
 #include "unity_config.h" 
 #include "unity.h"
 
+/*..........................................................................*/
+/* tests in this file can send a frame of data via UART that UART_echo_and_test_results.py will echo */
+
 void setUp(void) {
 	
 }
@@ -12,7 +15,25 @@ void tearDown(void) {
 }
 
 void test_sanity(void) {
-	TEST_ASSERT_EQUAL_INT(6, 2 + 3);
+	TEST_ASSERT_EQUAL_UINT(6, 2 + 3);
+}
+
+void hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
+	current_state = WAITING; 
+	char frame = 0x80; 
+	
+	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
+	
+	UART_SendChar(frame); 
+	main_loop(); 
+	
+	// check: clears interrupt flag
+	
+	// check: sets servos
+	
+	// check: sets new stack pointer
+	
+	// check: calls exit_interrupt()
 }
 
 int main(void) {
