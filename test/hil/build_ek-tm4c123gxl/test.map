@@ -846,23 +846,23 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
  .debug_ranges  0x000000c8       0x40 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .debug_ranges  0x00000108      0x218 build_ek-tm4c123gxl/unity.o
 
-.debug_line     0x00000000     0x2337
+.debug_line     0x00000000     0x232b
  .debug_line    0x00000000      0x106 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .debug_line    0x00000106      0x593 build_ek-tm4c123gxl/tm4c_bsp.o
  .debug_line    0x00000699      0x462 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_line    0x00000afb      0x174 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_line    0x00000c6f     0x16c8 build_ek-tm4c123gxl/unity.o
+ .debug_line    0x00000afb      0x168 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_line    0x00000c63     0x16c8 build_ek-tm4c123gxl/unity.o
 
-.debug_str      0x00000000     0x1d8e
+.debug_str      0x00000000     0x1d82
  .debug_str     0x00000000      0x391 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
                                 0x3d1 (size before relaxing)
  .debug_str     0x00000391      0xe6e build_ek-tm4c123gxl/tm4c_bsp.o
                                0x10ea (size before relaxing)
  .debug_str     0x000011ff       0x7b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
                                 0x806 (size before relaxing)
- .debug_str     0x0000127a      0x11c build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                                0x21d (size before relaxing)
- .debug_str     0x00001396      0x9f8 build_ek-tm4c123gxl/unity.o
+ .debug_str     0x0000127a      0x110 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                                0x211 (size before relaxing)
+ .debug_str     0x0000138a      0x9f8 build_ek-tm4c123gxl/unity.o
                                 0xd94 (size before relaxing)
 
 .debug_frame    0x00000000      0x754

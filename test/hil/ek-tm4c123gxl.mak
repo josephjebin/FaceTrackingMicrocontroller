@@ -47,7 +47,7 @@ TARGET  := ek-tm4c123gxl
 #-----------------------------------------------------------------------------
 # project directories
 #
-TARGET_DIR := ../../tm4c
+TARGET_DIR := ./tm4c
 UNITY_DIR := ../framework/src
 CMOCK_DIR := C:\Users\josep\cmock\src
 CMSIS_DIR := ../../CMSIS/Core/Include
@@ -56,8 +56,9 @@ CMSIS_DIR := ../../CMSIS/Core/Include
 VPATH := ./ \
 	./mocks \
 	../../src \
+	./tm4c \
 	../../tm4c \
-	../../tm4c/startup \
+	../../tm4c/system \
 	$(UNITY_DIR) \
 	$(CMOCK_DIR)
 
@@ -65,6 +66,7 @@ VPATH := ./ \
 INCLUDES := -I. \
 	-I./mocks \
 	-I../../src \
+	-I./tm4c \
 	-I../../tm4c \
 	-I../../tm4c/system \
 	-I$(UNITY_DIR) \
