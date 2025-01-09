@@ -8,5 +8,5 @@
 void set_sp(uint32_t *);  
 void exit_interrupt(); 
 
-#endif // tm4c_bsp_set_sp_h
+#endif // tm4c_bsp_mocks
 #endif

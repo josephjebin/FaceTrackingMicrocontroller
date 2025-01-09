@@ -50,10 +50,6 @@ void wait_for_interrupt(void) {
 	__asm volatile ("WFI"); 
 }
 
-
-
-
-
 void PLL_init(void){
   // 0) Use RCC2
   SYSCTL_RCC2_R |=  0x80000000;  // USERCC2

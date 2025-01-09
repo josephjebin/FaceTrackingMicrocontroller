@@ -1,8 +1,9 @@
-#include "tm4c_bsp.h"
+#include <TM4C123GH6PM.h>
 #include "cyber_minion.h"
 #include "unity_config.h" 
 #include "unity.h"
 
+#include "Mocktm4c_bsp_mocks.h"
 /*..........................................................................*/
 /* tests in this file can send a frame of data via UART that UART_echo_and_test_results.py will echo */
 
@@ -21,13 +22,18 @@ void test_sanity(void) {
 void hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	current_state = WAITING; 
 	char frame = 0x80; 
-	
+	set_sp_Expect(sp1); 
+	exit_interrupt_Expect(); 
 	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
 	
 	UART_SendChar(frame); 
 	main_loop(); 
 	
 	// check: clears interrupt flag
+	// clearing the interrupt flag should clear the RXRIS bit in the UARTRIS register
+	TEST_ASSERT_FALSE(UART0->RIS & (1 << 4)); 
+	// clearing the interrupt flag should clear the RXMIS bit in the UARTMIS register
+	TEST_ASSERT_FALSE(UART0->MIS & (1 << 4));
 	
 	// check: sets servos
 	
@@ -42,7 +48,7 @@ int main(void) {
     SysTick_init();
     enable_interrupts();
     UNITY_BEGIN();
-    RUN_TEST(test_sanity);
+    RUN_TEST(hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled);
     return UNITY_END();
 }
 

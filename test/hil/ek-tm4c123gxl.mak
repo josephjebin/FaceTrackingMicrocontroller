@@ -162,7 +162,8 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H\
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES)
+	-O $(INCLUDES) $(DEFINES) \
+	-DCMOCK_MEM_STATIC -DCMOCK_MEM_SIZE=1024 -DCMOCK_MEM_ALIGN=2
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \

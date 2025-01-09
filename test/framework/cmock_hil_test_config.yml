@@ -4,3 +4,6 @@
     uint8_t: UINT8
     unsigned short: UINT16
     unsigned long: UINT32
+  :mem_static: true
+  :mem_size: 1024
+  :mem_align: 2

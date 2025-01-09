@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\cyber_minion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\cyber_minion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jan  9 10:49:19 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jan  9 14:33:21 2025
 <BR><P>
 <H3>Maximum Stack Usage =        292 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -259,8 +259,8 @@ Function Pointers
  <LI><a href="#[57]">WTIMER5A_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[58]">WTIMER5B_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[77]">__main</a> from __main.o(!!!main) referenced from startup_tm4c123.o(.text)
+ <LI><a href="#[79]">hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled</a> from cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled) referenced 2 times from cyber_minion_hil_tests.o(.text.main)
  <LI><a href="#[78]">main_loop</a> from cyber_minion.o(.text.main_loop) referenced 4 times from cyber_minion.o(.text.UART0_Handler)
- <LI><a href="#[79]">test_sanity</a> from cyber_minion_hil_tests.o(.text.test_sanity) referenced 2 times from cyber_minion_hil_tests.o(.text.main)
 </UL>
 <P>
 <H3>
@@ -280,9 +280,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[b7]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[bc]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[b8]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[bd]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -290,82 +290,82 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[b9]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
+<P><STRONG><a name="[be]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
 
-<P><STRONG><a name="[ba]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[bf]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[82]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[bb]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[c0]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[bc]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[c1]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[bd]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[c2]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[be]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[c3]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[bf]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[c4]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[c0]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[c5]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[c1]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[c6]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[c2]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[c7]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[c3]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[c8]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[c4]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[c9]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[c5]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[ca]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[c6]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[cb]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[c7]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[cc]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[c8]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[cd]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[c9]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[ce]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[ca]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[cf]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[cb]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[d0]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[cc]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[d1]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[cd]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[d2]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
-<P><STRONG><a name="[ce]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[d3]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[cf]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[d4]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[d0]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[d5]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
 <P><STRONG><a name="[87]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[d1]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[d6]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[d2]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[d7]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[d3]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[d8]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[d4]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[d9]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[d5]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[da]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[d6]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[db]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[d7]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[dc]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[7c]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[d8]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[dd]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[7f]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -378,7 +378,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[d9]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[de]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[83]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132 + Unknown Stack Size
@@ -388,7 +388,7 @@ Global Symbols
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[da]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[df]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[8b]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -398,7 +398,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[db]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[e0]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[88]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -1223,11 +1223,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[dc]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[e1]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[dd]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[e2]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[de]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[e3]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[a2]"></a>setjmp</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, setjmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = setjmp
@@ -1260,29 +1260,51 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[df]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[e4]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[8a]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[e0]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[e5]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[e1]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[e6]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[e2]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[e7]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[e3]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[e8]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[bb]"></a>CMockExpectParameters_set_sp</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, mocktm4c_bsp_mocks.o(.text.CMockExpectParameters_set_sp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CMockExpectParameters_set_sp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
+</UL>
 
 <P><STRONG><a name="[ac]"></a>CMock_Guts_GetAddressFor</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, cmock.o(.text.CMock_Guts_GetAddressFor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CMock_Guts_GetAddressFor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt_CMockExpect
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
+</UL>
+
+<P><STRONG><a name="[b0]"></a>CMock_Guts_MemChain</STRONG> (Thumb, 210 bytes, Stack size 28 bytes, cmock.o(.text.CMock_Guts_MemChain))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = CMock_Guts_MemChain
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt_CMockExpect
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
+</UL>
+
+<P><STRONG><a name="[af]"></a>CMock_Guts_MemNew</STRONG> (Thumb, 130 bytes, Stack size 12 bytes, cmock.o(.text.CMock_Guts_MemNew))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = CMock_Guts_MemNew
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt_CMockExpect
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
 </UL>
 
 <P><STRONG><a name="[ad]"></a>CMock_Guts_MemNext</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, cmock.o(.text.CMock_Guts_MemNext))
@@ -1292,13 +1314,13 @@ Global Symbols
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
 </UL>
 
-<P><STRONG><a name="[ae]"></a>PLL_init</STRONG> (Thumb, 122 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.PLL_init))
+<P><STRONG><a name="[b2]"></a>PLL_init</STRONG> (Thumb, 122 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.PLL_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PLL_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[af]"></a>SysTick_init</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.SysTick_init))
+<P><STRONG><a name="[b3]"></a>SysTick_init</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.SysTick_init))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1334,8 +1356,8 @@ Global Symbols
 <P><STRONG><a name="[99]"></a>UART_Flush</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.UART_Flush))
 <BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityConcludeTest
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualIntArray
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityEnd
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualNumber
 </UL>
 
@@ -1350,8 +1372,9 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityTestResultsFailBegin
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityTestResultsBegin
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityPrintChar
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityEnd
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
 </UL>
 
 <P><STRONG><a name="[96]"></a>UnityAssertEqualIntArray</STRONG> (Thumb, 554 bytes, Stack size 88 bytes, unity.o(.text.UnityAssertEqualIntArray))
@@ -1379,10 +1402,10 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityTestResultsFailBegin
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Flush
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_sanity
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
 </UL>
 
-<P><STRONG><a name="[b1]"></a>UnityBegin</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, unity.o(.text.UnityBegin))
+<P><STRONG><a name="[b5]"></a>UnityBegin</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, unity.o(.text.UnityBegin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UnityBegin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1430,7 +1453,10 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Flush
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt_CMockExpect
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp
 </UL>
 
@@ -1445,8 +1471,8 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityTestResultsFailBegin
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityTestResultsBegin
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualIntArray
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityEnd
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualNumber
 </UL>
 
@@ -1497,10 +1523,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_wait
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
-<P><STRONG><a name="[b0]"></a>enable_interrupts</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.enable_interrupts))
+<P><STRONG><a name="[b4]"></a>enable_interrupts</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.enable_interrupts))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1514,20 +1540,43 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
+<P><STRONG><a name="[ae]"></a>exit_interrupt_CMockExpect</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, mocktm4c_bsp_mocks.o(.text.exit_interrupt_CMockExpect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = exit_interrupt_CMockExpect &rArr; UnityFail &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemChain
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemNew
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_GetAddressFor
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
+</UL>
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
+</UL>
+
 <P><STRONG><a name="[8c]"></a>get_UART0_interrupt_data</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.get_UART0_interrupt_data))
 <BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
+<P><STRONG><a name="[79]"></a>hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled))
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled &rArr; set_sp_CMockExpect &rArr; UnityFail &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_interrupt_CMockExpect
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualNumber
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendChar
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> cyber_minion_hil_tests.o(.text.main)
+</UL>
 <P><STRONG><a name="[84]"></a>main</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cyber_minion_hil_tests.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = main &rArr; UnityDefaultTestRun &rArr; UnityConcludeTest &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityEnd
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityBegin
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityBegin
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_and_servos_init
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_init
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_interrupts
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_init
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_init
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enable_interrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -1535,13 +1584,15 @@ Global Symbols
 <P><STRONG><a name="[78]"></a>main_loop</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cyber_minion.o(.text.main_loop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = main_loop &rArr; sleep_position &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_for_interrupt
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_for_interrupt
+</UL>
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cyber_minion.o(.text.UART0_Handler)
 </UL>
-<P><STRONG><a name="[b3]"></a>scan</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, cyber_minion.o(.text.scan))
+<P><STRONG><a name="[b7]"></a>scan</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, cyber_minion.o(.text.scan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = scan &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
@@ -1555,13 +1606,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
 </UL>
 
-<P><STRONG><a name="[b5]"></a>set_PWM0_generator0_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator0_CMPA))
+<P><STRONG><a name="[b9]"></a>set_PWM0_generator0_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator0_CMPA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = set_PWM0_generator0_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_x
 </UL>
 
-<P><STRONG><a name="[b6]"></a>set_PWM0_generator1_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator1_CMPA))
+<P><STRONG><a name="[ba]"></a>set_PWM0_generator1_CMPA</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, tm4c_bsp.o(.text.set_PWM0_generator1_CMPA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = set_PWM0_generator1_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_y
@@ -1570,21 +1621,21 @@ Global Symbols
 <P><STRONG><a name="[8e]"></a>set_compare_x</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cyber_minion.o(.text.set_compare_x))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator0_CMPA
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator0_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
 <P><STRONG><a name="[8d]"></a>set_compare_y</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cyber_minion.o(.text.set_compare_y))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = set_compare_y &rArr; set_PWM0_generator1_CMPA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator1_CMPA
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PWM0_generator1_CMPA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sleep_position
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 </UL>
 
 <P><STRONG><a name="[8f]"></a>set_sp</STRONG> (Thumb, 232 bytes, Stack size 40 bytes, mocktm4c_bsp_mocks.o(.text.set_sp))
@@ -1598,7 +1649,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
-<P><STRONG><a name="[b4]"></a>sleep_position</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, cyber_minion.o(.text.sleep_position))
+<P><STRONG><a name="[b1]"></a>set_sp_CMockExpect</STRONG> (Thumb, 100 bytes, Stack size 32 bytes, mocktm4c_bsp_mocks.o(.text.set_sp_CMockExpect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = set_sp_CMockExpect &rArr; UnityFail &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemChain
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_MemNew
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMockExpectParameters_set_sp
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMock_Guts_GetAddressFor
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
+</UL>
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
+</UL>
+
+<P><STRONG><a name="[b8]"></a>sleep_position</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, cyber_minion.o(.text.sleep_position))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = sleep_position &rArr; set_compare_x &rArr; set_PWM0_generator0_CMPA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_compare_x
@@ -1611,14 +1674,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
 </UL>
 
-<P><STRONG><a name="[79]"></a>test_sanity</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, cyber_minion_hil_tests.o(.text.test_sanity))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = test_sanity &rArr; UnityAssertEqualNumber &rArr; UnityTestResultsFailBegin &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualNumber
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> cyber_minion_hil_tests.o(.text.main)
-</UL>
-<P><STRONG><a name="[b2]"></a>wait_for_interrupt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.wait_for_interrupt))
+<P><STRONG><a name="[b6]"></a>wait_for_interrupt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, tm4c_bsp.o(.text.wait_for_interrupt))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 <P>
