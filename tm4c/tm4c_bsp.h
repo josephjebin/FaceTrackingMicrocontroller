@@ -21,12 +21,11 @@ void UART_SendChar(char);
 void UART_Flush(void);
 void enable_interrupts(void); 
 void wait_for_interrupt(void); //defined in startup_TM4C123.s
-void exit_interrupt(); 
 void set_PWM0_generator0_CMPA(unsigned short); 
 void set_PWM0_generator1_CMPA(unsigned short); 
 
 // must be mocked during HIL testing to allow flow of control to return to tests
 void set_sp(uint32_t *); 
-
+void exit_interrupt(); 
 
 #endif // tm4c_bsp_h

@@ -57,7 +57,6 @@ VPATH := ./ \
 	./mocks \
 	../../src \
 	../../tm4c \
-	../../tm4c/system \
 	../../tm4c/startup \
 	$(UNITY_DIR) \
 	$(CMOCK_DIR)
@@ -68,7 +67,6 @@ INCLUDES := -I. \
 	-I../../src \
 	-I../../tm4c \
 	-I../../tm4c/system \
-	-I../../tm4c/startup \
 	-I$(UNITY_DIR) \
 	-I$(CMOCK_DIR) \
 	-I$(CMSIS_DIR)
