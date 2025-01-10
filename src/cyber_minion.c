@@ -36,10 +36,11 @@ static uint32_t * volatile sp2 = &stack2[STACK_SIZE];
 static bool using_stack1 = false; 
 
 void main_loop(void) {
+	
 	while (1) {
 		switch(current_state) {
 			case WAITING: 
-				UART_SendChar('a'); 
+				UART_SendChar('w');
 				wait_for_interrupt(); 
 				break; 
 			case SCANNING: 
@@ -56,11 +57,13 @@ void main_loop(void) {
 }
 
 void UART0_Handler(void) {	
+	UART_SendChar('a');
 	// don't need to check receiver FIFO since UART handler is only triggered when FIFO has data
 	uint8_t data = get_UART0_interrupt_data(); 
 
 	if (data & 0x80) {
 		current_state = SCANNING;
+		UART_SendChar('b');
 	} else {
 		current_state = WAITING; 
 		
@@ -132,6 +135,7 @@ void UART0_Handler(void) {
 		set_sp(sp2); 
 	} 
 	else {
+		UART_SendChar('c');
 		sp1 = &stack1[STACK_SIZE]; 
 		*(--sp1) = (1U << 24);  /* xPSR */
 		*(--sp1) = (uint32_t)&main_loop; /* PC */
@@ -144,11 +148,12 @@ void UART0_Handler(void) {
 		using_stack1 = true;
 		set_sp(sp1); 
 	}
-	
+	UART_SendChar('y');
 	exit_interrupt(); 
 }
 
 void scan() {
+	UART_SendChar('s');
 	set_compare_y(MIDDLE_COMPARE - MEDIUM_COMPARE_INCREMENT); 
 	set_compare_x(MINIMUM_COMPARE);
 	delay_10ms(100);

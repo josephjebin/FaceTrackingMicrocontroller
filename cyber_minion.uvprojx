@@ -1937,7 +1937,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H</MiscControls>
+              <MiscControls>-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H -DCMOCK_MEM_STATIC -DCMOCK_MEM_SIZE=1024 -DCMOCK_MEM_ALIGN=2</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
               <IncludePath>..\..\packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include;.\CMSIS\Core\Include;.\test\framework\src;.\tm4c;.\tm4c\system;.\src;..\..\..\cmock\src;.\test\hil\mocks;.\tm4c\startup;.\test\hil;.\test\hil\tm4c</IncludePath>

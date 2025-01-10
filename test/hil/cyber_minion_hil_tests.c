@@ -29,14 +29,12 @@ void hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void
 	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
 	
 	UART_SendChar(frame); 
-	main_loop(); 
-	
 	// check: clears interrupt flag
 	// clearing the interrupt flag should clear the RXRIS bit in the UARTRIS register
 	TEST_ASSERT_FALSE(UART0->RIS & (1 << 4)); 
 	// clearing the interrupt flag should clear the RXMIS bit in the UARTMIS register
 	TEST_ASSERT_FALSE(UART0->MIS & (1 << 4));
-	
+	UART_SendChar('x'); 
 	// check: sets servos
 	
 	// check: sets new stack pointer
@@ -60,6 +58,6 @@ int main(void) {
 void assert_failed(char const * const module, int const loc) {
 	(void)module;
 	(void)loc;
-	UART_SendString("init fail"); 
+	UART_SendString("exception! oopsies!"); 
 	for (;;) {}
 }
