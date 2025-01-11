@@ -1,6 +1,6 @@
 Features of this project I'm really proud of: 
 * Unidirectional context switching after an interrupt
-* dual targetting: test run on host machine and microcontroller for unit and HIL testing respectively  
+* dual targetting: tests run on host machine and microcontroller for unit and HIL testing respectively  
 <br />
 Overview Video! <br />
 https://drive.google.com/file/d/1DXGHi_vd6GrTkzMNU0J7Osyh93HIYfZo/view?usp=drive_link
