@@ -2,10 +2,6 @@ import serial
 import time
 import sys
 
-# input: 1 frame of UART data to echo back followed by
-#        test results. 
-# hil tests will use null as terminating character for printing test results
-
 ser = serial.Serial(port="COM5", baudrate=9600, timeout=1)
 
 try:
@@ -16,13 +12,13 @@ try:
 
             # echo next frame 
             if data == b'~': 
-                print("E")
+                # print("E")
                 sent = False
                 while not sent: 
                     # if there is data to read
                     if ser.in_waiting > 0:
                         data = ser.read(ser.in_waiting)
-                        print(data)
+                        # print(data)
                         ser.write(data) 
                         sent = True
             # else display data 
@@ -39,15 +35,3 @@ except KeyboardInterrupt:
     print("Exiting...")
 finally:
     ser.close()  
-
-
-# try:
-#     while True:
-#         if ser.in_waiting > 0:
-#             data = ser.read(ser.in_waiting)
-#             print(data)
-            
-# except KeyboardInterrupt:
-#     print("Exiting...")
-# finally:
-#     ser.close()  
