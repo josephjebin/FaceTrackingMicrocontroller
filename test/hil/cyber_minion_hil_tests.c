@@ -61,6 +61,23 @@ void hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareVa
 	TEST_ASSERT_EQUAL_UINT16(expected_compare, PWM0->_0_CMPA);
 }
 
+void hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed(void) {
+	unsigned short expected_compare = 1500; 
+	set_compare_x(expected_compare); 
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, compare_x); 
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, PWM0->_0_CMPA); 
+	
+	expected_compare = MAXIMUM_COMPARE; 
+	set_compare_x(MAXIMUM_COMPARE + 1);
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, compare_x); 
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, PWM0->_0_CMPA); 
+	
+	expected_compare = MINIMUM_COMPARE; 
+	set_compare_x(MINIMUM_COMPARE - 1);
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, compare_x); 
+	TEST_ASSERT_EQUAL_UINT16(expected_compare, PWM0->_0_CMPA); 
+}
+
 int main(void) {
 	PLL_init();
 	UART0_and_servos_init();
@@ -70,7 +87,9 @@ int main(void) {
 	RUN_TEST(hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled);
 	RUN_TEST(hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed);
 	RUN_TEST(hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed); 
-	return UNITY_END();
+	RUN_TEST(hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed); 
+	(void) UNITY_END();
+	for(;;);
 }
 
 
