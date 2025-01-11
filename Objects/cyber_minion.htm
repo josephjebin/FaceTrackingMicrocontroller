@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\cyber_minion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\cyber_minion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jan  9 18:40:50 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jan  9 20:47:44 2025
 <BR><P>
 <H3>Maximum Stack Usage =        292 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1555,7 +1555,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Handler
 </UL>
 
-<P><STRONG><a name="[79]"></a>hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled))
+<P><STRONG><a name="[79]"></a>hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, cyber_minion_hil_tests.o(.text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled &rArr; set_sp_CMockExpect &rArr; UnityFail &rArr; UnityTestResultsBegin &rArr; UnityPrint &rArr; UnityPrintChar &rArr; UnityPrintNumberHex &rArr; UART_SendChar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityFail
@@ -1563,7 +1563,6 @@ Global Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_sp_CMockExpect
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityAssertEqualNumber
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendChar
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cyber_minion_hil_tests.o(.text.main)
 </UL>
@@ -1588,8 +1587,6 @@ Global Symbols
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scan
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_for_interrupt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
-</UL>
 <BR>[Address Reference Count : 1]<UL><LI> cyber_minion.o(.text.UART0_Handler)
 </UL>
 <P><STRONG><a name="[b7]"></a>scan</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, cyber_minion.o(.text.scan))
@@ -1602,7 +1599,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 
-<P><STRONG><a name="[a3]"></a>setUp</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, cyber_minion_hil_tests.o(.text.setUp))
+<P><STRONG><a name="[a3]"></a>setUp</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, cyber_minion_hil_tests.o(.text.setUp))
 <BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnityDefaultTestRun
 </UL>
 

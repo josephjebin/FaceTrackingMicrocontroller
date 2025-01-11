@@ -1,5 +1,6 @@
 #ifndef cyber_minion_h
 #include <stdint.h>
+#include <stdbool.h>
 
 #define cyber_minion_h
 #define MINIMUM_COMPARE (unsigned short) 1249
@@ -32,7 +33,7 @@ extern unsigned short compare_x;
 extern unsigned short compare_y; 
 extern uint32_t * volatile sp1; 
 extern uint32_t * volatile sp2; 
-
+extern bool using_stack1;  
 #endif // UNIT_TEST || HIL_TEST
 
 #endif // cyber_minion_h

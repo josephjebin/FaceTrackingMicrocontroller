@@ -4,36 +4,37 @@ import sys
 
 # input: 1 frame of UART data to echo back followed by
 #        test results. 
+# hil tests will use null as terminating character for printing test results
 
 ser = serial.Serial(port="COM5", baudrate=9600, timeout=1)
 
 try:
     while True:
-        if ser.in_waiting > 0:  # if there is data to read
+        # if there is data to read
+        if ser.in_waiting > 0:  
             data = ser.read(ser.in_waiting)
-            print("sending back: ")
-            print(data)
-            ser.write(data) 
-            print("sent!")
-            ser.flush()  
-            while ser.in_waiting == 0: {}
-                
-            # hil tests will use null as terminating character for printing test results
-            malformed_test_results = False
-            while not malformed_test_results and data != b'\x7E':
-                sys.stdout.flush()  
-                if(ser.in_waiting > 0): 
-                    try: 
+
+            # echo next frame 
+            if data == b'~': 
+                print("E")
+                sent = False
+                while not sent: 
+                    # if there is data to read
+                    if ser.in_waiting > 0:
                         data = ser.read(ser.in_waiting)
-                        decoded_data = data.decode('utf-8')
-                        print(decoded_data, end="")
-                    except UnicodeDecodeError:
-                        print("Received malformed test results:")
-                        malformed_test_results = True
-                else:
-                    # Allow time for new data to arrive
-                    time.sleep(0.1)
-            
+                        print(data)
+                        ser.write(data) 
+                        sent = True
+            # else display data 
+            else: 
+                try: 
+                    decoded_data = data.decode('utf-8')
+                    print(decoded_data, end="")
+                    sys.stdout.flush()  
+                except UnicodeDecodeError:
+                    print(data)
+                    print("Received malformed test results")
+
 except KeyboardInterrupt:
     print("Exiting...")
 finally:
