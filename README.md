@@ -32,14 +32,25 @@ Unit tests
 ruby cmock.rb -ocmock_unit_test_config.yml ../../tm4c/tm4c_bsp.h
 2. To compile unit tests, add the following flag to your compile command or Misc controls: -DUNIT_TEST
 3. Run the makefile in the unit test directory by running: 
+```
 make
-
+```
+If there are no changes, and you just want to flash the device with the tests run the following: 
+```
+make flash 
+```
 One cool thing about CMock is it will throw an error if a mocked object is used unexepectedly, so you can confirm that only what is expected is executed. 
 
 Hardware in loop (HIL) tests
-1. Generate Mocktm4c_bsp_set_sp.h by stepping into \test\framework, running the following, and changing paths to files as necessary (cmock.rb is in the lib folder of cmock):
-ruby cmock.rb -ocmock_hil_test_config.yml ../../tm4c/tm4c_bsp_set_sp.h
+1. Generate Mocktm4c_bsp_set_sp.h by stepping into \test\framework, running the following, and changing paths to files as necessary (cmock.rb is in the lib folder of cmock): <br />
+ruby cmock.rb -ocmock_hil_test_config.yml ../hil/tm4c/tm4c_bsp_mocks.h
 2. Run the python program UART_echo_and_test_results.py, which is a program that will echo UART data from the microcontroller back to the microcontroller. This program will also print the test results. 
 3. Run the makefile in the hil test directory by running: 
+```
 make -f ek-tm4c123gxl.mak
+```
+If there are no changes, and you just want to flash the device with the tests run the following: 
+```
+make flash -f ek-tm4c123gxl.mak
+```
 4. Press the reset button on the microcontroller to start testing. Test results will show up in the python program's console.
