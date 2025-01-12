@@ -65,7 +65,7 @@ void GPIOPortB_IRQHandler  (void) __attribute__ ((weak, alias("Default_Handler")
 void GPIOPortC_IRQHandler  (void) __attribute__ ((weak, alias("Default_Handler")));
 void GPIOPortD_IRQHandler  (void) __attribute__ ((weak, alias("Default_Handler")));
 void GPIOPortE_IRQHandler  (void) __attribute__ ((weak, alias("Default_Handler")));
-void UART0_Handler      (void) __attribute__ ((weak, alias("Default_Handler")));
+void UART0_Handler         (void) __attribute__ ((weak, alias("Default_Handler")));
 void UART1_IRQHandler      (void) __attribute__ ((weak, alias("Default_Handler")));
 void SSI0_IRQHandler       (void) __attribute__ ((weak, alias("Default_Handler")));
 void I2C0_IRQHandler       (void) __attribute__ ((weak, alias("Default_Handler")));
@@ -221,7 +221,7 @@ int const g_pfnVectors[] = {
     (int)&GPIOPortC_IRQHandler,   /* GPIO Port C                     */
     (int)&GPIOPortD_IRQHandler,   /* GPIO Port D                     */
     (int)&GPIOPortE_IRQHandler,   /* GPIO Port E                     */
-    (int)&UART0_Handler,       /* UART0 Rx and Tx                 */
+    (int)&UART0_Handler,          /* UART0 Rx and Tx                 */
     (int)&UART1_IRQHandler,       /* UART1 Rx and Tx                 */
     (int)&SSI0_IRQHandler,        /* SSI0 Rx and Tx                  */
     (int)&I2C0_IRQHandler,        /* I2C0 Master and Slave           */

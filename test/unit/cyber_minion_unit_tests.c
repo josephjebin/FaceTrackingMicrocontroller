@@ -17,7 +17,7 @@ void testHelper_UART0_Handler_set_up_and_call_and_assert(
 	unsigned short case_number
 ) {
 	get_UART0_interrupt_data_ExpectAndReturn(UART0_frame); 
-	set_sp_Expect(sp); 
+	set_sp_Expect(&stack[40] - 8); 
 	// case 0 doesn't set compare values
 	if(case_number != 0) {
 		set_PWM0_generator0_CMPA_Expect(expected_compare_x); 
@@ -53,7 +53,7 @@ void test_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	current_state = WAITING; 
 	uint8_t UART0_frame = 0x80; 
 	get_UART0_interrupt_data_ExpectAndReturn(UART0_frame); 
-	set_sp_Expect(sp); 
+	set_sp_Expect(&stack[40] - 8); 
 	exit_interrupt_Expect(); 
 	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
 	
@@ -62,9 +62,7 @@ void test_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	TEST_ASSERT_EQUAL_INT(SCANNING, current_state); 
 }
 
-// testing UART0_Handler indirectly tests the set_compare_x/y methods
-// ISSUE: changing which stack pointer set_sp() expects via set_sp_Expect does not
-// 				affect test results. 
+// testing UART0_Handler indirectly tests the set_compare_x/y methods 
 void test_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled(void) {
 	current_state = SCANNING; 
 	compare_x = MIDDLE_COMPARE; 

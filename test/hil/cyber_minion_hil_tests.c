@@ -40,7 +40,11 @@ void hilTestHelper_UART0_Handler_set_up_and_call_and_assert(
 	
 	hilTestHelper_trigger_UART_interrupt_with_frame(frame); 
 	
-	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
+	TEST_ASSERT_EQUAL_INT(WAITING, current_state);
+	// clearing the interrupt flag should clear the RXRIS bit in the UARTRIS register
+	TEST_ASSERT_FALSE_MESSAGE(UART0->RIS & (1 << 4), "UARTRIS"); 
+	// clearing the interrupt flag should clear the RXMIS bit in the UARTMIS register
+	TEST_ASSERT_FALSE_MESSAGE(UART0->MIS & (1 << 4), "UARTMIS");			
 	TEST_ASSERT_EQUAL_UINT16(expected_compare_x, compare_x); 
 	TEST_ASSERT_EQUAL_UINT16(expected_compare_x, PWM0->_0_CMPA); 
 	TEST_ASSERT_EQUAL_UINT16(expected_compare_y, compare_y);
@@ -51,7 +55,7 @@ void setUp(void) {}
 
 void tearDown(void) {}
 
-void test_sanity(void) {
+void hilTest_sanity(void) {
 	TEST_ASSERT_EQUAL_UINT(5, 2 + 3);
 }
 
@@ -151,7 +155,7 @@ int main(void) {
 	SysTick_init();
 	enable_interrupts();
 	UNITY_BEGIN();
-	RUN_TEST(test_sanity); 
+	RUN_TEST(hilTest_sanity); 
 	RUN_TEST(hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed);
 	RUN_TEST(hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed); 
 	RUN_TEST(hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled);

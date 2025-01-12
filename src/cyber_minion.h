@@ -1,6 +1,5 @@
 #ifndef cyber_minion_h
 #include <stdint.h>
-#include <stdbool.h>
 
 #define cyber_minion_h
 #define MINIMUM_COMPARE (unsigned short) 1249
