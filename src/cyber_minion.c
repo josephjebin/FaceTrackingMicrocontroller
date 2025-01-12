@@ -5,17 +5,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define STACK_SIZE 40
-static uint32_t stack1[STACK_SIZE];
-static uint32_t stack2[STACK_SIZE];
-
 #if defined(UNIT_TEST) || defined (HIL_TEST)
 State current_state = WAITING;  
 unsigned short compare_x = MIDDLE_COMPARE; 
 unsigned short compare_y = MAXIMUM_COMPARE; 
-uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
-uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
-bool using_stack1 = false; 
+uint32_t stack[STACK_SIZE];
+uint32_t * volatile sp = &stack[STACK_SIZE]; 
 
 #else 
 static State current_state = WAITING;  
@@ -26,12 +21,12 @@ static State current_state = WAITING;
 static unsigned short compare_x = MIDDLE_COMPARE; 
 static unsigned short compare_y = MAXIMUM_COMPARE; 
 
+static uint32_t stack[STACK_SIZE];
+
 /* 	intentionally out of bounds. to use the pointer, decrement it and then fill it.
 		this way, the stack points to the last filled element
 */
-static uint32_t * volatile sp1 = &stack1[STACK_SIZE]; 
-static uint32_t * volatile sp2 = &stack2[STACK_SIZE]; 
-static bool using_stack1 = false; 
+static uint32_t * volatile sp = &stack[STACK_SIZE]; 
 
 #endif
 
@@ -115,59 +110,39 @@ void UART0_Handler(void) {
 		}
 	}
 	
-	// context switch logic: fabricate a stack that the processor will use while jumping to &main_loop
-	if(using_stack1) {
-		sp2 = &stack2[STACK_SIZE]; 
-		*(--sp2) = (1U << 24);  /* xPSR */
-		*(--sp2) = (uint32_t)&main_loop; /* PC */
-		*(--sp2) = 0x0000000EU; /* LR  */
-		*(--sp2) = 0x0000000CU; /* R12 */
-		*(--sp2) = 0x00000003U; /* R3  */
-		*(--sp2) = 0x00000002U; /* R2  */
-		*(--sp2) = 0x00000001U; /* R1  */
-		*(--sp2) = 0x00000000U; /* R0  */
-		using_stack1 = false; 
-		set_sp(sp2); 
-	} 
-	else {
-		sp1 = &stack1[STACK_SIZE]; 
-		*(--sp1) = (1U << 24);  /* xPSR */
-		*(--sp1) = (uint32_t)&main_loop; /* PC */
-		*(--sp1) = 0x0000000EU; /* LR  */
-		*(--sp1) = 0x0000000CU; /* R12 */
-		*(--sp1) = 0x00000003U; /* R3  */
-		*(--sp1) = 0x00000002U; /* R2  */
-		*(--sp1) = 0x00000001U; /* R1  */
-		*(--sp1) = 0x00000000U; /* R0  */
-		using_stack1 = true;
-		set_sp(sp1); 
-	}
+	// context switch logic: ISR will pop 8 entries from the stack and put them in registers when terminating,
+	// so we put the desired PSR and PC into the stack and set the stack pointer accordingly. 
+	sp = &stack[STACK_SIZE]; 
+	*(--sp) = (1U << 24);  /* xPSR */
+	*(--sp) = (uint32_t)&main_loop; /* PC */
+	sp -= 6; 
+	set_sp(sp); 
 	exit_interrupt(); 
 }
 
 void scan() {
 	set_compare_y(MIDDLE_COMPARE - MEDIUM_COMPARE_INCREMENT); 
 	set_compare_x(MINIMUM_COMPARE);
-	delay_10ms(100);
+	delay_1ms(1000);
 	while (compare_x < MAXIMUM_COMPARE) {
 		set_compare_x(compare_x + SMALL_COMPARE_INCREMENT); 
-		delay_10ms(2);
+		delay_1ms(20);
 	}
 	
 	set_compare_y(compare_y - LARGE_COMPARE_INCREMENT);
-	delay_10ms(2);
+	delay_1ms(20);
 	
 	while (compare_x > MINIMUM_COMPARE) {
 		set_compare_x(compare_x - SMALL_COMPARE_INCREMENT); 
-		delay_10ms(2);
+		delay_1ms(20);
 	}
 	
 	set_compare_y(compare_y - LARGE_COMPARE_INCREMENT);
-	delay_10ms(2);
+	delay_1ms(20);
 	
 	while (compare_x < MAXIMUM_COMPARE) {
 		set_compare_x(compare_x + SMALL_COMPARE_INCREMENT); 
-		delay_10ms(2);
+		delay_1ms(20);
 	}
 }
 

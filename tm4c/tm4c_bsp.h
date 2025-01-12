@@ -13,7 +13,7 @@
 	
 void PLL_init(void); 
 void SysTick_init(void); 
-void delay_10ms(unsigned long); 
+void delay_1ms(unsigned long); 
 void UART0_and_servos_init(void);
 uint8_t get_UART0_interrupt_data(void); 
 void UART_SendString(const char*); 

@@ -8,17 +8,17 @@ try:
     while True:
         # if there is data to read
         if ser.in_waiting > 0:  
-            data = ser.read(ser.in_waiting)
+            data = ser.read()
 
             # echo next frame 
             if data == b'~': 
-                # print("E")
+                print("E")
                 sent = False
                 while not sent: 
                     # if there is data to read
                     if ser.in_waiting > 0:
-                        data = ser.read(ser.in_waiting)
-                        # print(data)
+                        data = ser.read()
+                        print(data)
                         ser.write(data) 
                         sent = True
             # else display data 
@@ -27,7 +27,7 @@ try:
                     decoded_data = data.decode('utf-8')
                     print(decoded_data, end="")
                     sys.stdout.flush()  
-                except UnicodeDecodeError:
+                except UnicodeDecodeError: 
                     print(data)
                     print("Received malformed test results")
 

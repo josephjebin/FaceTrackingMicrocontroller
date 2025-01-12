@@ -8,10 +8,6 @@
 /* 	tests in this file can send a frame of data via UART that UART_echo_and_test_results.py will echo back */
 
 /* 	
-		// small delay so any remaining UART data (like test results) has time to send
-		// this prevents outputting test results from interacting with the next test's logic
-		delay_10ms(2);
-		
 		// send a frame indicating we want the python program to echo the next frame using 0x7E 
 		// 0x7E is the ~ char, which isn't frequently used 
 		UART_SendChar(0x7E); 
@@ -19,25 +15,27 @@
 		// then send the frame to echo
 		UART_SendChar(frame); 
 		
-		//small delay so UART data has time to be sent to python and back
-		delay_10ms(2);
+		// baud rate of 9600 --> .104ms / bit. 1 frame is 10 bits --> 1ms per frame. 
+		// small delay so UART data has time to be sent to python and back
+		// (i found thru trial that 5ms is the minimum needed to guarantee 
+		//  the UART data can go back and forth and trigger the interrupt
+		//  before the test assertions)
+		delay_10ms(5);
 */
 void hilTestHelper_trigger_UART_interrupt_with_frame(char frame) { 
-	delay_10ms(2); 
 	UART_SendChar(0x7E); 
 	UART_SendChar(frame); 
-	delay_10ms(2); 
+	delay_1ms(5); 
 }
 
 void hilTestHelper_UART0_Handler_set_up_and_call_and_assert(
-	uint32_t * volatile sp, 
 	char frame, 
 	unsigned short expected_compare_x, 
 	unsigned short expected_compare_y
 ) {
 	current_state = SCANNING; 
 	TEST_ASSERT_EQUAL_INT(SCANNING, current_state); 
-	set_sp_Expect(sp); 
+	set_sp_Expect(&stack[40] - 8); 
 	exit_interrupt_Expect(); 
 	
 	hilTestHelper_trigger_UART_interrupt_with_frame(frame); 
@@ -49,13 +47,9 @@ void hilTestHelper_UART0_Handler_set_up_and_call_and_assert(
 	TEST_ASSERT_EQUAL_UINT16(expected_compare_y, PWM0->_1_CMPA); 
 }
 
-void setUp(void) {
-	using_stack1 = false; 
-}
+void setUp(void) {}
 
-void tearDown(void) {
-	
-}
+void tearDown(void) {}
 
 void test_sanity(void) {
 	TEST_ASSERT_EQUAL_UINT(5, 2 + 3);
@@ -93,7 +87,8 @@ void hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed(void
 void hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	current_state = WAITING; 
 	char frame = 0x80; 
-	set_sp_Expect(sp1); 
+	// &stack[40] - 8
+	set_sp_Expect(&stack[40] - 8); 
 	exit_interrupt_Expect(); 
 	TEST_ASSERT_EQUAL_INT_MESSAGE(WAITING, current_state, "setup: state"); 
 	
@@ -118,37 +113,37 @@ void hilTest_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlter
 	TEST_ASSERT_EQUAL_UINT16(expected_compare_y, PWM0->_1_CMPA); 
 
 	char frame = 0x00;
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp1, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x11;
 	expected_compare_x -= SMALL_COMPARE_INCREMENT;
 	expected_compare_y -= SMALL_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x22;
 	expected_compare_x -= MEDIUM_COMPARE_INCREMENT;
 	expected_compare_y -= MEDIUM_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x33;
 	expected_compare_x -= LARGE_COMPARE_INCREMENT;
 	expected_compare_y -= LARGE_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x44;
 	expected_compare_x += SMALL_COMPARE_INCREMENT;
 	expected_compare_y += SMALL_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x55;
 	expected_compare_x += MEDIUM_COMPARE_INCREMENT;
 	expected_compare_y += MEDIUM_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y); 
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y); 
 	
 	frame = 0x66;
 	expected_compare_x += LARGE_COMPARE_INCREMENT;
 	expected_compare_y += LARGE_COMPARE_INCREMENT; 
-	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(sp2, frame, expected_compare_x, expected_compare_y);
+	hilTestHelper_UART0_Handler_set_up_and_call_and_assert(frame, expected_compare_x, expected_compare_y);
 }
 
 int main(void) {

@@ -14,6 +14,7 @@
 #define MEDIUM_COMPARE_INCREMENT (unsigned short) 100
 // (.096 degrees / COMPARE increment) * 200 = 19.2 degrees
 #define LARGE_COMPARE_INCREMENT (unsigned short) 200
+#define STACK_SIZE 40
 
 void main_loop(void) __attribute__((aligned(4)));
 void UART0_Handler(void);
@@ -30,10 +31,9 @@ typedef enum {
 #if defined(UNIT_TEST) || defined(HIL_TEST)
 extern State current_state; 
 extern unsigned short compare_x; 
-extern unsigned short compare_y; 
-extern uint32_t * volatile sp1; 
-extern uint32_t * volatile sp2; 
-extern bool using_stack1;  
+extern unsigned short compare_y;
+extern uint32_t stack[STACK_SIZE];
+extern uint32_t * volatile sp; 
 #endif // UNIT_TEST || HIL_TEST
 
 #endif // cyber_minion_h
