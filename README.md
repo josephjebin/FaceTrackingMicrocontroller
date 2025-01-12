@@ -29,7 +29,9 @@ How to test:
 
 Unit tests
 1. Generate Mocktm4c_bsp.h by stepping into \test\framework, running the following, and changing paths to files as necessary (cmock.rb is in the lib folder of cmock):
+```
 ruby cmock.rb -ocmock_unit_test_config.yml ../../tm4c/tm4c_bsp.h
+```
 2. To compile unit tests, add the following flag to your compile command or Misc controls: -DUNIT_TEST
 3. Run the makefile in the unit test directory by running: 
 ```
