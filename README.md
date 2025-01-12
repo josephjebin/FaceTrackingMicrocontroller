@@ -35,10 +35,7 @@ ruby cmock.rb -ocmock_unit_test_config.yml ../../tm4c/tm4c_bsp.h
 ```
 make
 ```
-If there are no changes, and you just want to flash the device with the tests run the following: 
-```
-make flash 
-```
+
 One cool thing about CMock is it will throw an error if a mocked object is used unexepectedly, so you can confirm that only what is expected is executed. 
 
 Hardware in loop (HIL) tests
