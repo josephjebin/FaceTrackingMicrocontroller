@@ -27,95 +27,26 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
  .ARM.attributes
                 0x00000000       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
- .text          0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .data          0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .bss           0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .rodata.Mocktm4c_bsp_set_sp_Verify.str1.4
-                0x00000000        0x7 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .text.Mocktm4c_bsp_set_sp_Verify
-                0x00000000       0x30 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .text.Mocktm4c_bsp_set_sp_Destroy
-                0x00000000       0x14 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .text.Mocktm4c_bsp_set_sp_Init
-                0x00000000        0x8 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .rodata.set_sp.str1.4
-                0x00000000        0xb build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .text.set_sp   0x00000000       0x8c build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+ .text          0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .data          0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .bss           0x00000000        0x0 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .text.Mocktm4c_bsp_mocks_Verify
+                0x00000000       0x4c build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .text.Mocktm4c_bsp_mocks_Destroy
+                0x00000000       0x14 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .text.Mocktm4c_bsp_mocks_Init
+                0x00000000        0x8 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .text.CMockExpectParameters_set_sp
-                0x00000000        0x4 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .text.set_sp_CMockExpect
-                0x00000000       0x48 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .bss.Mock      0x00000000        0x4 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_info    0x00000000      0x5a5 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_abbrev  0x00000000      0x20c build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_loc     0x00000000      0x184 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_aranges
-                0x00000000       0x48 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_ranges  0x00000000       0x38 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_line    0x00000000      0x2f4 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_str     0x00000000      0x691 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .comment       0x00000000       0x4a build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .debug_frame   0x00000000       0xb0 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
- .ARM.attributes
-                0x00000000       0x30 build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                0x00000000        0x4 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .text          0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .data          0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .text          0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion.o
  .data          0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion.o
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/cyber_minion.o
- .text.set_compare_x
-                0x00000000       0x24 build_ek-tm4c123gxl/cyber_minion.o
- .text.set_compare_y
-                0x00000000       0x24 build_ek-tm4c123gxl/cyber_minion.o
- .text.UART0_Handler
-                0x00000000      0x200 build_ek-tm4c123gxl/cyber_minion.o
- .text.scan     0x00000000       0xb8 build_ek-tm4c123gxl/cyber_minion.o
- .text.sleep_position
-                0x00000000       0x14 build_ek-tm4c123gxl/cyber_minion.o
- .text.main_loop
-                0x00000000       0x30 build_ek-tm4c123gxl/cyber_minion.o
- .bss.current_state
-                0x00000000        0x1 build_ek-tm4c123gxl/cyber_minion.o
- .bss.stack1    0x00000000       0xa0 build_ek-tm4c123gxl/cyber_minion.o
- .bss.stack2    0x00000000       0xa0 build_ek-tm4c123gxl/cyber_minion.o
- .bss.using_stack1
-                0x00000000        0x1 build_ek-tm4c123gxl/cyber_minion.o
- .data.compare_x
-                0x00000000        0x2 build_ek-tm4c123gxl/cyber_minion.o
- .data.compare_y
-                0x00000000        0x2 build_ek-tm4c123gxl/cyber_minion.o
- .data.sp1      0x00000000        0x4 build_ek-tm4c123gxl/cyber_minion.o
- .data.sp2      0x00000000        0x4 build_ek-tm4c123gxl/cyber_minion.o
- .debug_info    0x00000000      0x47b build_ek-tm4c123gxl/cyber_minion.o
- .debug_abbrev  0x00000000      0x162 build_ek-tm4c123gxl/cyber_minion.o
- .debug_loc     0x00000000       0xa7 build_ek-tm4c123gxl/cyber_minion.o
- .debug_aranges
-                0x00000000       0x48 build_ek-tm4c123gxl/cyber_minion.o
- .debug_ranges  0x00000000       0x38 build_ek-tm4c123gxl/cyber_minion.o
- .debug_line    0x00000000      0x3b3 build_ek-tm4c123gxl/cyber_minion.o
- .debug_str     0x00000000      0x2ec build_ek-tm4c123gxl/cyber_minion.o
- .comment       0x00000000       0x4a build_ek-tm4c123gxl/cyber_minion.o
- .debug_frame   0x00000000       0xa4 build_ek-tm4c123gxl/cyber_minion.o
- .ARM.attributes
-                0x00000000       0x30 build_ek-tm4c123gxl/cyber_minion.o
  .text          0x00000000        0x0 build_ek-tm4c123gxl/tm4c_bsp.o
  .data          0x00000000        0x0 build_ek-tm4c123gxl/tm4c_bsp.o
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/tm4c_bsp.o
- .text.get_UART0_interrupt_data
-                0x00000000       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
- .text.set_PWM0_generator0_CMPA
-                0x00000000        0xc build_ek-tm4c123gxl/tm4c_bsp.o
- .text.set_PWM0_generator1_CMPA
-                0x00000000        0xc build_ek-tm4c123gxl/tm4c_bsp.o
- .text.wait_for_interrupt
-                0x00000000        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
- .text.exit_interrupt
-                0x00000000        0x6 build_ek-tm4c123gxl/tm4c_bsp.o
- .text.SysTick_wait
-                0x00000000       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
- .text.delay_10ms
-                0x00000000       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
  .text          0x00000000        0x0 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
  .data          0x00000000        0x0 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
@@ -133,8 +64,6 @@ Discarded input sections
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/unity.o
  .text.UnityFloatsWithin
                 0x00000000       0xbc build_ek-tm4c123gxl/unity.o
- .text.UnityIsOneArrayNull
-                0x00000000       0x48 build_ek-tm4c123gxl/unity.o
  .text.UnityPrintExpectedAndActualStrings
                 0x00000000       0x58 build_ek-tm4c123gxl/unity.o
  .text.UnityPrintLen
@@ -149,8 +78,6 @@ Discarded input sections
                 0x00000000       0x74 build_ek-tm4c123gxl/unity.o
  .text.UnityAssertGreaterOrLessOrEqualNumber
                 0x00000000      0x158 build_ek-tm4c123gxl/unity.o
- .text.UnityAssertEqualIntArray
-                0x00000000      0x138 build_ek-tm4c123gxl/unity.o
  .text.UnityAssertEqualFloatArray
                 0x00000000      0x10c build_ek-tm4c123gxl/unity.o
  .text.UnityAssertFloatsWithin
@@ -173,8 +100,6 @@ Discarded input sections
                 0x00000000       0x20 build_ek-tm4c123gxl/unity.o
  .text.UnityFloatToPtr
                 0x00000000        0xc build_ek-tm4c123gxl/unity.o
- .text.UnityFail
-                0x00000000       0x98 build_ek-tm4c123gxl/unity.o
  .text.UnityIgnore
                 0x00000000       0x58 build_ek-tm4c123gxl/unity.o
  .rodata.UnityMessage.str1.4
@@ -192,8 +117,6 @@ Discarded input sections
                 0x00000000       0x1a build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrDet
                 0x00000000        0xc build_ek-tm4c123gxl/unity.o
- .rodata.UnityStrElement
-                0x00000000        0xa build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrErr64
                 0x00000000       0x1e build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrErrDouble
@@ -224,27 +147,13 @@ Discarded input sections
                 0x00000000       0x15 build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrNull
                 0x00000000        0x5 build_ek-tm4c123gxl/unity.o
- .rodata.UnityStrNullPointerForActual
-                0x00000000       0x19 build_ek-tm4c123gxl/unity.o
- .rodata.UnityStrNullPointerForExpected
-                0x00000000       0x1d build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrOrEqual
                 0x00000000        0xd build_ek-tm4c123gxl/unity.o
- .rodata.UnityStrPointless
-                0x00000000       0x37 build_ek-tm4c123gxl/unity.o
  .text          0x00000000        0x0 build_ek-tm4c123gxl/cmock.o
  .data          0x00000000        0x0 build_ek-tm4c123gxl/cmock.o
  .bss           0x00000000        0x0 build_ek-tm4c123gxl/cmock.o
- .text.CMock_Guts_MemNew
-                0x00000000       0x40 build_ek-tm4c123gxl/cmock.o
- .text.CMock_Guts_MemChain
-                0x00000000       0x60 build_ek-tm4c123gxl/cmock.o
- .text.CMock_Guts_MemNext
-                0x00000000       0x30 build_ek-tm4c123gxl/cmock.o
  .text.CMock_Guts_MemEndOfChain
                 0x00000000       0x1c build_ek-tm4c123gxl/cmock.o
- .text.CMock_Guts_GetAddressFor
-                0x00000000       0x24 build_ek-tm4c123gxl/cmock.o
  .text.CMock_Guts_MemBytesCapacity
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .text.CMock_Guts_MemBytesFree
@@ -255,10 +164,6 @@ Discarded input sections
                 0x00000000        0xc build_ek-tm4c123gxl/cmock.o
  .text.CMock_Guts_MemFreeFinal
                 0x00000000        0xc build_ek-tm4c123gxl/cmock.o
- .rodata.str1.4
-                0x00000000      0x167 build_ek-tm4c123gxl/cmock.o
- .bss.CMock_Guts_Space
-                0x00000000     0x8008 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringCallOrder
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringCalledEarly
@@ -267,34 +172,12 @@ Discarded input sections
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringCalledLess
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .data.CMockStringCalledMore
-                0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .data.CMockStringExpNULL
-                0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringIgnPreExp
-                0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .data.CMockStringMismatch
-                0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .data.CMockStringOutOfMemory
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringPtrIsNULL
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
  .data.CMockStringPtrPreExp
                 0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .data.CMock_Guts_FreePtr
-                0x00000000        0x4 build_ek-tm4c123gxl/cmock.o
- .debug_info    0x00000000      0x431 build_ek-tm4c123gxl/cmock.o
- .debug_abbrev  0x00000000      0x178 build_ek-tm4c123gxl/cmock.o
- .debug_loc     0x00000000      0x395 build_ek-tm4c123gxl/cmock.o
- .debug_aranges
-                0x00000000       0x68 build_ek-tm4c123gxl/cmock.o
- .debug_ranges  0x00000000       0x58 build_ek-tm4c123gxl/cmock.o
- .debug_line    0x00000000      0x321 build_ek-tm4c123gxl/cmock.o
- .debug_str     0x00000000      0x413 build_ek-tm4c123gxl/cmock.o
- .comment       0x00000000       0x4a build_ek-tm4c123gxl/cmock.o
- .debug_frame   0x00000000       0xd0 build_ek-tm4c123gxl/cmock.o
- .ARM.attributes
-                0x00000000       0x30 build_ek-tm4c123gxl/cmock.o
  .text          0x00000000        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-exit.o)
  .data          0x00000000        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-exit.o)
  .bss           0x00000000        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-exit.o)
@@ -355,7 +238,7 @@ Linker script and memory map
 LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
 LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
-LOAD build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+LOAD build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 LOAD build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 LOAD build_ek-tm4c123gxl/cyber_minion.o
 LOAD build_ek-tm4c123gxl/tm4c_bsp.o
@@ -391,7 +274,7 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
 .eh_frame       0x0000036c        0x0
  .eh_frame      0x0000036c        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.text           0x0000036c      0xa34
+.text           0x0000036c     0x18a8
                 0x0000036c                . = ALIGN (0x4)
  *(.text)
  .text          0x0000036c       0x40 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
@@ -399,326 +282,434 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
                 0x000003ac                setjmp
                 0x000003b8                longjmp
  *(.text*)
+ .text.set_sp   0x000003c8       0x8c build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                0x000003c8                set_sp
+ .text.set_sp_CMockExpect
+                0x00000454       0x48 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                0x00000454                set_sp_CMockExpect
+ .text.exit_interrupt
+                0x0000049c       0x48 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                0x0000049c                exit_interrupt
+ .text.exit_interrupt_CMockExpect
+                0x000004e4       0x3c build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                0x000004e4                exit_interrupt_CMockExpect
  .text.test_sanity
-                0x000003c8       0x1a build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                0x000003c8                test_sanity
- .text.setUp    0x000003e2        0x2 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                0x000003e2                setUp
+                0x00000520       0x1a build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000520                test_sanity
+ *fill*         0x0000053a        0x2 
+ .text.hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed
+                0x0000053c       0x6c build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x0000053c                hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed
+ .text.hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed
+                0x000005a8       0x94 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x000005a8                hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed
+ .text.hilTestHelper_trigger_UART_interrupt_with_frame
+                0x0000063c       0x18 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x0000063c                hilTestHelper_trigger_UART_interrupt_with_frame
+ .text.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
+                0x00000654       0x84 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000654                hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled
+ .text.hilTestHelper_UART0_Handler_set_up_and_call_and_assert
+                0x000006d8       0xd8 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x000006d8                hilTestHelper_UART0_Handler_set_up_and_call_and_assert
+ .text.hilTest_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled
+                0x000007b0       0xd4 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x000007b0                hilTest_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled
+ .text.setUp    0x00000884        0x2 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000884                setUp
  .text.tearDown
-                0x000003e4        0x2 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                0x000003e4                tearDown
- *fill*         0x000003e6        0x2 
- .text.main     0x000003e8       0x34 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                0x000003e8                main
+                0x00000886        0x2 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000886                tearDown
+ .text.main     0x00000888       0x7c build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000888                main
  .text.assert_failed
-                0x0000041c       0x10 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                0x0000041c                assert_failed
+                0x00000904       0x10 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000904                assert_failed
+ .text.set_compare_x
+                0x00000914       0x24 build_ek-tm4c123gxl/cyber_minion.o
+                0x00000914                set_compare_x
+ .text.set_compare_y
+                0x00000938       0x24 build_ek-tm4c123gxl/cyber_minion.o
+                0x00000938                set_compare_y
+ .text.UART0_Handler
+                0x0000095c      0x130 build_ek-tm4c123gxl/cyber_minion.o
+                0x0000095c                UART0_Handler
+ .text.scan     0x00000a8c       0xbc build_ek-tm4c123gxl/cyber_minion.o
+                0x00000a8c                scan
+ .text.sleep_position
+                0x00000b48       0x14 build_ek-tm4c123gxl/cyber_minion.o
+                0x00000b48                sleep_position
+ .text.main_loop
+                0x00000b5c       0x30 build_ek-tm4c123gxl/cyber_minion.o
+                0x00000b5c                main_loop
+ .text.get_UART0_interrupt_data
+                0x00000b8c       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000b8c                get_UART0_interrupt_data
+ .text.set_PWM0_generator0_CMPA
+                0x00000b9c        0xc build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000b9c                set_PWM0_generator0_CMPA
+ .text.set_PWM0_generator1_CMPA
+                0x00000ba8        0xc build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000ba8                set_PWM0_generator1_CMPA
  .text.enable_interrupts
-                0x0000042c        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x0000042c                enable_interrupts
+                0x00000bb4        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000bb4                enable_interrupts
+ .text.wait_for_interrupt
+                0x00000bb8        0x4 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000bb8                wait_for_interrupt
  .text.PLL_init
-                0x00000430       0x5c build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000430                PLL_init
+                0x00000bbc       0x5c build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000bbc                PLL_init
  .text.SysTick_init
-                0x0000048c       0x18 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x0000048c                SysTick_init
+                0x00000c18       0x18 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000c18                SysTick_init
+ .text.SysTick_wait
+                0x00000c30       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000c30                SysTick_wait
+ .text.delay_1ms
+                0x00000c44       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000c44                delay_1ms
+ *fill*         0x00000c5a        0x2 
  .text.UART0_and_servos_init
-                0x000004a4      0x178 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x000004a4                UART0_and_servos_init
+                0x00000c5c      0x178 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000c5c                UART0_and_servos_init
  .text.UART_SendChar
-                0x0000061c       0x14 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x0000061c                UART_SendChar
+                0x00000dd4       0x1c build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000dd4                UART_SendChar
  .text.UART_SendString
-                0x00000630       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000630                UART_SendString
- *fill*         0x00000646        0x2 
+                0x00000df0       0x16 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000df0                UART_SendString
+ *fill*         0x00000e06        0x2 
  .text.UART_Flush
-                0x00000648       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
-                0x00000648                UART_Flush
+                0x00000e08       0x10 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000e08                UART_Flush
  .text.SystemInit
-                0x00000658       0xc8 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
-                0x00000658                SystemInit
+                0x00000e18       0xc8 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+                0x00000e18                SystemInit
  .text.Reset_Handler
-                0x00000720       0x94 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000720                Reset_Handler
+                0x00000ee0       0x94 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000ee0                Reset_Handler
  .text.NMI_Handler
-                0x000007b4       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x000007b4                NMI_Handler
+                0x00000f74       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000f74                NMI_Handler
  .text.HardFault_Handler
-                0x000007c8       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x000007c8                HardFault_Handler
+                0x00000f88       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000f88                HardFault_Handler
  .text.MemManage_Handler
-                0x000007dc       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x000007dc                MemManage_Handler
+                0x00000f9c       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000f9c                MemManage_Handler
  .text.BusFault_Handler
-                0x000007f0       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x000007f0                BusFault_Handler
+                0x00000fb0       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000fb0                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000804       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000804                UsageFault_Handler
+                0x00000fc4       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000fc4                UsageFault_Handler
  .text.Default_Handler
-                0x00000818       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                0x00000818                uDMAST_IRQHandler
-                0x00000818                GPIOPortP4_IRQHandler
-                0x00000818                PWM1Gen3_IRQHandler
-                0x00000818                WideTimer5B_IRQHandler
-                0x00000818                DebugMon_Handler
-                0x00000818                QEI2_IRQHandler
-                0x00000818                FlashCtrl_IRQHandler
-                0x00000818                GPIOPortP7_IRQHandler
-                0x00000818                Timer0B_IRQHandler
-                0x00000818                I2C0_IRQHandler
-                0x00000818                SysTick_Handler
-                0x00000818                WideTimer4B_IRQHandler
-                0x00000818                PendSV_Handler
-                0x00000818                I2C1_IRQHandler
-                0x00000818                GPIOPortP5_IRQHandler
-                0x00000818                PWMGen0_IRQHandler
-                0x00000818                UART1_IRQHandler
-                0x00000818                CAN1_IRQHandler
-                0x00000818                Timer1B_IRQHandler
-                0x00000818                Watchdog_IRQHandler
-                0x00000818                GPIOPortS_IRQHandler
-                0x00000818                GPIOPortQ7_IRQHandler
-                0x00000818                PWM1Gen2_IRQHandler
-                0x00000818                UART0_IRQHandler
-                0x00000818                GPIOPortL_IRQHandler
-                0x00000818                SSI0_IRQHandler
-                0x00000818                GPIOPortM_IRQHandler
-                0x00000818                FPU_IRQHandler
-                0x00000818                ADCSeq1_IRQHandler
-                0x00000818                GPIOPortP0_IRQHandler
-                0x00000818                WideTimer0B_IRQHandler
-                0x00000818                PWMFault_IRQHandler
-                0x00000818                WideTimer1A_IRQHandler
-                0x00000818                I2C4_IRQHandler
-                0x00000818                I2C5_IRQHandler
-                0x00000818                GPIOPortQ5_IRQHandler
-                0x00000818                PWMGen1_IRQHandler
-                0x00000818                SSI1_IRQHandler
-                0x00000818                I2C2_IRQHandler
-                0x00000818                GPIOPortC_IRQHandler
-                0x00000818                UART5_IRQHandler
-                0x00000818                GPIOPortK_IRQHandler
-                0x00000818                ADCSeq2_IRQHandler
-                0x00000818                PWMGen2_IRQHandler
-                0x00000818                UART2_IRQHandler
-                0x00000818                GPIOPortP3_IRQHandler
-                0x00000818                ADC1Seq0_IRQHandler
-                0x00000818                UART4_IRQHandler
-                0x00000818                GPIOPortJ_IRQHandler
-                0x00000818                Default_Handler
-                0x00000818                WideTimer0A_IRQHandler
-                0x00000818                Timer5A_IRQHandler
-                0x00000818                WideTimer3B_IRQHandler
-                0x00000818                WideTimer2B_IRQHandler
-                0x00000818                WideTimer5A_IRQHandler
-                0x00000818                Timer4A_IRQHandler
-                0x00000818                QEI1_IRQHandler
-                0x00000818                PWM1Fault_IRQHandler
-                0x00000818                GPIOPortP6_IRQHandler
-                0x00000818                QEI0_IRQHandler
-                0x00000818                ADC1Seq2_IRQHandler
-                0x00000818                ADC1Seq1_IRQHandler
-                0x00000818                PWMGen3_IRQHandler
-                0x00000818                GPIOPortD_IRQHandler
-                0x00000818                USB0_IRQHandler
-                0x00000818                I2C3_IRQHandler
-                0x00000818                SVC_Handler
-                0x00000818                GPIOPortP2_IRQHandler
-                0x00000818                GPIOPortQ4_IRQHandler
-                0x00000818                Timer3B_IRQHandler
-                0x00000818                Timer3A_IRQHandler
-                0x00000818                GPIOPortA_IRQHandler
-                0x00000818                ADC1Seq3_IRQHandler
-                0x00000818                Timer0A_IRQHandler
-                0x00000818                GPIOPortP1_IRQHandler
-                0x00000818                ADCSeq0_IRQHandler
-                0x00000818                Timer1A_IRQHandler
-                0x00000818                GPIOPortG_IRQHandler
-                0x00000818                GPIOPortQ1_IRQHandler
-                0x00000818                GPIOPortQ3_IRQHandler
-                0x00000818                Timer5B_IRQHandler
-                0x00000818                ADCSeq3_IRQHandler
-                0x00000818                WideTimer4A_IRQHandler
-                0x00000818                GPIOPortE_IRQHandler
-                0x00000818                CAN0_IRQHandler
-                0x00000818                GPIOPortQ0_IRQHandler
-                0x00000818                Comp0_IRQHandler
-                0x00000818                Comp1_IRQHandler
-                0x00000818                Comp2_IRQHandler
-                0x00000818                GPIOPortQ6_IRQHandler
-                0x00000818                SSI2_IRQHandler
-                0x00000818                PWM1Gen0_IRQHandler
-                0x00000818                GPIOPortF_IRQHandler
-                0x00000818                UART7_IRQHandler
-                0x00000818                UART6_IRQHandler
-                0x00000818                WideTimer2A_IRQHandler
-                0x00000818                GPIOPortB_IRQHandler
-                0x00000818                WideTimer3A_IRQHandler
-                0x00000818                CAN2_IRQHandler
-                0x00000818                WideTimer1B_IRQHandler
-                0x00000818                GPIOPortH_IRQHandler
-                0x00000818                GPIOPortQ2_IRQHandler
-                0x00000818                GPIOPortR_IRQHandler
-                0x00000818                Timer4B_IRQHandler
-                0x00000818                Timer2A_IRQHandler
-                0x00000818                SSI3_IRQHandler
-                0x00000818                Timer2B_IRQHandler
-                0x00000818                uDMAError_IRQHandler
-                0x00000818                GPIOPortN_IRQHandler
-                0x00000818                UART3_IRQHandler
-                0x00000818                SysCtrl_IRQHandler
-                0x00000818                Hibernate_IRQHandler
-                0x00000818                PWM1Gen1_IRQHandler
+                0x00000fd8       0x14 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000fd8                uDMAST_IRQHandler
+                0x00000fd8                GPIOPortP4_IRQHandler
+                0x00000fd8                PWM1Gen3_IRQHandler
+                0x00000fd8                WideTimer5B_IRQHandler
+                0x00000fd8                DebugMon_Handler
+                0x00000fd8                QEI2_IRQHandler
+                0x00000fd8                FlashCtrl_IRQHandler
+                0x00000fd8                GPIOPortP7_IRQHandler
+                0x00000fd8                Timer0B_IRQHandler
+                0x00000fd8                I2C0_IRQHandler
+                0x00000fd8                SysTick_Handler
+                0x00000fd8                WideTimer4B_IRQHandler
+                0x00000fd8                PendSV_Handler
+                0x00000fd8                I2C1_IRQHandler
+                0x00000fd8                GPIOPortP5_IRQHandler
+                0x00000fd8                PWMGen0_IRQHandler
+                0x00000fd8                UART1_IRQHandler
+                0x00000fd8                CAN1_IRQHandler
+                0x00000fd8                Timer1B_IRQHandler
+                0x00000fd8                Watchdog_IRQHandler
+                0x00000fd8                GPIOPortS_IRQHandler
+                0x00000fd8                GPIOPortQ7_IRQHandler
+                0x00000fd8                PWM1Gen2_IRQHandler
+                0x00000fd8                GPIOPortL_IRQHandler
+                0x00000fd8                SSI0_IRQHandler
+                0x00000fd8                GPIOPortM_IRQHandler
+                0x00000fd8                FPU_IRQHandler
+                0x00000fd8                ADCSeq1_IRQHandler
+                0x00000fd8                GPIOPortP0_IRQHandler
+                0x00000fd8                WideTimer0B_IRQHandler
+                0x00000fd8                PWMFault_IRQHandler
+                0x00000fd8                WideTimer1A_IRQHandler
+                0x00000fd8                I2C4_IRQHandler
+                0x00000fd8                I2C5_IRQHandler
+                0x00000fd8                GPIOPortQ5_IRQHandler
+                0x00000fd8                PWMGen1_IRQHandler
+                0x00000fd8                SSI1_IRQHandler
+                0x00000fd8                I2C2_IRQHandler
+                0x00000fd8                GPIOPortC_IRQHandler
+                0x00000fd8                UART5_IRQHandler
+                0x00000fd8                GPIOPortK_IRQHandler
+                0x00000fd8                ADCSeq2_IRQHandler
+                0x00000fd8                PWMGen2_IRQHandler
+                0x00000fd8                UART2_IRQHandler
+                0x00000fd8                GPIOPortP3_IRQHandler
+                0x00000fd8                ADC1Seq0_IRQHandler
+                0x00000fd8                UART4_IRQHandler
+                0x00000fd8                GPIOPortJ_IRQHandler
+                0x00000fd8                Default_Handler
+                0x00000fd8                WideTimer0A_IRQHandler
+                0x00000fd8                Timer5A_IRQHandler
+                0x00000fd8                WideTimer3B_IRQHandler
+                0x00000fd8                WideTimer2B_IRQHandler
+                0x00000fd8                WideTimer5A_IRQHandler
+                0x00000fd8                Timer4A_IRQHandler
+                0x00000fd8                QEI1_IRQHandler
+                0x00000fd8                PWM1Fault_IRQHandler
+                0x00000fd8                GPIOPortP6_IRQHandler
+                0x00000fd8                QEI0_IRQHandler
+                0x00000fd8                ADC1Seq2_IRQHandler
+                0x00000fd8                ADC1Seq1_IRQHandler
+                0x00000fd8                PWMGen3_IRQHandler
+                0x00000fd8                GPIOPortD_IRQHandler
+                0x00000fd8                USB0_IRQHandler
+                0x00000fd8                I2C3_IRQHandler
+                0x00000fd8                SVC_Handler
+                0x00000fd8                GPIOPortP2_IRQHandler
+                0x00000fd8                GPIOPortQ4_IRQHandler
+                0x00000fd8                Timer3B_IRQHandler
+                0x00000fd8                Timer3A_IRQHandler
+                0x00000fd8                GPIOPortA_IRQHandler
+                0x00000fd8                ADC1Seq3_IRQHandler
+                0x00000fd8                Timer0A_IRQHandler
+                0x00000fd8                GPIOPortP1_IRQHandler
+                0x00000fd8                ADCSeq0_IRQHandler
+                0x00000fd8                Timer1A_IRQHandler
+                0x00000fd8                GPIOPortG_IRQHandler
+                0x00000fd8                GPIOPortQ1_IRQHandler
+                0x00000fd8                GPIOPortQ3_IRQHandler
+                0x00000fd8                Timer5B_IRQHandler
+                0x00000fd8                ADCSeq3_IRQHandler
+                0x00000fd8                WideTimer4A_IRQHandler
+                0x00000fd8                GPIOPortE_IRQHandler
+                0x00000fd8                CAN0_IRQHandler
+                0x00000fd8                GPIOPortQ0_IRQHandler
+                0x00000fd8                Comp0_IRQHandler
+                0x00000fd8                Comp1_IRQHandler
+                0x00000fd8                Comp2_IRQHandler
+                0x00000fd8                GPIOPortQ6_IRQHandler
+                0x00000fd8                SSI2_IRQHandler
+                0x00000fd8                PWM1Gen0_IRQHandler
+                0x00000fd8                GPIOPortF_IRQHandler
+                0x00000fd8                UART7_IRQHandler
+                0x00000fd8                UART6_IRQHandler
+                0x00000fd8                WideTimer2A_IRQHandler
+                0x00000fd8                GPIOPortB_IRQHandler
+                0x00000fd8                WideTimer3A_IRQHandler
+                0x00000fd8                CAN2_IRQHandler
+                0x00000fd8                WideTimer1B_IRQHandler
+                0x00000fd8                GPIOPortH_IRQHandler
+                0x00000fd8                GPIOPortQ2_IRQHandler
+                0x00000fd8                GPIOPortR_IRQHandler
+                0x00000fd8                Timer4B_IRQHandler
+                0x00000fd8                Timer2A_IRQHandler
+                0x00000fd8                SSI3_IRQHandler
+                0x00000fd8                Timer2B_IRQHandler
+                0x00000fd8                uDMAError_IRQHandler
+                0x00000fd8                GPIOPortN_IRQHandler
+                0x00000fd8                UART3_IRQHandler
+                0x00000fd8                SysCtrl_IRQHandler
+                0x00000fd8                Hibernate_IRQHandler
+                0x00000fd8                PWM1Gen1_IRQHandler
  .text.UnityPrintNumberUnsigned
-                0x0000082c       0x64 build_ek-tm4c123gxl/unity.o
-                0x0000082c                UnityPrintNumberUnsigned
+                0x00000fec       0x64 build_ek-tm4c123gxl/unity.o
+                0x00000fec                UnityPrintNumberUnsigned
  .text.UnityPrintNumber
-                0x00000890       0x18 build_ek-tm4c123gxl/unity.o
-                0x00000890                UnityPrintNumber
+                0x00001050       0x18 build_ek-tm4c123gxl/unity.o
+                0x00001050                UnityPrintNumber
  .text.UnityPrintNumberHex
-                0x000008a8       0x32 build_ek-tm4c123gxl/unity.o
-                0x000008a8                UnityPrintNumberHex
+                0x00001068       0x32 build_ek-tm4c123gxl/unity.o
+                0x00001068                UnityPrintNumberHex
  .text.UnityPrint
-                0x000008da       0x64 build_ek-tm4c123gxl/unity.o
-                0x000008da                UnityPrint
- *fill*         0x0000093e        0x2 
+                0x0000109a       0x64 build_ek-tm4c123gxl/unity.o
+                0x0000109a                UnityPrint
+ *fill*         0x000010fe        0x2 
  .text.UnityTestResultsBegin
-                0x00000940       0x30 build_ek-tm4c123gxl/unity.o
+                0x00001100       0x30 build_ek-tm4c123gxl/unity.o
  .text.UnityTestResultsFailBegin
-                0x00000970       0x24 build_ek-tm4c123gxl/unity.o
+                0x00001130       0x24 build_ek-tm4c123gxl/unity.o
  .text.UnityAddMsgIfSpecified
-                0x00000994       0x50 build_ek-tm4c123gxl/unity.o
+                0x00001154       0x50 build_ek-tm4c123gxl/unity.o
+ .text.UnityIsOneArrayNull
+                0x000011a4       0x48 build_ek-tm4c123gxl/unity.o
  .text.UnityPrintNumberByStyle
-                0x000009e4       0x92 build_ek-tm4c123gxl/unity.o
-                0x000009e4                UnityPrintNumberByStyle
- *fill*         0x00000a76        0x2 
+                0x000011ec       0x92 build_ek-tm4c123gxl/unity.o
+                0x000011ec                UnityPrintNumberByStyle
+ *fill*         0x0000127e        0x2 
  .text.UnityConcludeTest
-                0x00000a78       0x50 build_ek-tm4c123gxl/unity.o
-                0x00000a78                UnityConcludeTest
+                0x00001280       0x50 build_ek-tm4c123gxl/unity.o
+                0x00001280                UnityConcludeTest
  .text.UnityAssertEqualNumber
-                0x00000ac8       0x74 build_ek-tm4c123gxl/unity.o
-                0x00000ac8                UnityAssertEqualNumber
+                0x000012d0       0x74 build_ek-tm4c123gxl/unity.o
+                0x000012d0                UnityAssertEqualNumber
+ .text.UnityAssertEqualIntArray
+                0x00001344      0x138 build_ek-tm4c123gxl/unity.o
+                0x00001344                UnityAssertEqualIntArray
+ .text.UnityFail
+                0x0000147c       0x98 build_ek-tm4c123gxl/unity.o
+                0x0000147c                UnityFail
  .text.UnityDefaultTestRun
-                0x00000b3c       0x4c build_ek-tm4c123gxl/unity.o
-                0x00000b3c                UnityDefaultTestRun
+                0x00001514       0x4c build_ek-tm4c123gxl/unity.o
+                0x00001514                UnityDefaultTestRun
  .text.UnityBegin
-                0x00000b88       0x20 build_ek-tm4c123gxl/unity.o
-                0x00000b88                UnityBegin
+                0x00001560       0x20 build_ek-tm4c123gxl/unity.o
+                0x00001560                UnityBegin
  .text.UnityEnd
-                0x00000ba8       0x80 build_ek-tm4c123gxl/unity.o
-                0x00000ba8                UnityEnd
+                0x00001580       0x80 build_ek-tm4c123gxl/unity.o
+                0x00001580                UnityEnd
+ .text.CMock_Guts_MemNew
+                0x00001600       0x40 build_ek-tm4c123gxl/cmock.o
+                0x00001600                CMock_Guts_MemNew
+ .text.CMock_Guts_MemChain
+                0x00001640       0x60 build_ek-tm4c123gxl/cmock.o
+                0x00001640                CMock_Guts_MemChain
+ .text.CMock_Guts_MemNext
+                0x000016a0       0x34 build_ek-tm4c123gxl/cmock.o
+                0x000016a0                CMock_Guts_MemNext
+ .text.CMock_Guts_GetAddressFor
+                0x000016d4       0x24 build_ek-tm4c123gxl/cmock.o
+                0x000016d4                CMock_Guts_GetAddressFor
  .text.__libc_init_array
-                0x00000c28       0x48 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
-                0x00000c28                __libc_init_array
+                0x000016f8       0x48 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
+                0x000016f8                __libc_init_array
  *(.rodata)
  *(.rodata*)
+ .rodata.Mocktm4c_bsp_mocks_Verify.str1.4
+                0x00001740       0x17 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ *fill*         0x00001757        0x1 
+ .rodata.set_sp.str1.4
+                0x00001758        0xb build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ *fill*         0x00001763        0x1 
+ .rodata.hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled.str1.4
+                0x00001764       0x2e build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ *fill*         0x00001792        0x2 
  .rodata.main.str1.4
-                0x00000c70       0x28 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00001794      0x186 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ *fill*         0x0000191a        0x2 
  .rodata.assert_failed.str1.4
-                0x00000c98        0xa build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- *fill*         0x00000ca2        0x2 
+                0x0000191c       0x14 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .rodata.Reset_Handler.str1.4
-                0x00000ca4        0xe build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x00000cb2        0x2 
+                0x00001930        0xe build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x0000193e        0x2 
  .rodata.NMI_Handler.str1.4
-                0x00000cb4        0xc build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00001940        0xc build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .rodata.HardFault_Handler.str1.4
-                0x00000cc0       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x00000cd2        0x2 
+                0x0000194c       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x0000195e        0x2 
  .rodata.MemManage_Handler.str1.4
-                0x00000cd4       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x00000ce6        0x2 
+                0x00001960       0x12 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x00001972        0x2 
  .rodata.UsageFault_Handler.str1.4
-                0x00000ce8       0x11 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- *fill*         0x00000cf9        0x3 
+                0x00001974       0x11 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ *fill*         0x00001985        0x3 
  .rodata.Default_Handler.str1.4
-                0x00000cfc       0x10 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00001988       0x10 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .rodata.UnityStrBreaker
-                0x00000d0c       0x18 build_ek-tm4c123gxl/unity.o
+                0x00001998       0x18 build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrDetail1Name
-                0x00000d24        0xa build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d2e        0x2 
+                0x000019b0        0xa build_ek-tm4c123gxl/unity.o
+ *fill*         0x000019ba        0x2 
  .rodata.UnityStrDetail2Name
-                0x00000d30        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d3b        0x1 
+                0x000019bc        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x000019c7        0x1 
+ .rodata.UnityStrElement
+                0x000019c8        0xa build_ek-tm4c123gxl/unity.o
+ *fill*         0x000019d2        0x2 
  .rodata.UnityStrExpected
-                0x00000d3c        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d47        0x1 
+                0x000019d4        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x000019df        0x1 
  .rodata.UnityStrFail
-                0x00000d48        0x5 build_ek-tm4c123gxl/unity.o
-                0x00000d48                UnityStrFail
- *fill*         0x00000d4d        0x3 
+                0x000019e0        0x5 build_ek-tm4c123gxl/unity.o
+                0x000019e0                UnityStrFail
+ *fill*         0x000019e5        0x3 
+ .rodata.UnityStrNullPointerForActual
+                0x000019e8       0x19 build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a01        0x3 
+ .rodata.UnityStrNullPointerForExpected
+                0x00001a04       0x1d build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a21        0x3 
  .rodata.UnityStrOk
-                0x00000d50        0x3 build_ek-tm4c123gxl/unity.o
-                0x00000d50                UnityStrOk
- *fill*         0x00000d53        0x1 
+                0x00001a24        0x3 build_ek-tm4c123gxl/unity.o
+                0x00001a24                UnityStrOk
+ *fill*         0x00001a27        0x1 
  .rodata.UnityStrPass
-                0x00000d54        0x5 build_ek-tm4c123gxl/unity.o
-                0x00000d54                UnityStrPass
- *fill*         0x00000d59        0x3 
+                0x00001a28        0x5 build_ek-tm4c123gxl/unity.o
+                0x00001a28                UnityStrPass
+ *fill*         0x00001a2d        0x3 
+ .rodata.UnityStrPointless
+                0x00001a30       0x37 build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a67        0x1 
  .rodata.UnityStrResultsFailures
-                0x00000d5c        0xb build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d67        0x1 
+                0x00001a68        0xb build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a73        0x1 
  .rodata.UnityStrResultsIgnored
-                0x00000d68        0xa build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d72        0x2 
+                0x00001a74        0xa build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a7e        0x2 
  .rodata.UnityStrResultsTests
-                0x00000d74        0x8 build_ek-tm4c123gxl/unity.o
+                0x00001a80        0x8 build_ek-tm4c123gxl/unity.o
  .rodata.UnityStrSpacer
-                0x00000d7c        0x3 build_ek-tm4c123gxl/unity.o
- *fill*         0x00000d7f        0x1 
+                0x00001a88        0x3 build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a8b        0x1 
  .rodata.UnityStrWas
-                0x00000d80        0x6 build_ek-tm4c123gxl/unity.o
+                0x00001a8c        0x6 build_ek-tm4c123gxl/unity.o
+ *fill*         0x00001a92        0x2 
+ .rodata.str1.4
+                0x00001a94      0x167 build_ek-tm4c123gxl/cmock.o
  *(.init)
- *fill*         0x00000d86        0x2 
- .init          0x00000d88        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
-                0x00000d88                _init
- .init          0x00000d8c        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
+ *fill*         0x00001bfb        0x1 
+ .init          0x00001bfc        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
+                0x00001bfc                _init
+ .init          0x00001c00        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
  *(.fini)
- .fini          0x00000d94        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
-                0x00000d94                _fini
- .fini          0x00000d98        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
-                0x00000da0                . = ALIGN (0x4)
+ .fini          0x00001c08        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crti.o
+                0x00001c08                _fini
+ .fini          0x00001c0c        0x8 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
+                0x00001c14                . = ALIGN (0x4)
 
-.glue_7         0x00000da0        0x0
- .glue_7        0x00000da0        0x0 linker stubs
+.glue_7         0x00001c14        0x0
+ .glue_7        0x00001c14        0x0 linker stubs
 
-.glue_7t        0x00000da0        0x0
- .glue_7t       0x00000da0        0x0 linker stubs
+.glue_7t        0x00001c14        0x0
+ .glue_7t       0x00001c14        0x0 linker stubs
 
-.vfp11_veneer   0x00000da0        0x0
- .vfp11_veneer  0x00000da0        0x0 linker stubs
+.vfp11_veneer   0x00001c14        0x0
+ .vfp11_veneer  0x00001c14        0x0 linker stubs
 
-.v4_bx          0x00000da0        0x0
- .v4_bx         0x00000da0        0x0 linker stubs
+.v4_bx          0x00001c14        0x0
+ .v4_bx         0x00001c14        0x0 linker stubs
 
-.iplt           0x00000da0        0x0
- .iplt          0x00000da0        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+.iplt           0x00001c14        0x0
+ .iplt          0x00001c14        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.rel.dyn        0x00000da0        0x0
- .rel.iplt      0x00000da0        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+.rel.dyn        0x00001c14        0x0
+ .rel.iplt      0x00001c14        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.preinit_array  0x00000da0        0x0
-                0x00000da0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00001c14        0x0
+                0x00001c14                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x00000da0                PROVIDE (__preinit_array_end = .)
+                0x00001c14                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000da0        0x4
-                0x00000da0                PROVIDE (__init_array_start = .)
+.init_array     0x00001c14        0x4
+                0x00001c14                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x00000da0        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
-                0x00000da4                PROVIDE (__init_array_end = .)
+ .init_array    0x00001c14        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+                0x00001c18                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000da4        0x4
+.fini_array     0x00001c18        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x00000da4        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+ .fini_array    0x00001c18        0x4 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x00000da8                _etext = .
+                0x00001c1c                _etext = .
 
 .stack          0x20000000      0x800
                 0x20000000                __stack_start__ = .
@@ -727,43 +718,75 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
                 0x20000800                . = ALIGN (0x4)
                 0x20000800                __stack_end__ = .
 
-.data           0x20000800        0x0 load address 0x00000da8
-                0x00000da8                __data_load = LOADADDR (.data)
+.data           0x20000800       0x1c load address 0x00001c1c
+                0x00001c1c                __data_load = LOADADDR (.data)
                 0x20000800                __data_start = .
  *(.data)
  *(.data*)
-                0x20000800                . = ALIGN (0x4)
-                0x20000800                __data_end__ = .
-                0x20000800                _edata = __data_end__
+ .data.compare_x
+                0x20000800        0x2 build_ek-tm4c123gxl/cyber_minion.o
+                0x20000800                compare_x
+ .data.compare_y
+                0x20000802        0x2 build_ek-tm4c123gxl/cyber_minion.o
+                0x20000802                compare_y
+ .data.sp       0x20000804        0x4 build_ek-tm4c123gxl/cyber_minion.o
+                0x20000804                sp
+ .data.CMockStringCalledMore
+                0x20000808        0x4 build_ek-tm4c123gxl/cmock.o
+                0x20000808                CMockStringCalledMore
+ .data.CMockStringExpNULL
+                0x2000080c        0x4 build_ek-tm4c123gxl/cmock.o
+                0x2000080c                CMockStringExpNULL
+ .data.CMockStringMismatch
+                0x20000810        0x4 build_ek-tm4c123gxl/cmock.o
+                0x20000810                CMockStringMismatch
+ .data.CMockStringOutOfMemory
+                0x20000814        0x4 build_ek-tm4c123gxl/cmock.o
+                0x20000814                CMockStringOutOfMemory
+ .data.CMock_Guts_FreePtr
+                0x20000818        0x4 build_ek-tm4c123gxl/cmock.o
+                0x2000081c                . = ALIGN (0x4)
+                0x2000081c                __data_end__ = .
+                0x2000081c                _edata = __data_end__
 
-.igot.plt       0x20000800        0x0
- .igot.plt      0x20000800        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+.igot.plt       0x2000081c        0x0 load address 0x00001c38
+ .igot.plt      0x2000081c        0x0 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
 
-.bss            0x20000800       0xa0
-                0x20000800                __bss_start__ = .
+.bss            0x20000820      0x558 load address 0x00001c40
+                0x20000820                __bss_start__ = .
  *(.bss)
- .bss           0x20000800       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
+ .bss           0x20000820       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
  *(.bss*)
- .bss.Unity     0x2000081c       0x84 build_ek-tm4c123gxl/unity.o
-                0x2000081c                Unity
+ .bss.Mock      0x2000083c        0x8 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .bss.current_state
+                0x20000844        0x1 build_ek-tm4c123gxl/cyber_minion.o
+                0x20000844                current_state
+ *fill*         0x20000845        0x3 
+ .bss.stack     0x20000848       0xa0 build_ek-tm4c123gxl/cyber_minion.o
+                0x20000848                stack
+ .bss.Unity     0x200008e8       0x84 build_ek-tm4c123gxl/unity.o
+                0x200008e8                Unity
+ *fill*         0x2000096c        0x4 
+ .bss.CMock_Guts_Space
+                0x20000970      0x408 build_ek-tm4c123gxl/cmock.o
  *(COMMON)
-                0x200008a0                . = ALIGN (0x4)
-                0x200008a0                _ebss = .
-                0x200008a0                __bss_end__ = .
-                0x200008a0                __exidx_start = .
+                0x20000d78                . = ALIGN (0x4)
+                0x20000d78                _ebss = .
+                0x20000d78                __bss_end__ = .
+                0x20000d78                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x200008a0                __exidx_end = .
+                0x20000d78                __exidx_end = .
                 [!provide]                PROVIDE (end = _ebss)
                 [!provide]                PROVIDE (_end = _ebss)
                 [!provide]                PROVIDE (__end__ = _ebss)
 
-.heap           0x200008a0        0x0
-                0x200008a0                __heap_start__ = .
-                0x200008a0                . = (. + HEAP_SIZE)
-                0x200008a0                . = ALIGN (0x4)
-                0x200008a0                __heap_end__ = .
+.heap           0x20000d78        0x0
+                0x20000d78                __heap_start__ = .
+                0x20000d78                . = (. + HEAP_SIZE)
+                0x20000d78                . = ALIGN (0x4)
+                0x20000d78                __heap_end__ = .
 
 /DISCARD/
  libc.a(*)
@@ -782,96 +805,135 @@ LOAD c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7
  .ARM.attributes
                 0x0000001e       0x30 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtbegin.o
  .ARM.attributes
-                0x0000004e       0x30 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x0000004e       0x30 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .ARM.attributes
-                0x0000007e       0x30 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x0000007e       0x30 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .ARM.attributes
-                0x000000ae       0x30 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+                0x000000ae       0x30 build_ek-tm4c123gxl/cyber_minion.o
  .ARM.attributes
-                0x000000de       0x30 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x000000de       0x30 build_ek-tm4c123gxl/tm4c_bsp.o
  .ARM.attributes
-                0x0000010e       0x30 build_ek-tm4c123gxl/unity.o
+                0x0000010e       0x30 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
  .ARM.attributes
-                0x0000013e       0x30 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
+                0x0000013e       0x30 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .ARM.attributes
-                0x0000016e       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-setjmp.o)
+                0x0000016e       0x30 build_ek-tm4c123gxl/unity.o
  .ARM.attributes
-                0x0000018a       0x1e c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
+                0x0000019e       0x30 build_ek-tm4c123gxl/cmock.o
+ .ARM.attributes
+                0x000001ce       0x30 c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000001fe       0x1c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-setjmp.o)
+ .ARM.attributes
+                0x0000021a       0x1e c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/softfp/crtn.o
 
 .comment        0x00000000       0x49
- .comment       0x00000000       0x49 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .comment       0x00000000       0x49 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
                                  0x4a (size before relaxing)
+ .comment       0x00000049       0x4a build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .comment       0x00000049       0x4a build_ek-tm4c123gxl/cyber_minion.o
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/tm4c_bsp.o
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/system_TM4C123GH6PM.o
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
  .comment       0x00000049       0x4a build_ek-tm4c123gxl/unity.o
+ .comment       0x00000049       0x4a build_ek-tm4c123gxl/cmock.o
 
-.debug_info     0x00000000     0x6741
- .debug_info    0x00000000      0x2d0 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_info    0x000002d0     0x1d37 build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_info    0x00002007      0xf6f build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_info    0x00002f76      0x2c2 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_info    0x00003238     0x3509 build_ek-tm4c123gxl/unity.o
+.debug_info     0x00000000     0x8701
+ .debug_info    0x00000000      0x711 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_info    0x00000711     0x1317 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_info    0x00001a28      0x435 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_info    0x00001e5d     0x1d3a build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_info    0x00003b97      0xf6f build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_info    0x00004b06      0x2c2 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_info    0x00004dc8     0x3509 build_ek-tm4c123gxl/unity.o
+ .debug_info    0x000082d1      0x430 build_ek-tm4c123gxl/cmock.o
 
-.debug_abbrev   0x00000000      0xa03
- .debug_abbrev  0x00000000      0x136 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_abbrev  0x00000136      0x25f build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_abbrev  0x00000395      0x1a4 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_abbrev  0x00000539      0x132 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_abbrev  0x0000066b      0x398 build_ek-tm4c123gxl/unity.o
+.debug_abbrev   0x00000000      0xfe3
+ .debug_abbrev  0x00000000      0x20c build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_abbrev  0x0000020c      0x23b build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_abbrev  0x00000447      0x151 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_abbrev  0x00000598      0x265 build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_abbrev  0x000007fd      0x1a4 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_abbrev  0x000009a1      0x132 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_abbrev  0x00000ad3      0x398 build_ek-tm4c123gxl/unity.o
+ .debug_abbrev  0x00000e6b      0x178 build_ek-tm4c123gxl/cmock.o
 
-.debug_loc      0x00000000     0x3384
- .debug_loc     0x00000000       0x4a build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_loc     0x0000004a       0xca build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_loc     0x00000114      0x66b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_loc     0x0000077f       0x8b build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_loc     0x0000080a     0x2b7a build_ek-tm4c123gxl/unity.o
+.debug_loc      0x00000000     0x3d06
+ .debug_loc     0x00000000      0x29a build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_loc     0x0000029a      0x29d build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_loc     0x00000537       0xa7 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_loc     0x000005de       0xef build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_loc     0x000006cd      0x66b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_loc     0x00000d38       0x8b build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_loc     0x00000dc3     0x2b7a build_ek-tm4c123gxl/unity.o
+ .debug_loc     0x0000393d      0x3c9 build_ek-tm4c123gxl/cmock.o
 
-.debug_aranges  0x00000000      0x288
+.debug_aranges  0x00000000      0x3b8
  .debug_aranges
-                0x00000000       0x40 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                0x00000000       0x58 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
  .debug_aranges
-                0x00000040       0x88 build_ek-tm4c123gxl/tm4c_bsp.o
+                0x00000058       0x70 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
  .debug_aranges
-                0x000000c8       0x30 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+                0x000000c8       0x48 build_ek-tm4c123gxl/cyber_minion.o
  .debug_aranges
-                0x000000f8       0x50 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                0x00000110       0x80 build_ek-tm4c123gxl/tm4c_bsp.o
  .debug_aranges
-                0x00000148      0x140 build_ek-tm4c123gxl/unity.o
+                0x00000190       0x30 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_aranges
+                0x000001c0       0x50 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_aranges
+                0x00000210      0x140 build_ek-tm4c123gxl/unity.o
+ .debug_aranges
+                0x00000350       0x68 build_ek-tm4c123gxl/cmock.o
 
-.debug_ranges   0x00000000      0x320
- .debug_ranges  0x00000000       0x30 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_ranges  0x00000030       0x78 build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_ranges  0x000000a8       0x20 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_ranges  0x000000c8       0x40 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_ranges  0x00000108      0x218 build_ek-tm4c123gxl/unity.o
+.debug_ranges   0x00000000      0x420
+ .debug_ranges  0x00000000       0x48 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_ranges  0x00000048       0x60 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_ranges  0x000000a8       0x38 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_ranges  0x000000e0       0x70 build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_ranges  0x00000150       0x20 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_ranges  0x00000170       0x40 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_ranges  0x000001b0      0x218 build_ek-tm4c123gxl/unity.o
+ .debug_ranges  0x000003c8       0x58 build_ek-tm4c123gxl/cmock.o
 
-.debug_line     0x00000000     0x2337
- .debug_line    0x00000000      0x106 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_line    0x00000106      0x593 build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_line    0x00000699      0x462 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_line    0x00000afb      0x174 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_line    0x00000c6f     0x16c8 build_ek-tm4c123gxl/unity.o
+.debug_line     0x00000000     0x2f03
+ .debug_line    0x00000000      0x3ae build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_line    0x000003ae      0x326 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_line    0x000006d4      0x2f4 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_line    0x000009c8      0x584 build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_line    0x00000f4c      0x462 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_line    0x000013ae      0x168 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_line    0x00001516     0x16c8 build_ek-tm4c123gxl/unity.o
+ .debug_line    0x00002bde      0x325 build_ek-tm4c123gxl/cmock.o
 
-.debug_str      0x00000000     0x1d8e
- .debug_str     0x00000000      0x391 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
-                                0x3d1 (size before relaxing)
- .debug_str     0x00000391      0xe6e build_ek-tm4c123gxl/tm4c_bsp.o
-                               0x10ea (size before relaxing)
- .debug_str     0x000011ff       0x7b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+.debug_str      0x00000000     0x2477
+ .debug_str     0x00000000      0x66a build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                                0x734 (size before relaxing)
+ .debug_str     0x0000066a      0x6c6 build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                                0xa12 (size before relaxing)
+ .debug_str     0x00000d30       0xc9 build_ek-tm4c123gxl/cyber_minion.o
+                                0x2d0 (size before relaxing)
+ .debug_str     0x00000df9      0xa61 build_ek-tm4c123gxl/tm4c_bsp.o
+                               0x10da (size before relaxing)
+ .debug_str     0x0000185a       0x7b build_ek-tm4c123gxl/system_TM4C123GH6PM.o
                                 0x806 (size before relaxing)
- .debug_str     0x0000127a      0x11c build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-                                0x21d (size before relaxing)
- .debug_str     0x00001396      0x9f8 build_ek-tm4c123gxl/unity.o
+ .debug_str     0x000018d5      0x110 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+                                0x211 (size before relaxing)
+ .debug_str     0x000019e5      0x8db build_ek-tm4c123gxl/unity.o
                                 0xd94 (size before relaxing)
+ .debug_str     0x000022c0      0x1b7 build_ek-tm4c123gxl/cmock.o
+                                0x413 (size before relaxing)
 
-.debug_frame    0x00000000      0x754
- .debug_frame   0x00000000       0x7c build_ek-tm4c123gxl/cyber_minion_hil_tests.o
- .debug_frame   0x0000007c      0x11c build_ek-tm4c123gxl/tm4c_bsp.o
- .debug_frame   0x00000198       0x54 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
- .debug_frame   0x000001ec       0x80 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
- .debug_frame   0x0000026c      0x4bc build_ek-tm4c123gxl/unity.o
- .debug_frame   0x00000728       0x2c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
+.debug_frame    0x00000000      0xa80
+ .debug_frame   0x00000000       0xf0 build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+ .debug_frame   0x000000f0      0x14c build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+ .debug_frame   0x0000023c       0xa4 build_ek-tm4c123gxl/cyber_minion.o
+ .debug_frame   0x000002e0      0x114 build_ek-tm4c123gxl/tm4c_bsp.o
+ .debug_frame   0x000003f4       0x54 build_ek-tm4c123gxl/system_TM4C123GH6PM.o
+ .debug_frame   0x00000448       0x80 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
+ .debug_frame   0x000004c8      0x4bc build_ek-tm4c123gxl/unity.o
+ .debug_frame   0x00000984       0xd0 build_ek-tm4c123gxl/cmock.o
+ .debug_frame   0x00000a54       0x2c c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-init.o)
 
 Cross Reference Table
 
@@ -888,38 +950,38 @@ BusFault_Handler                                  build_ek-tm4c123gxl/startup_TM
 CAN0_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 CAN1_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 CAN2_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-CMockExpectParameters_set_sp                      build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+CMockExpectParameters_set_sp                      build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringCallOrder                              build_ek-tm4c123gxl/cmock.o
 CMockStringCalledEarly                            build_ek-tm4c123gxl/cmock.o
 CMockStringCalledLate                             build_ek-tm4c123gxl/cmock.o
 CMockStringCalledLess                             build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringCalledMore                             build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringExpNULL                                build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringIgnPreExp                              build_ek-tm4c123gxl/cmock.o
 CMockStringMismatch                               build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringOutOfMemory                            build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMockStringPtrIsNULL                              build_ek-tm4c123gxl/cmock.o
 CMockStringPtrPreExp                              build_ek-tm4c123gxl/cmock.o
 CMock_Guts_GetAddressFor                          build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMock_Guts_MemBytesCapacity                       build_ek-tm4c123gxl/cmock.o
 CMock_Guts_MemBytesFree                           build_ek-tm4c123gxl/cmock.o
 CMock_Guts_MemBytesUsed                           build_ek-tm4c123gxl/cmock.o
 CMock_Guts_MemChain                               build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMock_Guts_MemEndOfChain                          build_ek-tm4c123gxl/cmock.o
 CMock_Guts_MemFreeAll                             build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMock_Guts_MemFreeFinal                           build_ek-tm4c123gxl/cmock.o
 CMock_Guts_MemNew                                 build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 CMock_Guts_MemNext                                build_ek-tm4c123gxl/cmock.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 Comp0_IRQHandler                                  build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 Comp1_IRQHandler                                  build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 Comp2_IRQHandler                                  build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
@@ -967,9 +1029,9 @@ I2C3_IRQHandler                                   build_ek-tm4c123gxl/startup_TM
 I2C4_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 I2C5_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 MemManage_Handler                                 build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
-Mocktm4c_bsp_set_sp_Destroy                       build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
-Mocktm4c_bsp_set_sp_Init                          build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
-Mocktm4c_bsp_set_sp_Verify                        build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+Mocktm4c_bsp_mocks_Destroy                        build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+Mocktm4c_bsp_mocks_Init                           build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+Mocktm4c_bsp_mocks_Verify                         build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 NMI_Handler                                       build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 PLL_init                                          build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
@@ -1015,7 +1077,6 @@ Timer4B_IRQHandler                                build_ek-tm4c123gxl/startup_TM
 Timer5A_IRQHandler                                build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 Timer5B_IRQHandler                                build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 UART0_Handler                                     build_ek-tm4c123gxl/cyber_minion.o
-UART0_IRQHandler                                  build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 UART0_and_servos_init                             build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 UART1_IRQHandler                                  build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
@@ -1029,15 +1090,16 @@ UART_Flush                                        build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/unity.o
 UART_SendChar                                     build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/unity.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 UART_SendString                                   build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 USB0_IRQHandler                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 Unity                                             build_ek-tm4c123gxl/unity.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 UnityAssertBits                                   build_ek-tm4c123gxl/unity.o
 UnityAssertEqualFloatArray                        build_ek-tm4c123gxl/unity.o
 UnityAssertEqualIntArray                          build_ek-tm4c123gxl/unity.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 UnityAssertEqualMemory                            build_ek-tm4c123gxl/unity.o
 UnityAssertEqualNumber                            build_ek-tm4c123gxl/unity.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
@@ -1057,7 +1119,8 @@ UnityDefaultTestRun                               build_ek-tm4c123gxl/unity.o
 UnityEnd                                          build_ek-tm4c123gxl/unity.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 UnityFail                                         build_ek-tm4c123gxl/unity.o
-                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+                                                  build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
 UnityFloatToPtr                                   build_ek-tm4c123gxl/unity.o
 UnityIgnore                                       build_ek-tm4c123gxl/unity.o
 UnityMessage                                      build_ek-tm4c123gxl/unity.o
@@ -1132,20 +1195,32 @@ assert_failed                                     build_ek-tm4c123gxl/cyber_mini
                                                   build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 atexit                                            c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
 compare_x                                         build_ek-tm4c123gxl/cyber_minion.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 compare_y                                         build_ek-tm4c123gxl/cyber_minion.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 current_state                                     build_ek-tm4c123gxl/cyber_minion.o
-delay_10ms                                        build_ek-tm4c123gxl/tm4c_bsp.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+delay_1ms                                         build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 enable_interrupts                                 build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 exit                                              c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-exit.o)
                                                   c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
-exit_interrupt                                    build_ek-tm4c123gxl/tm4c_bsp.o
+exit_interrupt                                    build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
                                                   build_ek-tm4c123gxl/cyber_minion.o
+exit_interrupt_CMockExpect                        build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 g_pfnVectors                                      build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
 get_UART0_interrupt_data                          build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion.o
 hardware_init_hook                                c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
+hilTestHelper_UART0_Handler_set_up_and_call_and_assert build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+hilTestHelper_trigger_UART_interrupt_with_frame   build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+hilTest_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+hilTest_set_compare_x_setsLocalCompareValueAndGenerator_when_validCompareValuePassed build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 longjmp                                           c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-setjmp.o)
                                                   build_ek-tm4c123gxl/unity.o
 main                                              build_ek-tm4c123gxl/cyber_minion_hil_tests.o
@@ -1162,17 +1237,21 @@ set_PWM0_generator0_CMPA                          build_ek-tm4c123gxl/tm4c_bsp.o
 set_PWM0_generator1_CMPA                          build_ek-tm4c123gxl/tm4c_bsp.o
                                                   build_ek-tm4c123gxl/cyber_minion.o
 set_compare_x                                     build_ek-tm4c123gxl/cyber_minion.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 set_compare_y                                     build_ek-tm4c123gxl/cyber_minion.o
-set_sp                                            build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
+set_sp                                            build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
                                                   build_ek-tm4c123gxl/cyber_minion.o
-set_sp_CMockExpect                                build_ek-tm4c123gxl/Mocktm4c_bsp_set_sp.o
+set_sp_CMockExpect                                build_ek-tm4c123gxl/Mocktm4c_bsp_mocks.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 setjmp                                            c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp\libc_nano.a(lib_a-setjmp.o)
                                                   build_ek-tm4c123gxl/unity.o
 sleep_position                                    build_ek-tm4c123gxl/cyber_minion.o
 software_init_hook                                build_ek-tm4c123gxl/startup_TM4C123GH6PM.o
                                                   c:/qp/qtools/gnu_arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/softfp/crt0.o
-sp1                                               build_ek-tm4c123gxl/cyber_minion.o
-sp2                                               build_ek-tm4c123gxl/cyber_minion.o
+sp                                                build_ek-tm4c123gxl/cyber_minion.o
+stack                                             build_ek-tm4c123gxl/cyber_minion.o
+                                                  build_ek-tm4c123gxl/cyber_minion_hil_tests.o
 tearDown                                          build_ek-tm4c123gxl/cyber_minion_hil_tests.o
                                                   build_ek-tm4c123gxl/unity.o
 test_sanity                                       build_ek-tm4c123gxl/cyber_minion_hil_tests.o

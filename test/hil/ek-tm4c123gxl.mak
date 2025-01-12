@@ -47,7 +47,7 @@ TARGET  := ek-tm4c123gxl
 #-----------------------------------------------------------------------------
 # project directories
 #
-TARGET_DIR := ../../tm4c
+TARGET_DIR := ./tm4c
 UNITY_DIR := ../framework/src
 CMOCK_DIR := C:\Users\josep\cmock\src
 CMSIS_DIR := ../../CMSIS/Core/Include
@@ -56,9 +56,9 @@ CMSIS_DIR := ../../CMSIS/Core/Include
 VPATH := ./ \
 	./mocks \
 	../../src \
+	./tm4c \
 	../../tm4c \
 	../../tm4c/system \
-	../../tm4c/startup \
 	$(UNITY_DIR) \
 	$(CMOCK_DIR)
 
@@ -66,9 +66,9 @@ VPATH := ./ \
 INCLUDES := -I. \
 	-I./mocks \
 	-I../../src \
+	-I./tm4c \
 	-I../../tm4c \
 	-I../../tm4c/system \
-	-I../../tm4c/startup \
 	-I$(UNITY_DIR) \
 	-I$(CMOCK_DIR) \
 	-I$(CMSIS_DIR)
@@ -81,14 +81,14 @@ INCLUDES := -I. \
 ASM_SRCS := 
 
 # C source files
-C_SRCS := Mocktm4c_bsp_set_sp.c \
+C_SRCS := Mocktm4c_bsp_mocks.c \
 	cyber_minion_hil_tests.c \
 	cyber_minion.c \
 	tm4c_bsp.c \
 	system_TM4C123GH6PM.c \
 	startup_TM4C123GH6PM.c \
 	unity.c \
-	cmock.c
+	cmock.c \
 	
 # C++ source files
 CPP_SRCS :=
@@ -162,7 +162,8 @@ ASFLAGS = -g $(ARM_CPU) $(ARM_FPU) $(ASM_CPU) $(ASM_FPU)
 CFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-DHIL_TEST -DUNITY_INCLUDE_CONFIG_H\
 	-ffunction-sections -fdata-sections \
-	-O $(INCLUDES) $(DEFINES)
+	-O $(INCLUDES) $(DEFINES) \
+	-DCMOCK_MEM_STATIC -DCMOCK_MEM_SIZE=1024 -DCMOCK_MEM_ALIGN=2
 
 CPPFLAGS = -c -g $(ARM_CPU) $(ARM_FPU) $(FLOAT_ABI) -mthumb -Wall \
 	-ffunction-sections -fdata-sections -fno-rtti -fno-exceptions \

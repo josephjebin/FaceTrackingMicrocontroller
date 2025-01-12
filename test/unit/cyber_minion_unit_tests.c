@@ -12,13 +12,12 @@ void tearDown(void) {
 
 void testHelper_UART0_Handler_set_up_and_call_and_assert(
 	uint8_t UART0_frame, 
-	uint32_t *sp, 
 	unsigned short expected_compare_x, 
 	unsigned short expected_compare_y, 
 	unsigned short case_number
 ) {
 	get_UART0_interrupt_data_ExpectAndReturn(UART0_frame); 
-	set_sp_Expect(sp); 
+	set_sp_Expect(&stack[40] - 8); 
 	// case 0 doesn't set compare values
 	if(case_number != 0) {
 		set_PWM0_generator0_CMPA_Expect(expected_compare_x); 
@@ -54,7 +53,7 @@ void test_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	current_state = WAITING; 
 	uint8_t UART0_frame = 0x80; 
 	get_UART0_interrupt_data_ExpectAndReturn(UART0_frame); 
-	set_sp_Expect(sp1); 
+	set_sp_Expect(&stack[40] - 8); 
 	exit_interrupt_Expect(); 
 	TEST_ASSERT_EQUAL_INT(WAITING, current_state); 
 	
@@ -63,9 +62,7 @@ void test_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	TEST_ASSERT_EQUAL_INT(SCANNING, current_state); 
 }
 
-// testing UART0_Handler indirectly tests the set_compare_x/y methods
-// ISSUE: changing which stack pointer set_sp() expects via set_sp_Expect does not
-// 				affect test results. 
+// testing UART0_Handler indirectly tests the set_compare_x/y methods 
 void test_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternatesStackPointer_whenUARTFrameMSBDisabled(void) {
 	current_state = SCANNING; 
 	compare_x = MIDDLE_COMPARE; 
@@ -78,49 +75,49 @@ void test_UART0_Handler_changesStateToWaiting_and_setsServoPositions_andAlternat
 	unsigned short case_number = 0; 
 	uint8_t UART0_frame = 0; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp1, expected_compare_x, expected_compare_y, case_number); 
+		UART0_frame, expected_compare_x, expected_compare_y, case_number); 
 	
 	case_number = 1; 
 	UART0_frame = 0x11;
 	expected_compare_x -= SMALL_COMPARE_INCREMENT; 
 	expected_compare_y -= SMALL_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp2, expected_compare_x, expected_compare_y, case_number); 
+		UART0_frame, expected_compare_x, expected_compare_y, case_number); 
 	
 	case_number = 2; 
 	UART0_frame = 0x22;
 	expected_compare_x -= MEDIUM_COMPARE_INCREMENT; 
 	expected_compare_y -= MEDIUM_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp1, expected_compare_x, expected_compare_y, case_number);
+		UART0_frame, expected_compare_x, expected_compare_y, case_number);
 		
 	case_number = 3; 
 	UART0_frame = 0x33;
 	expected_compare_x -= LARGE_COMPARE_INCREMENT; 
 	expected_compare_y -= LARGE_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp2, expected_compare_x, expected_compare_y, case_number);	
+		UART0_frame, expected_compare_x, expected_compare_y, case_number);	
 		
 	case_number = 4; 
 	UART0_frame = 0x44;
 	expected_compare_x += SMALL_COMPARE_INCREMENT; 
 	expected_compare_y += SMALL_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp1, expected_compare_x, expected_compare_y, case_number);
+		UART0_frame, expected_compare_x, expected_compare_y, case_number);
 		
 	case_number = 5; 
 	UART0_frame = 0x55;
 	expected_compare_x += MEDIUM_COMPARE_INCREMENT; 
 	expected_compare_y += MEDIUM_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp2, expected_compare_x, expected_compare_y, case_number);
+		UART0_frame, expected_compare_x, expected_compare_y, case_number);
 		
 	case_number = 6; 
 	UART0_frame = 0x66;
 	expected_compare_x += LARGE_COMPARE_INCREMENT; 
 	expected_compare_y += LARGE_COMPARE_INCREMENT; 
 	testHelper_UART0_Handler_set_up_and_call_and_assert(
-		UART0_frame, sp1, expected_compare_x, expected_compare_y, case_number);
+		UART0_frame, expected_compare_x, expected_compare_y, case_number);
 }
 
 void set_compare_x_doesNotCompareValuesOutsideValidRange(void) {

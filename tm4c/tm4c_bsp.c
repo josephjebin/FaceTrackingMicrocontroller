@@ -35,6 +35,12 @@ void set_sp(uint32_t * new_sp) {
 		"MOV sp, r0             \n"   // Move next stack pointer into sp  
 	);
 }
+
+void exit_interrupt(void) {
+    __asm volatile (
+        "mov lr, #0xFFFFFFF9"  // Set LR to return to Handler mode with MSP
+    );
+}
 #endif
 
 void enable_interrupts(void) {
@@ -43,14 +49,6 @@ void enable_interrupts(void) {
 void wait_for_interrupt(void) {
 	__asm volatile ("WFI"); 
 }
-
-void exit_interrupt(void) {
-    __asm volatile (
-        "mov lr, #0xFFFFFFF9"  // Set LR to return to Handler mode with MSP
-    );
-}
-
-
 
 void PLL_init(void){
   // 0) Use RCC2
@@ -75,21 +73,21 @@ void PLL_init(void){
 
 void SysTick_init(void) {
 	NVIC_ST_CTRL_R = 0;						// 1) disable SysTick during setup 
-	NVIC_ST_RELOAD_R = 799999;		// 2) 80 MHz: 799999 + 1 = 800,000; 800,000 * 12.5ns = 10ms
+	NVIC_ST_RELOAD_R = 79999;			// 2) 80 MHz: 79999 + 1 = 80,000; 80,000 * 12.5ns = 1ms
 	NVIC_ST_CURRENT_R = 0;				// 3) any write to current clears it 
 	NVIC_ST_CTRL_R = 0x00000005;	// 4) enable SysTick with core clock
 }
 
-// reload is initialized to 800,000 (10ms)
+// reload is initialized to 80,000 (1ms)
 void SysTick_wait(void) {
 	NVIC_ST_CURRENT_R = 0;       						// any value written to CURRENT clears
   while((NVIC_ST_CTRL_R&0x00010000)==0){}	// wait for count flag
 }
 
-void delay_10ms(unsigned long delay) {
+void delay_1ms(unsigned long delay) {
 	unsigned long i;
   for(i=0; i < delay; i++){
-    SysTick_wait();  // wait 10ms
+    SysTick_wait();  // wait 1ms
   }
 } 
 
@@ -162,6 +160,7 @@ void UART_SendChar(char c) {
 		// Wait until the transmit FIFO is not full using TXFF bit
 	}
 	UART0->DR = c;  
+	delay_1ms(2); 
 }	
 
 void UART_Flush(void) {
