@@ -12,13 +12,11 @@ try:
 
             # echo next frame 
             if data == b'~': 
-                print("E")
                 sent = False
                 while not sent: 
                     # if there is data to read
                     if ser.in_waiting > 0:
                         data = ser.read()
-                        print(data)
                         ser.write(data) 
                         sent = True
             # else display data 

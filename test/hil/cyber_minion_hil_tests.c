@@ -87,7 +87,6 @@ void hilTest_set_compare_x_staysWithinBounds_when_invalidCompareValuePassed(void
 void hilTest_UART0_Handler_changesStateToScanning_whenUARTFrameMSBIsEnabled(void) {
 	current_state = WAITING; 
 	char frame = 0x80; 
-	// &stack[40] - 8
 	set_sp_Expect(&stack[40] - 8); 
 	exit_interrupt_Expect(); 
 	TEST_ASSERT_EQUAL_INT_MESSAGE(WAITING, current_state, "setup: state"); 
